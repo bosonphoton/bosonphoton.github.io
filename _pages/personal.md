@@ -6,11 +6,11 @@ description: writing, books, podcasts
 nav: true
 nav_order: 7
 ---
-# <a href = "https://capuchipu.medium.com/">Writing
+# Writing 
+###  <a href = "https://capuchipu.medium.com/">My medium page
+##### Informal thoughts on science, maths, tech, philosophy, neuroscience, and AI.
 
-##### My medium blog. Informal thoughts on science, maths, tech, philosophy, neuroscience, and AI.
-
-[![medium.png](../assets/img/medium.png){:width="300px" height="200px"}](https://capuchipu.medium.com/)
+[![medium.png](/assets/img/medium.png){:width="400px" height="250px"}](https://capuchipu.medium.com/)
 
 <hr>
 
