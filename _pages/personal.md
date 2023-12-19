@@ -4,7 +4,7 @@ permalink: /personal/
 title: personal
 description: writing, books, podcasts
 nav: true
-nav_order: 7
+nav_order: 4
 ---
 # Writing 
 ###  <a href = "https://capuchipu.medium.com/">My medium page
@@ -20,7 +20,7 @@ nav_order: 7
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-size: 14px; /* Adjust the font size as needed */
+      font-size: 16px; /* Adjust the font size as needed */
       line-height: 1.5; /* Adjust the line height as needed */
     }
   </style>
