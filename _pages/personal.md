@@ -2,7 +2,7 @@
 layout: page
 permalink: /personal/
 title: personal
-description: books & podcasts
+description: some recs for books & podcasts
 nav: true
 nav_order: 4
 ---

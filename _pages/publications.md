@@ -38,28 +38,28 @@ nav_order: 1
 <hr>
 <body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
     <div style="text-align: left;">
-        <b>Crossmodal Sensory Integration in Visual Filling-in</b>
+        <b><a href = "https://github.com/bosonphoton/CaltechSURF2023">Crossmodal Sensory Integration in Visual Filling-in</a></b>
     </div>
 </body>
 
 <hr>
 <body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
     <div style="text-align: left;">
-        <b>Bayesian Concept Learning</b>
+        <b><a href = "https://github.com/bosonphoton/BayesianConceptLearning">Bayesian Concept Learning</a></b>
     </div>
 </body>
 
 <hr>
 <body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
     <div style="text-align: left;">
-        <b>Assessing Creativity: Transliminality, Personality, Affect, and Psychopathology</b>
+        <b><a href = "https://www.researchgate.net/publication/370971017_Assessing_Creativity_Transliminality_Personality_Affect_and_Psychopathology">Assessing Creativity: Transliminality, Personality, Affect, and Psychopathology</a></b>
     </div>
 </body>
 
 <hr>
 <body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
     <div style="text-align: left;">
-        <b>An Evolutionary Partitioning Approach For an Ensemble Classifier</b>
+        <b><a href = "https://drive.google.com/drive/u/0/folders/1-lGnF51whcDmNKKF7vhml3k4gZSE5KnU">An Evolutionary Partitioning Approach For an Ensemble Classifier</a></b>
     </div>
 </body>
 
