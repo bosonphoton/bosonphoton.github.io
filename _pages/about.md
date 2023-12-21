@@ -19,4 +19,5 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hi there. Welcome! My primary interests lie at the intersection of neuroscience, mathematics, and AI. I believe that by exploring the logical/statistical underpinnings of human cognition, we can build machines representative of a general, explainable, and interpretable intelligence that can advance scientific pursuits and improve upon the human condition. Interesting and interested people, please reach me by <a href>email</a>.
+Hi there. Welcome! My primary interests lie at the intersection of neuroscience, mathematics, and AI. I believe that by exploring the logical/statistical underpinnings of human cognition, we can build machines representative of a general, explainable, and interpretable intelligence that can advance scientific pursuits and improve upon the human condition. Interesting and interested people, please reach me by <a href="mailto:chelseazoubz@gmail.com">email</a>.
+
