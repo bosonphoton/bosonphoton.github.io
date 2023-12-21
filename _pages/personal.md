@@ -2,17 +2,10 @@
 layout: page
 permalink: /personal/
 title: personal
-description: writing, books, podcasts
+description: books & podcasts
 nav: true
 nav_order: 4
 ---
-# Writing 
-###  <a href = "https://capuchipu.medium.com/">My medium page
-##### Informal thoughts on science, maths, tech, philosophy, neuroscience, and AI.
-
-[![medium.png](/assets/img/medium.png){:width="400px" height="250px"}](https://capuchipu.medium.com/)
-
-<hr>
 
 # Bookshelf
 <head>
