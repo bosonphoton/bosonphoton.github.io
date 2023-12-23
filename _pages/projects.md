@@ -1,113 +1,113 @@
-[//]: # (---)
+---
 
-[//]: # (layout: page)
+layout: page
 
-[//]: # (title: projects)
+title: notes
 
-[//]: # (permalink: /projects/)
+permalink: /notes/
 
-[//]: # (description: A growing collection of your cool projects.)
+description: ML & math notes
 
-[//]: # (nav: true)
+nav: true
 
-[//]: # (nav_order: 2)
+nav_order: 2
 
-[//]: # (display_categories: [work, fun])
+display_categories: 
 
-[//]: # (horizontal: false)
+horizontal: false
 
-[//]: # (---)
+---
 
-[//]: # ()
-[//]: # (<!-- pages/projects.md -->)
 
-[//]: # (<div class="projects">)
+<!-- pages/projects.md -->
 
-[//]: # ({%- if site.enable_project_categories and page.display_categories %})
+<div class="projects">
 
-[//]: # (  <!-- Display categorized projects -->)
+{%- if site.enable_project_categories and page.display_categories %}
 
-[//]: # (  {%- for category in page.display_categories %})
+  <!-- Display categorized projects -->
 
-[//]: # (  <h2 class="category">{{ category }}</h2>)
+  {%- for category in page.display_categories %}
 
-[//]: # (  {%- assign categorized_projects = site.projects | where: "category", category -%})
+  <h2 class="category">{{ category }}</h2>
 
-[//]: # (  {%- assign sorted_projects = categorized_projects | sort: "importance" %})
+  {%- assign categorized_projects = site.projects | where: "category", category -%}
 
-[//]: # (  <!-- Generate cards for each project -->)
+  {%- assign sorted_projects = categorized_projects | sort: "importance" %}
 
-[//]: # (  {% if page.horizontal -%})
+  <!-- Generate cards for each project -->
 
-[//]: # (  <div class="container">)
+  {% if page.horizontal -%}
 
-[//]: # (    <div class="row row-cols-2">)
+  <div class="container">
 
-[//]: # (    {%- for project in sorted_projects -%})
+    <div class="row row-cols-2">
 
-[//]: # (      {% include projects_horizontal.html %})
+    {%- for project in sorted_projects -%}
 
-[//]: # (    {%- endfor %})
+      {% include projects_horizontal.html %}
 
-[//]: # (    </div>)
+    {%- endfor %}
 
-[//]: # (  </div>)
+    </div>
 
-[//]: # (  {%- else -%})
+  </div>
 
-[//]: # (  <div class="grid">)
+  {%- else -%}
 
-[//]: # (    {%- for project in sorted_projects -%})
+  <div class="grid">
 
-[//]: # (      {% include projects.html %})
+    {%- for project in sorted_projects -%}
 
-[//]: # (    {%- endfor %})
+      {% include projects.html %}
 
-[//]: # (  </div>)
+    {%- endfor %}
 
-[//]: # (  {%- endif -%})
+  </div>
 
-[//]: # (  {% endfor %})
+  {%- endif -%}
 
-[//]: # ()
-[//]: # ({%- else -%})
+  {% endfor %}
 
-[//]: # (<!-- Display projects without categories -->)
 
-[//]: # (  {%- assign sorted_projects = site.projects | sort: "importance" -%})
+{%- else -%}
 
-[//]: # (  <!-- Generate cards for each project -->)
+<!-- Display projects without categories -->
 
-[//]: # (  {% if page.horizontal -%})
+  {%- assign sorted_projects = site.projects | sort: "importance" -%}
 
-[//]: # (  <div class="container">)
+  <!-- Generate cards for each project -->
 
-[//]: # (    <div class="row row-cols-2">)
+  {% if page.horizontal -%}
 
-[//]: # (    {%- for project in sorted_projects -%})
+  <div class="container">
 
-[//]: # (      {% include projects_horizontal.html %})
+    <div class="row row-cols-2">
 
-[//]: # (    {%- endfor %})
+    {%- for project in sorted_projects -%}
 
-[//]: # (    </div>)
+      {% include projects_horizontal.html %}
 
-[//]: # (  </div>)
+    {%- endfor %}
 
-[//]: # (  {%- else -%})
+    </div>
 
-[//]: # (  <div class="grid">)
+  </div>
 
-[//]: # (    {%- for project in sorted_projects -%})
+  {%- else -%}
 
-[//]: # (      {% include projects.html %})
+  <div class="grid">
 
-[//]: # (    {%- endfor %})
+    {%- for project in sorted_projects -%}
 
-[//]: # (  </div>)
+      {% include projects.html %}
 
-[//]: # (  {%- endif -%})
+    {%- endfor %}
 
-[//]: # ({%- endif -%})
+  </div>
 
-[//]: # (</div>)
+  {%- endif -%}
+
+{%- endif -%}
+
+</div>
