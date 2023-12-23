@@ -57,10 +57,7 @@ nav_order: 1
 </body>
 
 <hr>
-<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
-    <div style="text-align: left;">
-        <b><a href = "https://drive.google.com/drive/u/0/folders/1-lGnF51whcDmNKKF7vhml3k4gZSE5KnU">An Evolutionary Partitioning Approach For an Ensemble Classifier</a></b>
-    </div>
-</body>
 
+
+<b>[An Evolutionary Partitioning Approach For an Ensemble Classifier](/assets/EA.pdf)</b>
 
