@@ -6,7 +6,7 @@ title: notes
 
 permalink: /notes/
 
-description: ML & math notes.
+description: ML & math notes
 
 nav: true
 
