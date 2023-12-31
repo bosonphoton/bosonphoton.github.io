@@ -6,7 +6,7 @@ permalink: /research/
 
 title: research
 
-description: some ongoing research projects (in progress)
+description: some ongoing research projects
 
 nav: true
 
@@ -31,7 +31,7 @@ nav_order: 1
 <hr>
 <body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
     <div style="text-align: left;">
-        <b>Abstracted Gaussian Prototypes for One-Shot Concept Learning</b>
+        <b>Abstracted Gaussian Prototypes for One-Shot Concept Learning (in progress)</b>
     </div>
 </body>
 
