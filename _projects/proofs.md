@@ -61,15 +61,45 @@ Tho different R can map to same Z (i.e., R = -2, 2). <br><br>
 
 Def: The <b>image</b> of x, f(x) for $$x \in X$$ is the element of Y that f assigns to x. <br><br>
 Def: The <b>graph of a function</b> is just the domain paired with it's range (but not every element of Y is used up) $$\{ (x,y) | x \in X$$ and $$f(x) = y \}$$. graph(f) $$\subset X \times Y$$ <br>
-Ex: the empty function is the function with empty graph (a graph that is the empty set of f). So $$f: \emptyset \to Y$$. <br><br>
+Ex: the empty function is the function with empty graph (a graph that is the empty set of f). So $$f: \emptyset \to Y$$. <br>
 Let $$f: X \rightarrow Y. Z \subset X \times Y$$. Z is a the graph of f if: <br>
 1. for any $$x \in X, \exists y \in Y \mid (x,y) \in Z$$ (i.e., every vertical line through X cuts the graph at least once) <br>
 2. if (x,y) is in Z, and (x,z) is in Z, then y = z (i.e., every vertical line through X cuts the curve at most once) <br><br>
 
-Def: X is the <b>domain</b>, Y is the <b>codomain</b> (which accounts for all <i>possible</i> outputs, different than the <b>range</b> which is what <i>actually</i> comes out)
+Def: X is the <b>domain</b>, Y is the <b>codomain</b> (which accounts for all <i>possible</i> outputs, different than the <b>range</b> which is what <i>actually</i> comes out) <br>
+Ex: Let $$f: \mathbb{N}\to \mathbb{N}$$ be defined by $$f(n) = n^2$$. Let $$g: \mathbb{N}\to \mathbb{R}$$ be defined by $$g(x) = x^2$$. <br>
+Then graph(f) = graph(g), but f and g are different functions. <br>
+Let $$h: \mathbb{R}\to \mathbb{R}$$ be defined by $$h(x) = x^2$$. <br>
+Then graph(f) $$\subsetneq$$ graph(h). <br><br>
+
+Def: The <b>range</b> (basically the function's outputs) is the set of images of elements in X under f; it is a subset of the codomain. <br><br>
+
+Def: f is a <b>real-valued function</b> if Ran(f) $$\subset \mathbb{R}$$ <br><br>
+
+<h6><b><u>Injections, Surjections, Bijections</u></b></h6> <br>
+<img src="/assets/img/injection.jpeg" alt="inj,surj,bij" width = "600"><br><br>
+
+<b>1. Injections (one to one)</b>: Every unique x maps to a unique y; but not every y may be assigned an x <br>
+1. f is an injection if x & y are distinct elements $$\in$$ X, f(x) $$\neq$$ f(y). <br>
+2. or if f(x) = f(y) then x = y <br>
+
+Counterexample: $$f(x) = x^2$$ is not an injection bc f(-2) = f(2) <br><br>
+Let $$f: X \to Y$$ and $$g: Y \to Z$$. <br>
+Prove that if f & g are injective, then g $$\circ$$ f is injective. <br>
+<b>Proof</b>: Suppose $$g \circ f(x) = g \circ f(y)$$. If g is injective, then f(x) = f(y). If f is injective, then x = y. So g $$\circ$$ f is injective. 
+<br><br>
 
 
+<b>2. Surjections (onto)</b>: All y must be assigned some x; even if different x maps to same y<br>
+1. f is a surjection if Ran(f) = Y (i.e., the range captures ALL of the codomain)<br>
 
+Let $$ Y = \{x \in \mathbb{R} \mid x \geq 0 \}$$ and $$f: \mathbb{R} \to Y$$ be defined by $$f(x) = x^2$$. Then f is a surjection. <br>
+<b>Proof</b>: We need to prove that Ran(f) = Y. Since Ran(f) $$\subset$$ Y, we also want to show Y $$\subset$$ Ran(f). Let  y 
+
+
+<br><br>
+
+<b>3. Bijections (both inj + surj)</b>: All elements of y must have a unique x<br>
 
 
 
