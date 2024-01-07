@@ -93,8 +93,9 @@ Prove that if f & g are injective, then g $$\circ$$ f is injective. <br>
 <b>2. Surjections (onto)</b>: All y must be assigned some x; even if different x maps to same y<br>
 1. f is a surjection if Ran(f) = Y (i.e., the range captures ALL of the codomain)<br>
 
-Let $$ Y = \{x \in \mathbb{R} \mid x \geq 0 \}$$ and $$f: \mathbb{R} \to Y$$ be defined by $$f(x) = x^2$$. Then f is a surjection. <br>
-<b>Proof</b>: We need to prove that Ran(f) = Y. Since Ran(f) $$\subset$$ Y, we also want to show Y $$\subset$$ Ran(f). Let  y 
+Let $$ Y = \{x \in \mathbb{R} \mid x \geq 0 \}$$ and $$f: \mathbb{R} \to Y$$ be defined by $$f(x) = x^2$$. Prove that f is a surjection. <br>
+<b>Proof</b>: We need to prove that Ran(f) = Y. Since Ran(f) is always $$\subset$$ Y, we also want to show Y $$\subset$$ Ran(f). Let y $$\in$$ Y, so y is a non-negative real number. Then $$\sqrt{y} \in \mathbb{R}$$ and f($$\sqrt{y}$$) = y. So y $$\in$$ Ran(f). Since y is an arbitrary element of Y, then Y $$\subset$$ Ran(f). <br>
+<b>Explanation</b>: We start with the definition of a surjection, which is Y = ran(f). To prove equivalence, we can show that they are subsets of each other. Using the known fact that the range is always a subset of the codomain, we additionally need to show that this given codomain Y is a subset of the range. We choose some input $$\sqrt{y}$$ that satisfies $$\in \mathbb{R}$$, and the output image is y. So y is an element of Ran(f). Since y is arbitrary, this shows that <b>every</b> element in Y is in Ran(f), so Y $$\subset$$ Ran(f). 
 
 
 <br><br>
