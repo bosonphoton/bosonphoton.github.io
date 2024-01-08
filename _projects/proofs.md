@@ -7,7 +7,7 @@ description: notes from Transition to Higher Mathematics, Structure and Proof by
 
 img: 
 
-importance: 3
+importance: 2
 ---
 
 <style>
@@ -95,12 +95,21 @@ Prove that if f & g are injective, then g $$\circ$$ f is injective. <br>
 
 Let $$ Y = \{x \in \mathbb{R} \mid x \geq 0 \}$$ and $$f: \mathbb{R} \to Y$$ be defined by $$f(x) = x^2$$. Prove that f is a surjection. <br>
 <b>Proof</b>: We need to prove that Ran(f) = Y. Since Ran(f) is always $$\subset$$ Y, we also want to show Y $$\subset$$ Ran(f). Let y $$\in$$ Y, so y is a non-negative real number. Then $$\sqrt{y} \in \mathbb{R}$$ and f($$\sqrt{y}$$) = y. So y $$\in$$ Ran(f). Since y is an arbitrary element of Y, then Y $$\subset$$ Ran(f). <br>
-<b>Explanation</b>: We start with the definition of a surjection, which is Y = ran(f). To prove equivalence, we can show that they are subsets of each other. Using the known fact that the range is always a subset of the codomain, we additionally need to show that this given codomain Y is a subset of the range. We choose some input $$\sqrt{y}$$ that satisfies $$\in \mathbb{R}$$, and the output image is y. So y is an element of Ran(f). Since y is arbitrary, this shows that <b>every</b> element in Y is in Ran(f), so Y $$\subset$$ Ran(f). 
-
-
+<b>Explanation</b>: We start with the definition of a surjection, which is Y = ran(f). To prove equivalence, we can show that they are subsets of each other. Using the known fact that the range is always a subset of the codomain, we additionally need to show that this given codomain Y is a subset of the range. We choose some input $$\sqrt{y}$$ that satisfies $$\in \mathbb{R}$$, and the output image is y. So y is an element of Ran(f). Since y is arbitrary, this shows that <b>every</b> element in Y is in Ran(f), so Y $$\subset$$ Ran(f).
 <br><br>
 
 <b>3. Bijections (both inj + surj)</b>: All elements of y must have a unique x<br>
+1. Bijective functions preserve key structural features of the domain, and we can treat domain and codomain as the same set. <br><br>
+
+Def: A <b>permutation</b> of set X is a bijection $$f: X \hookrightarrow X$$ 
+<br><br>
+
+<h6><b><u>Images and Inverses</u></b></h6> <br>
+Def: <b>Inverse (Pre) Image</b>. Let $$f: X \to Y$$ and $$b \in Y$$. The inverse image $$f^{-1}(b) = \{x \in X \mid f(x) = b\}$$ (Sort of like a reverse mapping) <br>
+1. If $$b \notin Ran(f)$$ then $$f^{-1}(b) = \emptyset$$ 
+2. If f is injection, then for any $$b \in Ran(f), f^{-1}(b)$$ has a single element (bc injections = for every unique x $$\exists$$ unique y so the reverse mapping must have only a single element)
+
+
 
 
 
