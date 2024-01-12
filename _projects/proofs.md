@@ -3,7 +3,7 @@ layout: page
 
 title: math proofs
 
-description: notes from Transition to Higher Mathematics, Structure and Proof by Bob A. Dumas and John E. McCarthy. (excuse some lazy language)
+description: notes from Transition to Higher Mathematics, Structure and Proof by Bob A. Dumas and John E. McCarthy.
 
 img: 
 
@@ -122,7 +122,19 @@ $$graph(f\vert_{W}) = graph(f) \cap [W \times Y]$$<br><br>
 <h6><b><u>Sequences</u></b> (a list of objects)</h6><br>
 
 Def: A <b>Finite Sequence</b> $$\braket{a_n \mid n < N}$$ is a function with domain $$\lceil N \rceil$$ where $$N \in \mathbb{N}$$.<br> 
-An <b>Infinite Sequence</b> is just $$\braket{a_n \mid n \in N}$$ (the domain is the infinite in $$\mathbb{N}$$)
+An <b>Infinite Sequence</b> is just $$\braket{a_n \mid n \in N}$$ (the domain is the infinite in $$\mathbb{N}$$)<br>
+- Often denoted $$\braket{a_n}$$ <br><br>
+
+Def: A finite <b>Binary Sequence</b> is a function $$f:\lceil N \rceil \to \lceil 2 \rceil$$, and infinite binary sequence is just $$f: \mathbb{N} \to \lceil 2 \rceil$$.<br><br>
+
+Def: An <b>Infinite Union</b> is $$\bigcup_{n=1}^{\infty} X_n = \{x \mid \text{for some } n \in \mathbb{N^+}, x \in X_n\}$$
+- collection of all elements that are in at least one of the sets $$X_n$$
+- $$\mathbb{N^+} is the <b>Index Set</b> for the union <br><br>
+
+Def: <b>Family of Sets</b>. Let A be a set, for $$a \in A$$, let $$X_a$$ be a set (so A is a set of sets). $$F = \{X_a \mid a \in A \}$$ is the family of sets indexed by A (so F is basically a subset of the set of sets?).
+
+
+
 
 
 
