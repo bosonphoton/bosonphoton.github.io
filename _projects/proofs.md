@@ -23,7 +23,7 @@ importance: 2
     }
 </style>
 
-<h5><b>Preliminary</b></h5>
+<h4><b>Preliminary</b></h4>
 Natural numbers $$\mathbb{N}$$ = {0,1,2,3...} <br>
 Integers $$\mathbb{Z}$$ = {...,-1,0,1,...} <br>
 Rational numbers $$\mathbb{Q}$$ = {$$\frac{p}{q}$$ where p,q $$\in$$ $$\mathbb{Z}$$ and q $$\neq$$ 0} <br>
@@ -48,7 +48,9 @@ Def: X is a <b>proper subset</b> $$\subsetneq$$ of Y if $$X \subset Y$$ and $$X 
 Def: The <b>empty set</b> $$\emptyset$$ is the set with no elements; it is true that $$\emptyset \subset X$$ for any set X <br><br>
 Def: X and Y are <b>disjoint</b> if $$X \cap Y = \emptyset$$ <br><br>
 Def: The <b>Cartesian product</b> (direct product) of X and Y is the set of ordered pairs $$\{ (x,y) | x \in X$$ and $$y \in Y \}$$. More generally, $$\prod_{i=1}^{n} X_i$$ = $$\{ (x_1, x_2, \ldots, x_n) \mid x_i \in X_i, \ 1 \leq i \leq n\}$$. $$X^n$$ denotes the Cartesian product of a set X for n times.  <br><br>
+Def: <b>Floor/ceiling</b>. $$\lceil X \rceil$$ is the set of elements less than X<br><br>
 Order of set operations matter: if X and Y are disjoint, $$(X \cap X) \cup Y \neq X \cap (X \cup Y)$$ <br><br>
+
 
 <h6><b><u>Functions</u></b></h6>
 Let $$f: X \rightarrow Y$$ be a function mapping elements from set $$X$$ to set $$Y$$. <br>
@@ -107,8 +109,20 @@ Def: A <b>permutation</b> of set X is a bijection $$f: X \hookrightarrow X$$
 <h6><b><u>Images and Inverses</u></b></h6> <br>
 Def: <b>Inverse (Pre) Image</b>. Let $$f: X \to Y$$ and $$b \in Y$$. The inverse image $$f^{-1}(b) = \{x \in X \mid f(x) = b\}$$ (Sort of like a reverse mapping) <br>
 1. If $$b \notin Ran(f)$$ then $$f^{-1}(b) = \emptyset$$ 
-2. If f is injection, then for any $$b \in Ran(f), f^{-1}(b)$$ has a single element (bc injections = for every unique x $$\exists$$ unique y so the reverse mapping must have only a single element)
+2. If f is injection, then for any $$b \in Ran(f), f^{-1}(b)$$ has a single element (bc injections = for every unique x $$\exists$$ unique y so the reverse mapping must have only a single element)<br><br>
 
+Def: <b>Inverse Function</b>. If $$f: X \to Y$$ is a bijection, then the inverse function is  $$f^{-1}: Y \to X$$ with the graph $$\{(b,a) \in Y \times X \mid (a,b) \in graph(f)\}$$.<br><br>
+
+Def: <b>Identity Function</b>. If f is a bijection, then $$f^{-1} \circ f = Id(X)$$ and $$f \circ f^{-1} = Id(Y)$$.<br><br>
+
+Def: <b>Restricted Domain</b> (Considers a new function on smaller domain if non-invertible): Because some functions are not injections ($$f = x^{2}$$) and non-invertible (since one Y can map back to two different X's), we can first consider a new function $$g$$ equal to $$f$$ on a subset of the domain. For instance $$g(x) = x^{2}$$ with domain $$\{x \in R \mid x \geq 0\}$$.<br>
+Ex: Let $$f: X \to Y$$ and $$W \subset X$$. The restriction of f to W is $$f\vert_W = f: W \to Y$$ <br>
+$$graph(f\vert_{W}) = graph(f) \cap [W \times Y]$$<br><br>
+
+<h6><b><u>Sequences</u></b> (a list of objects)</h6><br>
+
+Def: A <b>Finite Sequence</b> $$\braket{a_n \mid n < N}$$ is a function with domain $$\lceil N \rceil$$ where $$N \in \mathbb{N}$$.<br> 
+An <b>Infinite Sequence</b> is just $$\braket{a_n \mid n \in N}$$ (the domain is the infinite in $$\mathbb{N}$$)
 
 
 
