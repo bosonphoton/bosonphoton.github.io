@@ -57,7 +57,7 @@ Def: X is a <b>proper subset</b> $$\subsetneq$$ of Y if $$X \subset Y$$ and $$X 
 Def: The <b>empty set</b> $$\emptyset$$ is the set with no elements; it is true that $$\emptyset \subset X$$ for any set X <br><br>
 Def: X and Y are <b>disjoint</b> if $$X \cap Y = \emptyset$$ <br><br>
 Def: The <b>Cartesian product</b> (direct product) of X and Y is the set of ordered pairs $$\{ (x,y) | x \in X$$ and $$y \in Y \}$$. More generally, $$\prod_{i=1}^{n} X_i$$ = $$\{ (x_1, x_2, \ldots, x_n) \mid x_i \in X_i, \ 1 \leq i \leq n\}$$. $$X^n$$ denotes the Cartesian product of a set X for n times.  <br><br>
-Def: <b>Floor/ceiling</b>. $$\lceil X \rceil$$ is the set of elements less than X<br><br>
+Def: <b>Floor/ceiling</b>. $$\lceil n \rceil$$ is the set of natural numbers (0,1,2..., n-1) less than n<br><br>
 Order of set operations matter: if X and Y are disjoint, $$(X \cap X) \cup Y \neq X \cap (X \cup Y)$$ <br><br>
 
 
@@ -145,7 +145,26 @@ Ex: Let $$X_n = \{n+1, n+2,..., 2n\}$$ for $$n \in \mathbb{N^+}$$. Then
 - $$\bigcap_{n=1}^{\infty} X_n = \emptyset$$ <br><br>
 
 
+<h6><b><u>Exercises</u></b></h6><br>
+1. Prove Demorgans Laws: $$(A \cap B)^c = A^c \cup B^c$$
+- Let $$x \in (A \cap B)^c$$
+- Then $$x \notin (A \cap B)$$
+- $$x \notin A$$ and $$x \notin B$$
+- So $$x \in A^c$$ and $$x \in B^c$$ <br><br>
 
+2. Prove that $$A \cap (B \cup C) = (A \cup B) \cap (A \cup C)$$
+- Let $$x \in A \cap (B \cup C)$$
+- $$x \in A$$ and $$x \in (B \cup C)$$
+- $$x \in A$$ and either $$(x \in B)$$ or $$(x \in C)$$
+- either $$(x \in A$$ and $$x \in B)$$ or $$(x \in A$$ and $$x \in C)$$
+- ($$x \in A$$ and $$B$$) or ($$x \in A$$ and $$C$$)
+- So $$x \in (A \cap B) \cup (A \cap C)$$
+
+
+
+<br><br>
+<h4><b>Relations</b></h4>
+Def: A <b>Relation</b> from X to Y is a subset of X $$\times$$ Y.
 
 
 
