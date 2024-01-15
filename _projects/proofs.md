@@ -12,7 +12,7 @@ importance: 2
 
 <style>
     body {
-      font-size: 14px; /* Adjust the font size as needed */
+      font-size: 15px; /* Adjust the font size as needed */
       line-height: 1; /* Adjust the line height as needed */
     }
     p {
@@ -27,21 +27,30 @@ importance: 2
 Natural numbers $$\mathbb{N}$$ = {0,1,2,3...} <br>
 Integers $$\mathbb{Z}$$ = {...,-1,0,1,...} <br>
 Rational numbers $$\mathbb{Q}$$ = {$$\frac{p}{q}$$ where p,q $$\in$$ $$\mathbb{Z}$$ and q $$\neq$$ 0} <br>
+$$\mathbb{R}$$ is both an open interval (noninclusive) and a closed interval (inclusive). <br><br>
 
-A bounded interval must be either:
-1. (a,b)
-2. [a,b)
-3. (a,b]
-4. [a,b] 
+[//]: # (A bounded interval must be either:)
 
-Unbounded intervals are either:
-1. (-$$\infty$$, b)
-2. (-$$\infty$$, b]
-3. (b,$$\infty$$)
-4. [b,$$\infty$$)
-5. R
+[//]: # (1. &#40;a,b&#41;)
 
-Notice that $$\mathbb{R}$$ is both an open interval (noninclusive) and a closed interval (inclusive). <br><br>
+[//]: # (2. [a,b&#41;)
+
+[//]: # (3. &#40;a,b])
+
+[//]: # (4. [a,b] )
+
+[//]: # ()
+[//]: # (Unbounded intervals are either:)
+
+[//]: # (1. &#40;-$$\infty$$, b&#41;)
+
+[//]: # (2. &#40;-$$\infty$$, b])
+
+[//]: # (3. &#40;b,$$\infty$$&#41;)
+
+[//]: # (4. [b,$$\infty$$&#41;)
+
+[//]: # (5. R)
 
 <h6><b><u>Sets</u></b></h6>
 Def: X is a <b>proper subset</b> $$\subsetneq$$ of Y if $$X \subset Y$$ and $$X \neq Y$$ <br><br>
@@ -129,9 +138,12 @@ Def: A finite <b>Binary Sequence</b> is a function $$f:\lceil N \rceil \to \lcei
 
 Def: An <b>Infinite Union</b> is $$\bigcup_{n=1}^{\infty} X_n = \{x \mid \text{for some } n \in \mathbb{N^+}, x \in X_n\}$$
 - collection of all elements that are in at least one of the sets $$X_n$$
-- $$\mathbb{N^+} is the <b>Index Set</b> for the union <br><br>
+- $$\mathbb{N^+}$$ is the <b>Index Set</b> for the union <br><br>
 
-Def: <b>Family of Sets</b>. Let A be a set, for $$a \in A$$, let $$X_a$$ be a set (so A is a set of sets). $$F = \{X_a \mid a \in A \}$$ is the family of sets indexed by A (so F is basically a subset of the set of sets?).
+Def: <b>Family of Sets</b>. Let A be a set, for $$a \in A$$, let $$X_a$$ be a set ($$X_a$$ is a set indexed by A). $$F = \{X_a \mid a \in A \}$$ is the family of sets indexed by A. <br>
+Ex: Let $$X_n = \{n+1, n+2,..., 2n\}$$ for $$n \in \mathbb{N^+}$$. Then
+- $$\bigcap_{n=1}^{\infty} X_n = \emptyset$$ <br><br>
+
 
 
 
