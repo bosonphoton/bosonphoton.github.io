@@ -164,7 +164,18 @@ Ex: Let $$X_n = \{n+1, n+2,..., 2n\}$$ for $$n \in \mathbb{N^+}$$. Then
 
 <br><br>
 <h4><b>Relations</b></h4>
-Def: A <b>Relation</b> from X to Y is a subset of X $$\times$$ Y.
+Def: A <b>Relation</b> from X to Y is a subset of X $$\times$$ Y. Any set of ordered pairs is a relation.<br><br>
+- <b>$$xRy$$</b> denotes that x bears a relation R to y, aka $$(x,y) \in R$$.
+- X and Y can be the same set, then the relation is "on" rather than "between"
+- A function $$f: X \to Y$$ can be thought of as a special relation from X to Y with the property that every X occurs exactly once as a first element of a pair in the relation (where no same X can map to a different Y). <br>
+
+<h6><b><u>Properties of Relations</u></b></h6><br>
+1. <b>Reflexive</b> implies $$(xRx)$$
+2. <b>Symmetric</b> implies $$(xRy = yRx)$$
+3. <b>Antisymmetric</b> implies $$(xRy$$ and $$yRx \to x = y)$$
+4. <b>Transitive</b> implies $$(xRy$$ and $$yRz \to xRz)$$ <br><br>
+
+<h6><b><u>Orderings</u></b></h6><br>
 
 
 
