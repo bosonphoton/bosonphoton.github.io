@@ -170,14 +170,21 @@ Def: A <b>Relation</b> from X to Y is a subset of X $$\times$$ Y. Any set of ord
 - A function $$f: X \to Y$$ can be thought of as a special relation from X to Y with the property that every X occurs exactly once as a first element of a pair in the relation (where no same X can map to a different Y). <br>
 
 <h6><b><u>Properties of Relations</u></b></h6><br>
-1. <b>Reflexive</b> implies $$(xRx)$$
-2. <b>Symmetric</b> implies $$(xRy = yRx)$$
-3. <b>Antisymmetric</b> implies $$(xRy$$ and $$yRx \to x = y)$$
-4. <b>Transitive</b> implies $$(xRy$$ and $$yRz \to xRz)$$ <br><br>
+1. <b>Reflexive</b> implies $$(xRx)$$. (2 = 2)
+2. <b>Symmetric</b> implies $$(xRy = yRx)$$. (3 $$\neq$$ 2 implies 2 $$\neq$$ 3)
+3. <b>Antisymmetric</b> implies $$(xRy$$ and $$yRx \to x = y)$$. (x $$\leq$$ y and x $$\geq$$ y implies x = y)
+4. <b>Transitive</b> implies $$(xRy$$ and $$yRz \to xRz)$$. (2 < 3 and 3 < 4 implies 2 < 4 )  <br><br>
 
 <h6><b><u>Orderings</u></b></h6><br>
+Def: R is a <b>Partial Ordering</b> if it is: <br>
+1. Reflexive 
+2. Antisymmetric 
+3. Transitive <br>
 
+Ex: $$\subset$$ is a partial ordering bc (1) Every set is a subset of itself, (2) If X is a subset of Y and vice versa, then X = Y, and (3) If X is subset of Y and Y is subset of Z then X is subset of Z. <br><br>
 
+Def: Let R be a partial ordering on X. R is a <b>Linear Ordering</b> if for any $$x,y \in X$$, either $$xRy$$ or $$yRx$$ <br>
+Ex: $$\leq$$ and $$\geq$$ on $$\mathbb{R}$$ is a linear ordering but $$<$$ or $$>$$ is not 
 
 
 
