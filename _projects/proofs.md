@@ -72,16 +72,16 @@ Tho different R can map to same Z (i.e., R = -2, 2). <br><br>
 
 Def: The <b>image</b> of x, f(x) for $$x \in X$$ is the element of Y that f assigns to x. <br><br>
 Def: The <b>graph of a function</b> is just the domain paired with it's range (but not every element of Y is used up) $$\{ (x,y) | x \in X$$ and $$f(x) = y \}$$. graph(f) $$\subset X \times Y$$ <br>
-Ex: the empty function is the function with empty graph (a graph that is the empty set of f). So $$f: \emptyset \to Y$$. <br>
-Let $$f: X \rightarrow Y. Z \subset X \times Y$$. Z is a the graph of f if: <br>
+- Ex: the empty function is the function with empty graph (a graph that is the empty set of f). So $$f: \emptyset \to Y$$. <br>
+- Let $$f: X \rightarrow Y. Z \subset X \times Y$$. Z is a the graph of f if: <br>
 1. for any $$x \in X, \exists y \in Y \mid (x,y) \in Z$$ (i.e., every vertical line through X cuts the graph at least once) <br>
 2. if (x,y) is in Z, and (x,z) is in Z, then y = z (i.e., every vertical line through X cuts the curve at most once) <br><br>
 
 Def: X is the <b>domain</b>, Y is the <b>codomain</b> (which accounts for all <i>possible</i> outputs, different than the <b>range</b> which is what <i>actually</i> comes out) <br>
-Ex: Let $$f: \mathbb{N}\to \mathbb{N}$$ be defined by $$f(n) = n^2$$. Let $$g: \mathbb{N}\to \mathbb{R}$$ be defined by $$g(x) = x^2$$. <br>
-Then graph(f) = graph(g), but f and g are different functions. <br>
-Let $$h: \mathbb{R}\to \mathbb{R}$$ be defined by $$h(x) = x^2$$. <br>
-Then graph(f) $$\subsetneq$$ graph(h). <br><br>
+- Ex: Let $$f: \mathbb{N}\to \mathbb{N}$$ be defined by $$f(n) = n^2$$. Let $$g: \mathbb{N}\to \mathbb{R}$$ be defined by $$g(x) = x^2$$. <br> 
+-- Then graph(f) = graph(g), but f and g are different functions. <br>
+- Let $$h: \mathbb{R}\to \mathbb{R}$$ be defined by $$h(x) = x^2$$. <br>
+-- Then graph(f) $$\subsetneq$$ graph(h). <br><br>
 
 Def: The <b>range</b> (basically the function's outputs) is the set of images of elements in X under f; it is a subset of the codomain. <br><br>
 
@@ -94,19 +94,18 @@ Def: f is a <b>real-valued function</b> if Ran(f) $$\subset \mathbb{R}$$ <br><br
 1. f is an injection if x & y are distinct elements $$\in$$ X, f(x) $$\neq$$ f(y). <br>
 2. or if f(x) = f(y) then x = y <br>
 
-Counterexample: $$f(x) = x^2$$ is not an injection bc f(-2) = f(2) <br><br>
-Let $$f: X \to Y$$ and $$g: Y \to Z$$. <br>
-Prove that if f & g are injective, then g $$\circ$$ f is injective. <br>
-<b>Proof</b>: Suppose $$g \circ f(x) = g \circ f(y)$$. If g is injective, then f(x) = f(y). If f is injective, then x = y. So g $$\circ$$ f is injective. 
+- Counterexample: $$f(x) = x^2$$ is not an injection bc f(-2) = f(2) <br><br>
+- Let $$f: X \to Y$$ and $$g: Y \to Z$$. Prove that if f & g are injective, then g $$\circ$$ f is injective. <br>
+- <b>Proof</b>: Suppose $$g \circ f(x) = g \circ f(y)$$. If g is injective, then f(x) = f(y). If f is injective, then x = y. So g $$\circ$$ f is injective. 
 <br><br>
 
 
 <b>2. Surjections (onto)</b>: All y must be assigned some x; even if different x maps to same y<br>
 1. f is a surjection if Ran(f) = Y (i.e., the range captures ALL of the codomain)<br>
 
-Let $$ Y = \{x \in \mathbb{R} \mid x \geq 0 \}$$ and $$f: \mathbb{R} \to Y$$ be defined by $$f(x) = x^2$$. Prove that f is a surjection. <br>
-<b>Proof</b>: We need to prove that Ran(f) = Y. Since Ran(f) is always $$\subset$$ Y, we also want to show Y $$\subset$$ Ran(f). Let y $$\in$$ Y, so y is a non-negative real number. Then $$\sqrt{y} \in \mathbb{R}$$ and f($$\sqrt{y}$$) = y. So y $$\in$$ Ran(f). Since y is an arbitrary element of Y, then Y $$\subset$$ Ran(f). <br>
-<b>Explanation</b>: We start with the definition of a surjection, which is Y = ran(f). To prove equivalence, we can show that they are subsets of each other. Using the known fact that the range is always a subset of the codomain, we additionally need to show that this given codomain Y is a subset of the range. We choose some input $$\sqrt{y}$$ that satisfies $$\in \mathbb{R}$$, and the output image is y. So y is an element of Ran(f). Since y is arbitrary, this shows that <b>every</b> element in Y is in Ran(f), so Y $$\subset$$ Ran(f).
+- Let $$ Y = \{x \in \mathbb{R} \mid x \geq 0 \}$$ and $$f: \mathbb{R} \to Y$$ be defined by $$f(x) = x^2$$. Prove that f is a surjection. <br>
+- <b>Proof</b>: We need to prove that Ran(f) = Y. Since Ran(f) is always $$\subset$$ Y, we also want to show Y $$\subset$$ Ran(f). Let y $$\in$$ Y, so y is a non-negative real number. Then $$\sqrt{y} \in \mathbb{R}$$ and f($$\sqrt{y}$$) = y. So y $$\in$$ Ran(f). Since y is an arbitrary element of Y, then Y $$\subset$$ Ran(f). <br>
+- <b>Explanation</b>: We start with the definition of a surjection, which is Y = ran(f). To prove equivalence, we can show that they are subsets of each other. Using the known fact that the range is always a subset of the codomain, we additionally need to show that this given codomain Y is a subset of the range. We choose some input $$\sqrt{y}$$ that satisfies $$\in \mathbb{R}$$, and the output image is y. So y is an element of Ran(f). Since y is arbitrary, this shows that <b>every</b> element in Y is in Ran(f), so Y $$\subset$$ Ran(f).
 <br><br>
 
 <b>3. Bijections (both inj + surj)</b>: All elements of y must have a unique x<br>
@@ -125,7 +124,7 @@ Def: <b>Inverse Function</b>. If $$f: X \to Y$$ is a bijection, then the inverse
 Def: <b>Identity Function</b>. If f is a bijection, then $$f^{-1} \circ f = Id(X)$$ and $$f \circ f^{-1} = Id(Y)$$.<br><br>
 
 Def: <b>Restricted Domain</b> (Considers a new function on smaller domain if non-invertible): Because some functions are not injections ($$f = x^{2}$$) and non-invertible (since one Y can map back to two different X's), we can first consider a new function $$g$$ equal to $$f$$ on a subset of the domain. For instance $$g(x) = x^{2}$$ with domain $$\{x \in R \mid x \geq 0\}$$.<br>
-Ex: Let $$f: X \to Y$$ and $$W \subset X$$. The restriction of f to W is $$f\vert_W = f: W \to Y$$ <br>
+- Ex: Let $$f: X \to Y$$ and $$W \subset X$$. The restriction of f to W is $$f\vert_W = f: W \to Y$$ <br>
 $$graph(f\vert_{W}) = graph(f) \cap [W \times Y]$$<br><br>
 
 <h6><b><u>Sequences</u></b> (a list of objects)</h6><br>
@@ -141,8 +140,7 @@ Def: An <b>Infinite Union</b> is $$\bigcup_{n=1}^{\infty} X_n = \{x \mid \text{f
 - $$\mathbb{N^+}$$ is the <b>Index Set</b> for the union <br><br>
 
 Def: <b>Family of Sets</b>. Let A be a set, for $$a \in A$$, let $$X_a$$ be a set ($$X_a$$ is a set indexed by A). $$F = \{X_a \mid a \in A \}$$ is the family of sets indexed by A. <br>
-Ex: Let $$X_n = \{n+1, n+2,..., 2n\}$$ for $$n \in \mathbb{N^+}$$. Then
-- $$\bigcap_{n=1}^{\infty} X_n = \emptyset$$ <br><br>
+- Ex: Let $$X_n = \{n+1, n+2,..., 2n\}$$ for $$n \in \mathbb{N^+}$$. Then $$\bigcap_{n=1}^{\infty} X_n = \emptyset$$ <br><br>
 
 
 <h6><b><u>Exercises</u></b></h6><br>
@@ -176,15 +174,21 @@ Def: A <b>Relation</b> from X to Y is a subset of X $$\times$$ Y. Any set of ord
 4. <b>Transitive</b> implies $$(xRy$$ and $$yRz \to xRz)$$. (2 < 3 and 3 < 4 implies 2 < 4 )  <br><br>
 
 <h6><b><u>Orderings</u></b></h6><br>
-Def: R is a <b>Partial Ordering</b> if it is: <br>
+Def: R is a <b>Partial Ordering</b> ($$\preceq$$) if it is: <br>
 1. Reflexive 
 2. Antisymmetric 
 3. Transitive <br>
 
-Ex: $$\subset$$ is a partial ordering bc (1) Every set is a subset of itself, (2) If X is a subset of Y and vice versa, then X = Y, and (3) If X is subset of Y and Y is subset of Z then X is subset of Z. <br><br>
+<img src="/assets/img/partialordering.png" alt="partord" width = "400"><br><br>
+Visualize partial orderings by imagining arrows connecting distinct elements $$a,b$$ if $$a \preceq b$$ and there is no third element $$c$$ s.t. $$a \preceq c \preceq b$$ <br><br>
+- Ex: Let X be a set of collections of apples and oranges (X = \{$$basket_a, basket_b$$\}). If $$basket_a$$,$$basket_b$$ are in X, then $$basket_a$$ $$\preceq$$ $$basket_b$$ if number of apples in $$basket_a \leq basket_b$$ AND number of oranges in $$basket_a \leq basket_b$$, this is a partial ordering. <br><br>
+- Ex: $$\subset$$ is a partial ordering bc (1) Every set is a subset of itself, (2) If X is a subset of Y and vice versa, then X = Y, and (3) If X is subset of Y and Y is subset of Z then X is subset of Z. <br><br>
 
-Def: Let R be a partial ordering on X. R is a <b>Linear Ordering</b> if for any $$x,y \in X$$, either $$xRy$$ or $$yRx$$ <br>
-Ex: $$\leq$$ and $$\geq$$ on $$\mathbb{R}$$ is a linear ordering but $$<$$ or $$>$$ is not 
+
+Def: Let R be a partial ordering on X. R is a <b>Linear Ordering</b> (total ordering) if for any $$x,y \in X$$, either $$xRy$$ or $$yRx$$ (either $$x \leq y$$ or $$y \leq x$$ or both if x = y) <br>
+- Ex: $$\leq$$ and $$\geq$$ on $$\mathbb{R}$$ is a linear ordering but $$<$$ or $$>$$ is not <br><br>
+
+
 
 
 

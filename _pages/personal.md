@@ -64,6 +64,7 @@ nav_order: 4
   <li>The Doors of Perception by Aldous Huxley</li>
   <li>Nausea by Jean-Paul Sartre</li>
   <li>The Myth of Sisyphus by Albert Camus</li>
+  <li>Magic Tree House Series by Mary Pope Osborne</li>
 </ul>
 
 </body>
