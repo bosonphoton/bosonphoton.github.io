@@ -198,7 +198,7 @@ Def: <b>Equivalence Relation</b> if R is: <br>
 2. <u>Symmetric:</u> Suppose (a,b) R (c,d) so a + d = b + c. To see if (c,d) R (a,b), check whether c + b = d + a, this holds by commutativity of addition. 
 3. <u>Transitive:</u> Suppose (a, b) R (c, d) and (c,d) R (e,f). Check (a, b) R (e,f) aka a + f = b + e. We have a + d = b + c and c + f = d + e, and adding these two we get a + d + c + f = b + c + d + e and cancelling c + d we get a + f = b + e. <br><br>
 
-Def: <b>Equivalence class</b> 
+Def: <b>Equivalence Clas</b> 
 
 
 
