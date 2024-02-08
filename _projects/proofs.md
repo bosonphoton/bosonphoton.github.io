@@ -188,6 +188,18 @@ Visualize partial orderings by imagining arrows connecting distinct elements $$a
 Def: Let R be a partial ordering on X. R is a <b>Linear Ordering</b> (total ordering) if for any $$x,y \in X$$, either $$xRy$$ or $$yRx$$ (either $$x \leq y$$ or $$y \leq x$$ or both if x = y) <br>
 - Ex: $$\leq$$ and $$\geq$$ on $$\mathbb{R}$$ is a linear ordering but $$<$$ or $$>$$ is not <br><br>
 
+Def: <b>Equivalence Relation</b> if R is: <br>
+1. Reflexive
+2. Symmetric 
+3. Transitive <br>
+
+- Ex: If $$a,b,c,d \in \mathbb{Z}$$, $$(a,b) R (c,d)$$ iff. $$a + d = b + c$$, R is an equivalence relation:
+1. <u>Reflexive:</u> So (a,b) R (a,b) if a + b = a + b 
+2. <u>Symmetric:</u> Suppose (a,b) R (c,d) so a + d = b + c. To see if (c,d) R (a,b), check whether c + b = d + a, this holds by commutativity of addition. 
+3. <u>Transitive:</u> Suppose (a, b) R (c, d) and (c,d) R (e,f). Check (a, b) R (e,f) aka a + f = b + e. We have a + d = b + c and c + f = d + e, and adding these two we get a + d + c + f = b + c + d + e and cancelling c + d we get a + f = b + e. <br><br>
+
+Def: <b>Equivalence class</b> 
+
 
 
 

@@ -7,7 +7,7 @@ nav: true
 nav_order: 4
 ---
 <img src="/assets/img/speedride.jpg" alt="Speedriding mid-air in the french alps" width="300" height="200">
-<figcaption>Speedriding in the French alps -- midair capture before a catastrophic crash landing</figcaption> 
+<figcaption>Speedriding in the French alps</figcaption> 
 <br>
 # Bookshelf
 <head>
