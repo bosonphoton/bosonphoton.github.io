@@ -18,6 +18,21 @@ importance: 4
 category: work
 
 ---
+<style>
+    body {
+      font-size: 15px; /* Adjust the font size as needed */
+      line-height: 1; /* Adjust the line height as needed */
+    }
+    p {
+      margin-bottom: 8px; /* Adjust the margin bottom for paragraphs as needed */
+    }
+    .math {
+      font-size: 14px; /* Adjust the font size for math expressions as needed */
+    }
+</style>
+
+
+
 
 <h5>Big O & Recursion</h5>
 Log time $$O(log$$ $$n)$$: Means that somewhere in algo, input is <b>reduced by a percentage at each step</b> (i.e., binary search where step 1 is n/2 and step 2 is n/4, etc.)
@@ -41,7 +56,8 @@ def fn(i):
 
 <br><br>
 <h2>1. Array and Strings</h2>
-<h5>Two Pointers</h5>
+<h5><b><u>Two Pointers</u></b></h5>
+<b>***Algorithm</b>
 - Start with two pointers left and right
 - Iterate these two pointers along an array or string index
 - *Usually start code with while left < right
@@ -61,7 +77,7 @@ def palindrome(n):
     
     return True
 ```
-<br><br>
+<br>
 Check if there exists a target = sum of two numbers, in sorted array:
 - Start summing left and right
 - Because array is sorted, we can just move right pointer left if sum is too big, and left pointer right if too small
@@ -82,7 +98,7 @@ def sorted_twosum(array, target):
     
     return False
 ```
-<br><br>
+<br>
 Using two pointers to iterate through two arrays:
 - Start both pointers at the first index
 - Use while loop until one pointer reaches end
@@ -113,7 +129,7 @@ def merge(arr1, arr2):
     
     return ans
 ```
-<br><br>
+<br>
 Check if string A is a subsequence of string B:
 - Init two pointers for string A and B
 - If pointers match, move both pointers to the next letter
@@ -129,11 +145,70 @@ def subseq(a,b):
             j += 1 #will move b if no match
             
     return i == len(a) #True only if we iterated all through a
-
 ```
+<br>
+<h5><b><u>Sliding Window</u></b></h5>
+Use sliding windows when the problem:
+1. Defines some constraint/attribute to make the subarray "valid" (valid if sum of subarray is < 10)
+2. Asks to find subarray in some way (i.e., longest, shortest, largest valid subarray)
+
+Examples of problems include:
+- Find the longest subarray with a sum less than or equal to k
+- Find the longest substring that has at most one "0"
+- Find the number of subarrays that have a product less than k
+
+<b>***Algorithm:</b> Left and right bound of subarray can be defined by two pointers:
+- initialize two pointers left = right = 0
+- increment right to add new valid elements to subarray
+- increment left to remove elements that make subarray invalid
+- keep track of constraint using a variable "curr"" and then do "curr += nums[right]" etc. (to maintain O(1))
+- use <b>for loop</b> to increment <b>right to </b>add elements 
+- use <b>while loop</b> to <b>remove</b> elements until array valid
+- update answer after exiting while loop
+
+For an array of length n, there are:<br>
+- n subarrays of length 1 <br>
+- (n - 1) subarrays of length 2 <br>
+- (n - 2) subarrays of length 3...<br>
+- So in total there are $$\frac{n(n+1)}{2}$$ subarrays
+
+Return len of longer subarray that sums < k:
+```python
+def subarr(array,k):
+    i = j = 0
+    curr = 0 #constraint checker
+    ans = 0
+    for i in len(array): #keep adding elements til
+        curr += array[i] #update current checker
+        while curr > k: #keep removing elements until current is <= k
+            curr -= array[j]
+            j += 1        
+        ans = max(ans, right - left + 1)
+    
+    return ans
+```
+Return len of longest sequence of 1's in an array of 1s and 0s. You may flip one 0 (notice this is the same as saying longest array that contains at most one 0):
+```python
+def ones(array): #constraint in this problem is curr <= 1 zeros
+    i = j = ans = 0
+    curr = 0
+    for i in len(array):
+        if array[i] == 0: #if right pointer encounters 0
+            curr += 1 
+    while curr > 1: #remove element if left pointer is 0
+        if array[j] == 0:
+            curr -= 0
+        j += 1   
+    ans = max(ans, right - left + 1)
+
+    return ans
+```
+
+
+
+
+<br><br>
 <h2>Search</h2>
-
-
 <h5>Binary Search</h5>
 
 If we are asked to return the index of an element, rather than a for loop with O(n), we can do it in O(log(n)) using binary search. Divides each section in half recursively.
