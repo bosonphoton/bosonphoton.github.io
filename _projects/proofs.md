@@ -188,19 +188,37 @@ Visualize partial orderings by imagining arrows connecting distinct elements $$a
 Def: Let R be a partial ordering on X. R is a <b>Linear Ordering</b> (total ordering) if for any $$x,y \in X$$, either $$xRy$$ or $$yRx$$ (either $$x \leq y$$ or $$y \leq x$$ or both if x = y) <br>
 - Ex: $$\leq$$ and $$\geq$$ on $$\mathbb{R}$$ is a linear ordering but $$<$$ or $$>$$ is not <br><br>
 
-Def: <b>Equivalence Relation</b> if R is: <br>
+<h6><b><u>Equivalence Relation</u></b></h6><br>
+Def: <b>Equivalence Relation (x ~ y for xRy)</b> Basically rules that allows us to relate objects in a set that we consider the same in given context (like relating ppl with the same height from two diff groups). if R is: <br>
 1. Reflexive
 2. Symmetric 
 3. Transitive <br>
+
 
 - Ex: If $$a,b,c,d \in \mathbb{Z}$$, $$(a,b) R (c,d)$$ iff. $$a + d = b + c$$, R is an equivalence relation:
 1. <u>Reflexive:</u> So (a,b) R (a,b) if a + b = a + b 
 2. <u>Symmetric:</u> Suppose (a,b) R (c,d) so a + d = b + c. To see if (c,d) R (a,b), check whether c + b = d + a, this holds by commutativity of addition. 
 3. <u>Transitive:</u> Suppose (a, b) R (c, d) and (c,d) R (e,f). Check (a, b) R (e,f) aka a + f = b + e. We have a + d = b + c and c + f = d + e, and adding these two we get a + d + c + f = b + c + d + e and cancelling c + d we get a + f = b + e. <br><br>
 
-Def: <b>Equivalence Clas</b> 
+Def: <b>Equivalence Class $$[x]_R$$</b> is the set of all elements in X that satisfies some equivalence relation R for $$x \in X$$ (like relating heights, ages, birthdays, weights). If $$y \in [x]_R$$, y is a <b>representative element</b>.
+- Ex: Let X = $$\{1,2,3,4,5\}$$. Let R = $$\{(a,b) \mid a+b \text { is even} \}$$
+1. First we must confirm R is an equivalence relation. 
+2. Equivalence class of [1] = {1,3,5}
+3. Equivalence class of [2] = {2,4} and so on <br><br>
 
+Def: The set of all equivalence classes $$\{[x]_R \mid x \in X\}$$ is the <b>quotient space</b> of X by R, denoted $$X/R$$.
+<br><br>
 
+Prop: Let $$x,y \in R$$. If $$x \sim y$$, then [x] = [y]. Else, $$[x] \cap [y] = \emptyset$$.
+- Let x and y be people with same height. Then the equivalent class of person x (which is all people with same height as x) must equal to all persons with same height of person y <br><br>
 
+Def: <b>Pairwise Disjoint: </b> Let $$\{ X_a \mid a \in A \}$$ be a family of sets. The family is pairwise disjoint if for any $$a,b \in A, a \neq b$$ where $$X_a \cap X_b = \emptyset$$. 
+- Basically, the two sets don't overlap <br><br>
 
+Def: <b>Partition: </b> All and only the pairwise disjoint sets make up the partition space.A partition is a chunk of that space.<br><br>
+
+Thm: Let X be a set and ~ an equivalence relation on X. Then X/~ (quotient space of X by ~) is a partition of X (bc quotient space is just the set of all equivalence classes and they are d)
+- Let X be a bunch of ppl and ~ is those with same height. Then X/~ (the quotient space i.e., the set of all people with the same height) is a partition (chunk) of X.<br>
+
+<h6><b><u>Constructing Bijections</u></b></h6><br>
 
