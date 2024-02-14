@@ -12,14 +12,14 @@ importance: 2
 
 <style>
     body {
-      font-size: 15px; /* Adjust the font size as needed */
+      font-size: 16px; /* Adjust the font size as needed */
       line-height: 1; /* Adjust the line height as needed */
     }
     p {
       margin-bottom: 8px; /* Adjust the margin bottom for paragraphs as needed */
     }
     .math {
-      font-size: 14px; /* Adjust the font size for math expressions as needed */
+      font-size: 16px; /* Adjust the font size for math expressions as needed */
     }
 </style>
 
@@ -217,8 +217,12 @@ Def: <b>Pairwise Disjoint: </b> Let $$\{ X_a \mid a \in A \}$$ be a family of se
 
 Def: <b>Partition: </b> All and only the pairwise disjoint sets make up the partition space.A partition is a chunk of that space.<br><br>
 
-Thm: Let X be a set and ~ an equivalence relation on X. Then X/~ (quotient space of X by ~) is a partition of X (bc quotient space is just the set of all equivalence classes and they are d)
-- Let X be a bunch of ppl and ~ is those with same height. Then X/~ (the quotient space i.e., the set of all people with the same height) is a partition (chunk) of X.<br>
+Thm: Let X be a set and ~ an equivalence relation on X. Then <b>X/~</b> (quotient space of X by ~) is a partition of X (bc quotient space is just the set of all equivalence classes
+- Let X be a bunch of ppl and ~ is those with same height. Then X/~ (the quotient space i.e., the set of all people with the same height) is a partition (chunk) of X.<br><br>
 
-<h6><b><u>Constructing Bijections</u></b></h6><br>
+<h6><b><u>Constructing Bijections</u></b></h6><br><br>
+Let $$f: X \to Y$$ and ~ is the equivalence relation on X induced by f. $$X/f$$ is the set of equivalence classes induced by ~ of X. 
+- $$X/f$$ is the inverse image of an element in $$Ran(f)$$. If $$x \in X$$ and $$f(x) = y$$: 
+- $$[x] = f^{-1}(y)$$
+- $X/f = \{f^{-1}(y) \mid y \in Ran(f))\}$$. The elements in X/f are <b>level sets</b> of f (think of topographical map where a point maps to a specific altitude (level curve), which are subsets of level sets)
 

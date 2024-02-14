@@ -20,14 +20,14 @@ category: work
 ---
 <style>
     body {
-      font-size: 15px; /* Adjust the font size as needed */
+      font-size: 16px; /* Adjust the font size as needed */
       line-height: 1; /* Adjust the line height as needed */
     }
     p {
       margin-bottom: 8px; /* Adjust the margin bottom for paragraphs as needed */
     }
     .math {
-      font-size: 14px; /* Adjust the font size for math expressions as needed */
+      font-size: 15px; /* Adjust the font size for math expressions as needed */
     }
 </style>
 
@@ -195,12 +195,55 @@ def ones(array): #constraint in this problem is curr <= 1 zeros
     for i in len(array):
         if array[i] == 0: #if right pointer encounters 0
             curr += 1 
-    while curr > 1: #remove element if left pointer is 0
-        if array[j] == 0:
-            curr -= 0
-        j += 1   
-    ans = max(ans, right - left + 1)
+        while curr > 1: #remove element if left pointer is 0
+            if array[j] == 0:
+                curr -= 1
+            j += 1   
+        ans = max(ans, right - left + 1)
 
+    return ans
+```
+<br>
+<b>Number of Subarrays</b> <br>
+- Suppose current window is (left, right). Number of valid subarrays up till right index  = len of window (because left can keep indexing until right).
+- Inside while loop, update answer: [Ans += current window length]
+
+Return num of subarrays whose product < k
+```python
+def subarr(array,k):
+    if k <= 1:
+        return 0
+    
+    j = answer = 0
+    curr = 1
+    for i in len(array):
+        curr *= array[i]
+        while curr >= k:
+            curr /= array[j]
+            j += 1
+        
+        windowlen = i - j + 1 #if you fix the right bound, left bound can take any value up to right 
+        ans += windowlen
+        
+    return answer
+```
+<br>
+<b>Fixed Window Size</b> (problems that require subarrays to be some fixed length k)<br>
+- build window: from index 0 to index (k -1)
+- add element at index i and keep window size by removing element at index<b> (i - k) </b> <br>
+
+Find sum of the subarray with the largest sum whose length is k:
+```python
+def subarr(nums,k):
+    curr = 0 
+    for i in range(k): #build first window 
+        curr += nums[i] #sum of first window
+    
+    ans = curr 
+    for i in range(k, len(nums)): #start at element to right of existing window
+        curr += nums[i] - nums[i - k] #add right and remove left element
+        ans = max(ans, curr)
+    
     return ans
 ```
 
