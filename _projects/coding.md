@@ -244,7 +244,7 @@ def subarr(nums,k):
         curr += nums[i] - nums[i - k] #add right and remove left element
         ans = max(ans, curr)
     
-    return ans
+    return an
 ```
 
 
