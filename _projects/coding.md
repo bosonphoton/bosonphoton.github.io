@@ -172,13 +172,13 @@ For an array of length n, there are:<br>
 - (n - 2) subarrays of length 3...<br>
 - So in total there are $$\frac{n(n+1)}{2}$$ subarrays
 
-Return len of longer subarray that sums < k:
+Return len of longest subarray that sums < k:
 ```python
 def subarr(array,k):
     i = j = 0
     curr = 0 #constraint checker
     ans = 0
-    for i in len(array): #keep adding elements til
+    for i in range(len(array)): #keep adding elements til
         curr += array[i] #update current checker
         while curr > k: #keep removing elements until current is <= k
             curr -= array[j]
@@ -192,7 +192,7 @@ Return len of longest sequence of 1's in an array of 1s and 0s. You may flip one
 def ones(array): #constraint in this problem is curr <= 1 zeros
     i = j = ans = 0
     curr = 0
-    for i in len(array):
+    for i in range(len(array)):
         if array[i] == 0: #if right pointer encounters 0
             curr += 1 
         while curr > 1: #remove element if left pointer is 0
@@ -216,7 +216,7 @@ def subarr(array,k):
     
     j = answer = 0
     curr = 1
-    for i in len(array):
+    for i in range(len(array)):
         curr *= array[i]
         while curr >= k:
             curr /= array[j]
@@ -246,6 +246,35 @@ def subarr(nums,k):
     
     return an
 ```
+<br>
+<h5><b><u>Prefix Sum</u></b></h5>
+- Create array prefix where prefix[i] is the sum of all elements up to i
+- Sum from i to j = prefix[j] - prefix[i-1] <-- (which is the sum before index i)
+
+Given int array nums, queries where queries[i] = [x, y] and a limit, return bool arr true if the sum from x to y is less than limit: <br>
+nums = [1, 6, 3, 2, 7, 2]<br>
+queries = [[0, 3], [2, 5], [2, 4]]<br>
+limit = 13<br>
+the answer is [true, false, true]
+
+```python
+def answer_queries(nums, queries, limit):
+    #builds the prefix array
+    prefix = [nums[0]] #start with first element in nums so [-1] index won't be empty
+    for i in range(1, len(nums)): #start adding the last value of prefix with the next value in nums
+        prefix.append(nums[i] + prefix[-1])
+    
+    ans = []
+    for x, y in queries:
+        curr = prefix[y] - prefix[x] + nums[x] # add nums[x] bc it's included in array 
+        ans.append(curr < limit)
+
+    return ans
+```
+
+
+
+
 
 
 
