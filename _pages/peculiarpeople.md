@@ -44,7 +44,6 @@ His mum died when he was young, he has some chronic injury that he needs medical
 I think maybe that’s why he believes in the things he does. I was scouting for some past trauma to make sense as to 
 how someone begins with these contrarian beliefs. I like him though. He still sends me some conspiracy articles to this day.
 
-
 <h4>March 7th, 2024: Stuart and the Pigs</h4>
 - <b>Appearance:</b> 60s, gray messy hair, jeans and plaid farming clothes covered in dust and dirt, barefoot, covered in mud, bright blue eyes, strange friendly deamenor, thick farmer NZ/AUS accent
 - <b>Highlights:</b> Has over 150+ pigs purely as his pets
