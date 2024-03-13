@@ -33,7 +33,6 @@ category: work
 
 
 
-
 <h5>Big O & Recursion</h5>
 Log time $$O(log$$ $$n)$$: Means that somewhere in algo, input is <b>reduced by a percentage at each step</b> (i.e., binary search where step 1 is n/2 and step 2 is n/4, etc.)
 <br><br>

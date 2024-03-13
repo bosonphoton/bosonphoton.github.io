@@ -18,7 +18,6 @@ horizontal: false
 
 ---
 
-
 <!-- pages/projects.md -->
 
 <div class="projects">
