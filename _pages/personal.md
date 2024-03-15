@@ -111,7 +111,7 @@ nav_order: 4
 </div>
 
 <div class="iframe-container">
-  <iframe style="border-radius:12px" src="https://open.spotify.com/show/0Nq3gBTKrKfCOLNvpFhhS1?si=549cea217e414e81" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+ <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/0Nq3gBTKrKfCOLNvpFhhS1?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 </div>
 
 <div class="iframe-container">
