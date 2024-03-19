@@ -14,22 +14,38 @@ nav_order: 5
 
 ---
 
-<h4>March 15th, 2024: Lake Tekapo Quacker</h4>
-<div style="font-size: 12px;">
-<b>Appearance:</b> Could not really tell in the dark but prob 50-60s man or woman<br>
-<b>Highlights:</b> Quacked and snored all night<br>
-<b>Entry:</b> I'm staying in a hostel for a night in Lake Tekapo and placed in a room with 3 other beds. 
-In the top bunk next to mine, someone begins snoring incredibly loud in some of the most creative ways -- 
-whistling, grunting, whimpering, moaning, sighing, etc. This continues for some time as I toss and turn.
-Finally, the symphony silences. I'm exhausted by this point, and can finally get comfy. A few minutes later, 
-I hear QUACKING. This person is literally QUACKING. At a steady pace of about 15 quacks per minute.
-At this point I'm not even pissed, I'm downright amused. I'm not sure if it was the lack of sleep but 
-I uncontrollably burst out laughing (trying to be as silent as possible to respect my bunk mates of course). 
-So this person continues quacking on for a few hours, but then something more strange happens.
-They get up in the middle of the night (probably to use the restroom), and remarkably, the quacking does not stop.
-They continue quacking on as they head out the door. When they get back, the quacking stops. Then a few hours later, it begins again.
-I am just so confused. I make a vow to myself, that in the morning I will muster up the courage to directly ask them what that was, just out of curiosity.
-But morning comes and I miss my opportunity. The quacking man/woman/duck remains a mystery.
+[//]: # ()
+[//]: # (<h4>March 15th, 2024: Lake Tekapo Quacker</h4>)
+
+[//]: # (<div style="font-size: 12px;">)
+
+[//]: # (<b>Appearance:</b> Could not really tell in the dark but prob 50-60s man or woman<br>)
+
+[//]: # (<b>Highlights:</b> Quacked and snored all night<br>)
+
+[//]: # (<b>Entry:</b> I'm staying in a hostel for a night in Lake Tekapo and placed in a room with 3 other beds. )
+
+[//]: # (In the top bunk next to mine, someone begins snoring incredibly loud in some of the most creative ways -- )
+
+[//]: # (whistling, grunting, whimpering, moaning, sighing, etc. This continues for some time as I toss and turn.)
+
+[//]: # (Finally, the symphony silences. I'm exhausted by this point, and can finally get comfy. A few minutes later, )
+
+[//]: # (I hear QUACKING. This person is literally QUACKING. At a steady pace of about 15 quacks per minute.)
+
+[//]: # (At this point I'm not even pissed, I'm downright amused. I'm not sure if it was the lack of sleep but )
+
+[//]: # (I uncontrollably burst out laughing &#40;trying to be as silent as possible to respect my bunk mates of course&#41;. )
+
+[//]: # (So this person continues quacking on for a few hours, but then something more strange happens.)
+
+[//]: # (They get up in the middle of the night &#40;probably to use the restroom&#41;, and remarkably, the quacking does not stop.)
+
+[//]: # (They continue quacking on as they head out the door. When they get back, the quacking stops. Then a few hours later, it begins again.)
+
+[//]: # (I am just so confused. I make a vow to myself, that in the morning I will muster up the courage to directly ask them what that was, just out of curiosity.)
+
+[//]: # (But morning comes and I miss my opportunity. The quacking man/woman/duck remains a mystery.)
 
 
 <h4>March 7th, 2024: Stuart and the Pigs</h4>
