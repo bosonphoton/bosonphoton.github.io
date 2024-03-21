@@ -20,7 +20,7 @@ nav_order: 5
 
 <b>Appearance:</b> Could not really tell in the dark but prob 50-60s man or woman<br>
 
-<b>Highlights:</b> <br>
+<b>Highlights:</b> Quacked <br>
 
 <b>Entry:</b> Stayed in a hostel for a night in Lake Tekapo. In the top bunk next to mine, someone begins snoring incredibly loud. A few minutes later, they start quacking. The quacks are indistinguishable from a duck. The quacks are also precisely and consistently paced. Something more strange happens. 
 This person leaves the room in the middle of the night (I assume to use the restroom), but remarkably, the quacking does not stop. They continue quacking on as they head out the door. Only until they get back, the quacking stops. A few hours later, it begins again.
