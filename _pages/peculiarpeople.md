@@ -25,7 +25,7 @@ compares the human herd mentality to topics in Orwell's 1984, as well as Alexand
 <b>Appearance:</b> Mid 20s, short dyed hair, circle framed glasses, williamsburg lgbtq hippie vibes<br>
 <b>Entry:</b> I met Rose from a meditation volunteer retreat in Australia. They voice their perspectives on technology and society, and shares a powerful ayahuasca experience they had in Columbia. 
 They believe technology is advancing too quick and much of it is unnecessary to humanity. I tell them it justifies better living conditions. They agree but responds there may be a tradeoff between the physical anguish of pre-modern societies (hunting for food, dealing with cold winters, etc.) and mental anguish experienced in modern ones (mental health, depression, suicide, etc.). True.
-We get to the topic of psychedelics, and they share their experience of meeting these celestial beings on DMT. I ask her if she supposes the DMT entities objectively exist or are just figments of her subjective consciousness. Her impression is that the entities exist objectively, but what she saw were just "projections" of the higher dimensional beings onto our reality, compressed in a way our brains can comprehend.
+We get to the topic of psychedelics, and they share their experience of meeting these celestial beings on DMT. I ask them if they suppose the DMT entities objectively exist or are just figments of their subjective consciousness. Their impression is that the entities exist objectively, but what they saw were just "projections" of the higher dimensional beings onto our reality, compressed in a way our brains can comprehend.
 
 
 <h4>March 15th, 2024: Lake Tekapo Quacker</h4>
