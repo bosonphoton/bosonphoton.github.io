@@ -1,7 +1,7 @@
 ### Other cool stuff
 
 
-<a href="http://www.paulgraham.com/articles.html">Paul Graham's Essays</a> A collection of essays by Paul Graham
+<a href="http://www.paulgraham.com/articles.html">Paul Graham's Essays</a> Inspo & startup advice from Paul Graham
 
 <a href="https://www.quantamagazine.org/">Quanta Mag</a> Cool science stuff
 
