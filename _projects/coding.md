@@ -250,7 +250,7 @@ def subarr(nums,k):
 - Create array prefix where prefix[i] is the sum of all elements up to i
 - Sum from i to j = prefix[j] - prefix[i-1] <-- (which is the sum before index i)
 
-Given int array nums, queries where queries[i] = [x, y] and a limit, return bool arr true if the sum from x to y is less than limit: <br>
+Given int array nums, queries (pertaining to index of nums) where queries[i] = [x, y] and a limit, return bool arr true if the sum from x to y is less than limit: <br>
 nums = [1, 6, 3, 2, 7, 2]<br>
 queries = [[0, 3], [2, 5], [2, 4]]<br>
 limit = 13<br>
@@ -270,8 +270,29 @@ def answer_queries(nums, queries, limit):
 
     return ans
 ```
+<br>
+
+<b>Running Sum of 1d Array</b>: Given an array of integers nums, you start with an initial positive value startValue. In each iteration, you calculate the step by step sum of startValue plus elements in nums (from left to right).
+Return the minimum positive value of startValue such that the step by step sum is never less than 1. <br><br>
+Input: nums = [-3,2,-3,4,2] <br>
+Output: 5<br>
+Explanation: If you choose startValue = 4, in the third iteration your step by step sum is less than 1.<br>
+- Make prefix sum array
+- Find minimum of prefix array (pref_min)
+- Find X such that sum(X,pref_min) is 1
+- If X is less than 1, return 1
 
 
+```python
+def minStartValue(self, nums):
+        prefix = [nums[0]]
+        for i in range(1,len(nums)):
+            prefix.append(prefix[-1]+nums[i])
+
+        if 1 - min(prefix) < 1:
+            return 1
+        return 1 - min(prefix)
+```
 
 
 

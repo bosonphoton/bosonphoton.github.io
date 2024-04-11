@@ -29,6 +29,7 @@ nav_order: 4
   <li>The Mind's I by Daniel Dennet and Douglas Hofstadter</li> 
   <li style="font-weight: bold;">AI Superpowers: China, Silicon Valley, and the New World Order by Kai-Fu Lee</li>
   <li>AI 2041 by Kai-Fu Lee</li>
+  <li>Chip War by Chris Miller</li>
   <li style="font-weight: bold;">The Singularity is Near by Ray Kurzweil</li>
   <li>How to Create a Mind by Ray Kurzweil</li>
   <li>Life 3.0 by Max Tegmark</li>
