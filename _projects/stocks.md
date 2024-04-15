@@ -12,8 +12,10 @@ importance: 5
 category: work
 ---
 
+Objective: Predict stock price for the next N days into the future.
+
 <h4>Ingredients Used</h4>
-1. Flask
+1. 
 2. AlphaVantage API
 3. ML libraries (tensorflow, sklearn, etc.)
 <br>
@@ -31,10 +33,8 @@ inputs over a longer time period. There are 5 components of an LSTM:
 4. Forget gate: weight of previous state on current state
 5. Output gate: weight of current state output into hidden state
 
-We want to predict a stock price N days into the future. So we want t o
 
 
-<b>Data Cleaning & Preprocessing</b>
 
 
 
