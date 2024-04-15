@@ -11,7 +11,7 @@ nav_order: 4
 
 <hr>
 
-<h3>thoughts (short essays)</h3>
+<h3>thoughts</h3>
 <a href = "/thoughts/AGI.html">Intelligence and AGI</a>
 <br><br>
 
