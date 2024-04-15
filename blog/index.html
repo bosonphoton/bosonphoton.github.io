@@ -5,13 +5,40 @@ pagination:
   enabled: true
   collection: posts
   permalink: /page/:num/
-  per_page: 5
+  per_page: 100
   sort_field: date
   sort_reverse: true
   trail:
     before: 1 # The number of links before the current page
     after: 3  # The number of links after the current page
 ---
+
+<style>
+    .post h3, .post p {
+        font-size: 0.9em;
+    }
+
+    .post .post-meta, .post .post-tags {
+        font-size: 0.8em;
+    }
+
+    .post {
+        padding: 0px;
+    }
+
+    .post-list li {
+        margin-bottom: 0px;
+    }
+
+    .header-bar, .tag-category-list, .featured-posts {
+        margin-bottom: 0px;
+    }
+</style>
+
+
+
+
+
 <h1><a href = "https://medium.com/@capuchipu">my medium blog</a></h1>
 
 <div class="post">
@@ -23,7 +50,6 @@ pagination:
     <h2><a href = "https://medium.com/@capuchipu">medium articles</a> & writing stuff</h2>
   </div>
   {% endif %}
-
 
 
   {% if site.display_tags or site.display_categories %}

@@ -15,4 +15,3 @@
 
 <a href="https://live-closer-to-truth.pantheonsite.io/">Closer To Truth</a> Cool science/philosophy stuff
 
-

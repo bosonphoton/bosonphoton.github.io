@@ -7,15 +7,23 @@ nav: true
 nav_order: 4
 ---
 <img src="/assets/img/speedride.jpg" alt="Speedriding mid-air in the french alps" width="300" height="200">
-<figcaption>Speedriding in the French alps</figcaption> 
-<br>
-# Bookshelf
+<figcaption style="font-size: 12px;"><b>Speedriding in the French alps</b></figcaption>
+
+<hr>
+
+<h3>thoughts (short essays)</h3>
+<a href = "/thoughts/AGI.html">Intelligence and AGI</a>
+<br><br>
+
+<hr>
+
+<h3>bookshelf</h3>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-size: 16px; /* Adjust the font size as needed */
+      font-size: 15px; /* Adjust the font size as needed */
       line-height: 1.5; /* Adjust the line height as needed */
     }
   </style>
@@ -72,8 +80,7 @@ nav_order: 4
 
 <hr>
 
-# Podcasts
-
+<h3>podcasts</h3>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
