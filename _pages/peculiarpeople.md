@@ -6,7 +6,7 @@ title: peculiar people
 
 permalink: /peculiarpeople/
 
-description: encounters of strange people I've met
+description: encounters of interesting and strange people I've met
 
 nav: true
 

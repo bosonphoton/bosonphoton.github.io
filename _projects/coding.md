@@ -282,7 +282,6 @@ Explanation: If you choose startValue = 4, in the third iteration your step by s
 - Find X such that sum(X,pref_min) is 1
 - If X is less than 1, return 1
 
-
 ```python
 def minStartValue(self, nums):
         prefix = [nums[0]]
@@ -293,6 +292,23 @@ def minStartValue(self, nums):
             return 1
         return 1 - min(prefix)
 ```
+
+<br><br>
+<h2>2. Hashing</h2>
+A hash function is a function that takes any input and converts to an integer (that is less than some determined value).<br>
+<b>PROS<b/>
+- Hashmaps (dictionaries) are all O(1) for the following: adding key value pairs, delete element if exists, check existence.<br>
+<b>CONS</b>
+- slower for smaller input sizes
+- collisions (when different keys convert to same integer)
+- take up more space (arrays are more flexible with resizing)
+
+<h5><b><u>Checking for Existence</u></b></h5>
+<b>***Algorithm</b>
+- Start with two pointers left and right
+- Iterate these two pointers along an array or string index
+- *Usually start code with while left < right
+
 
 
 
