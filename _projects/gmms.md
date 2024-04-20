@@ -12,4 +12,4 @@ importance: 6
 category: work
 ---
 
-<embed src="/assets/gmm.pdf" width="800px" height="2100px" />
+<iframe src="/assets/gmm.pdf" width="800px" height="2100px" />
