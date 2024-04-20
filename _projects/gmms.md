@@ -12,5 +12,7 @@ importance: 6
 category: work
 ---
 
-<object data="/assets/gmm.pdf" width="800px" height="2100px" />
+<iframe src="/assets/gmm.pdf" style="width: 100%; height: 100vh; border: none; overflow: auto;" allowfullscreen></iframe>
+<br><br><br>
+or download [here](assets/gmms.pdf) if pdf is not rendering
 
