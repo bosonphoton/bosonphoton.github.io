@@ -12,4 +12,5 @@ importance: 6
 category: work
 ---
 
-<iframe src="/assets/gmm.pdf" width="800px" height="2100px" />
+<object data="/assets/gmm.pdf" width="800px" height="2100px" />
+
