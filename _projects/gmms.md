@@ -14,5 +14,8 @@ category: work
 
 <iframe src="/assets/gmm.pdf" style="width: 100%; height: 100vh; border: none; overflow: auto;" allowfullscreen></iframe>
 <br><br><br>
-or download [here](assets/gmms.pdf) if pdf is not rendering
+
+<img src="/assets/gmm.jpg" width="770" height="1000" alt="gmm" />
+<img src="/assets/gmm-2.jpg" width="770" height="1000" alt="gmm2" />
+<img src="/assets/gmm-3.jpg" width="770" height="1000" alt="gmm3" />
 
