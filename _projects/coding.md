@@ -296,20 +296,28 @@ def minStartValue(self, nums):
 <br><br>
 <h2>2. Hashing</h2>
 A hash function is a function that takes any input and converts to an integer (that is less than some determined value).<br>
-<b>PROS<b/>
+
+<b>PROS</b>
 - Hashmaps (dictionaries) are all O(1) for the following: adding key value pairs, delete element if exists, check existence.<br>
+
 <b>CONS</b>
 - slower for smaller input sizes
 - collisions (when different keys convert to same integer)
 - take up more space (arrays are more flexible with resizing)
 
 <h5><b><u>Checking for Existence</u></b></h5>
+Given an array of integers nums and an integer target, return indices of two numbers such that they add up to target. You cannot use the same index twice.<br>
 <b>***Algorithm</b>
-- Start with two pointers left and right
-- Iterate these two pointers along an array or string index
-- *Usually start code with while left < right
+- Store each (key, value) as (element, and it's index)
+- Iterate through the array, checking if  already exists in the dictionary
+- If not, initialize new entry
+- Else, return array[target - array[i]] (which is the index of the "target - array[i]" element)
 
-
+<h5><b><u>Missing Number</u></b></h5>
+Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array. <br>
+- Approach 1: Sort and compare (return the index that is out of place compared to array element when sorted ascending)
+- Approach 2: Hashset (see which number missing from range [0,n] after creating a dictionary)
+- Approach 3 (clever trick): Sum Cancellation (sum of expected minus sum of array) 
 
 
 
