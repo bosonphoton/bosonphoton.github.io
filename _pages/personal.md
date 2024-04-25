@@ -2,7 +2,7 @@
 layout: page
 permalink: /personal/
 title: personal
-description: Outside of research, I enjoy extreme sports (kitesurfing, paragliding, snowboarding, skiing, currently learning speedriding (skiing with a paraglide)), ambient/classical/electronic music, meditation, & writing random stuff.
+description: Outside of research, I enjoy extreme sports (kitesurfing, paragliding, snowboarding, skiing, currently learning speedriding (skiing with a paraglide)), ambient/classical/electronic music, philosophy of mind, & writing random stuff.
 nav: true
 nav_order: 4
 ---
@@ -12,7 +12,8 @@ nav_order: 4
 <hr>
 
 <h3>thoughts</h3>
-<a href = "/thoughts/AGI.html">Intelligence and AGI</a>
+<a href = "/thoughts/AGI.html">Intelligence and AGI</a><br>
+<a href = "/thoughts/academia.html">Academia Deromanticized</a>
 <br><br>
 
 <hr>
