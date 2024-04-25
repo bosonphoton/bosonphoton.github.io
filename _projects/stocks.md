@@ -42,6 +42,8 @@ An LSTM uses tanh and sigmoid activation functions. <br>
 Sigmoid is used in the in, out, and forget gate, which removes info by squashing values to 0, and keeping info with 1. Tanh is used to update the cell state and output the hidden state, creating candidate values between -1 and 1 that scale and normalize values. <br><br>
 
 
+<h3><b>ML Model</b></h3>
+
 <h6><b>1. Data Preprocessing</b></h6>
 To retrieve the data, I'm using the free AlphaVantage API to get the most recent prices of any stock. First, I'll fill in any missing values with the last known price (note that there are many different approaches to impute for missing data). I'm also applying log transform to the prices because it can better capture relative percentage changes in prices. 
 For instance, a stock going from 10$ to 20$ should not be weighed the same as a stock going from 100$ to 110$ (weber's law!). Finally, normalize the data using min max scaling so that the range of values fall between 0 and 1. 
@@ -67,7 +69,7 @@ def preprocess(ticker):
     data = np.log(np.array(data) + 1) #log transform
     scaled = [ ((i - min(data)) / (max(data) - min(data))) for i in data ] #min max scaling
     
-    return scaled, last_date
+    return scaled, last_date, max(data), min(data)
 
 ```
 I want to create sets of 60 day batches to predict the price of next day. 
@@ -76,7 +78,7 @@ After doing so, I'll split the data into training and testing to see how to well
 ```python
 from sklearn.model_selection import train_test_split
 
-scaled = preprocess(ticker)
+scaled, last_date, max, min = preprocess(ticker)
 X = []
 y = []
 for i in range(60,len(scaled)):
@@ -105,12 +107,79 @@ model.compile(loss='mean_squared_error', optimizer='adam')
 ```
 <br>
 
-<h6><b>3. Trainings the Model</b></h6>
+<h6><b>3. Training and Evaluating the Model</b></h6>
+I'm going to be using MAE and MSE to evaluate my model performance. MAE is just the average deviation of the true values from predicted values. 
+RMSE is the root of the average of squared errors. The difference between the two is that MAE is not very sensitive to outliers because large deviations are weighted linearly,
+so they do not influence the overall error as much as in the RMSE.
+
+- MAE = $$ \frac{1}{n} \sum_{i=1}^{n} \mid y_i - \hat{y}_i \mid $$
+- RMSE = $$ \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2} $$
+
+```python
+from sklearn.metrics import mean_absolute_error, mean_squared_error
+
+model.fit(X_train, y_train, epochs=100, batch_size=32)
+
+X_test = np.array(X_test)
+y_test = np.array(y_test)
+
+test_loss = model.evaluate(X_test, y_test)
+
+y_pred = model.predict(X_test)
+
+mae = mean_absolute_error(y_test, y_pred)
+rmse = mean_squared_error(y_test, y_pred, squared=False)
+
+print("Test Loss: ", test_loss)
+print("Mean Absolute Error: ", mae)
+print("Root Mean Square Error: ", rmse)
+```
+
+When I ran this, I got Test Loss:  0.0002112429210683331, Mean Absolute Error:  0.009415658948740935, Root Mean Square Error:  0.014534198440214904. Good enough. A general practice is to retrain the network on the entire dataset once you are ready to deploy your model. 
+<br><br>
+
+<h6><b>4. Prediction</b></h6>
+Now that the model is trained, I can use the last 60 days to predict the next day's price. Remember that at the beginning, I did a log transform and min max scaling to the values. So now I'll reverse the process and do an inverse transformation to output the actual stock price per share. 
+
+```python
+import math
+
+def inverse_predict(last60,max,min):
+  y_pred = model.predict(np.expand_dims(last60, axis=0))
+  inverse_scaled = (y_pred[0][0]) * (max - min) + min #inverse min max scaling
+  prediction = math.e ** (inverse_scaled) - 1 #inverse log transform
+  prices_pre = np.array(last60) * (max - min) + min #inverse min max scaling
+  prices = math.e ** (prices_pre) - 1 #inverse log transform
+  prices = np.append(prices,prediction)
+
+  return prediction, prices
+
+prediction, prices = inverse_predict(X[-1],max,min) #X[-1] is the last 60 days price
+```
+
+And here is a quick visual chart depicting the past data and the predicted price.
+
+```python
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(10,6))
+plt.plot(range(61), prices, linestyle='-', marker='o', color='red', label='Predicted Data')
+plt.plot(range(60), prices[:60], linestyle='-', marker='o', color='blue', label='Actual Data')
+plt.title(f"{ticker} Stock Price: Last 60 Days and Next Day Predicted")
+plt.xlabel('Date')
+plt.ylabel('Price')
+plt.legend()
+plt.savefig(f"{ticker}_stock_price.png")
+```
+Looks something like this. <img src="/assets/VOO_stock_price.png" alt="VOO Stock Price" width="400" height="240">
+
+Okay my model kinda sucks based on this pic but I promise it's only bc this pic was laying around from an earlier model trained only on like 30 epochs. 
+Whatever lets start building the app. It'll be a super basic interface for now since this is actually my first full stack project (not a CS major lol). 
+The goal is to have the user type in any ticker symbol and then have it display the predicted price of the next day and a visual plot. 
 
 
-
-
-
-
-
+<br>
+<h3><b>Web App</b></h3>
+Finally, the LSTM model to actually predict the stock prices is complete. Now, I'll be developing a simple web application using Flask that
+allows the user to input any stock ticker symbol and predict tomorrow's price. 
 
