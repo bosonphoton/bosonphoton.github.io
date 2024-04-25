@@ -51,9 +51,9 @@ nav_order: 4
   <li style="font-weight: bold;">The Drunkard's Walk: How Randomness Rules Our Lives by Leonard Mlodinow</li>
   <li>Duelling Idiots & Other Probability Puzzlers by Paul J. Nahin</li>
   <li style="font-weight: bold;">Subliminal: How Your Unconscious Mind Rules Your Behavior by Leonard Mlodinow</li>
-  <li style="font-weight: bold;">Being You: A New Science of Consciousness by Anil Seth</li>
   <li>Rethinking Consciousness by Micheal S.A. Graziano</li>
   <li>A Thousand Brains: A New Theory of Intelligence by Jeff Hawkins</li>
+  <li style="font-weight: bold;">Being You: A New Science of Consciousness by Anil Seth</li>
   <li>The Conscious Mind by David Chalmers</li>
   <li>Consciousness and Fundamental Reality by Philip Goff</li>
   <li>Paradox: The Nine Greatest Enigmas in Physics by Jim Al-Khalili</li>
@@ -74,7 +74,7 @@ nav_order: 4
   <li>The Doors of Perception by Aldous Huxley</li>
   <li>Nausea by Jean-Paul Sartre</li>
   <li>The Myth of Sisyphus by Albert Camus</li>
-  <li>Magic Tree House Series by Mary Pope Osborne</li>
+  <li>Magic Tree House Series by Mary Pope Osborne (all time fave)</li>
 </ul>
 
 </body>
