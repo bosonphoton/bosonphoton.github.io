@@ -55,13 +55,30 @@ def fn(i):
 
 <br><br>
 <h2>1. Array and Strings</h2>
+<h5><b><u>Rows & Columns</u></b></h5>
+Transpose matrix
+- Iterate through number of row
+  - Iterate through number of columns
+  - switch rows and columns so matrix[columns][rows]
+
+```python
+numRows = len(matrix)
+numCols = len(matrix[0])
+transposed = []
+for row in range(numRows):
+    newCol = []
+    for col in range(numCols):
+        newCol.append(matrix[col][row])
+    transposed.append(newCol)
+```
+
 <h5><b><u>Two Pointers</u></b></h5>
 <b>***Algorithm</b>
 - Start with two pointers left and right
 - Iterate these two pointers along an array or string index
 - *Usually start code with while left < right
 
-Check if string is palindrome:
+<b>Ex:</b> Check if string is palindrome:
 ```python
 def palindrome(n):
     left = 0
@@ -77,7 +94,7 @@ def palindrome(n):
     return True
 ```
 <br>
-Check if there exists a target = sum of two numbers, in sorted array:
+<b>Ex:</b> Check if there exists a target = sum of two numbers, in sorted array:
 - Start summing left and right
 - Because array is sorted, we can just move right pointer left if sum is too big, and left pointer right if too small
 
@@ -103,7 +120,7 @@ Using two pointers to iterate through two arrays:
 - Use while loop until one pointer reaches end
 - At each iteration of the loop, move one or both of the pointers forward
 
-Merge two sorted arrays:
+<b>Ex:</b> Merge two sorted arrays:
 ```python
 def merge(arr1, arr2):
     ans = []
@@ -129,7 +146,7 @@ def merge(arr1, arr2):
     return ans
 ```
 <br>
-Check if string A is a subsequence of string B:
+<b>Ex:</b> Check if string A is a subsequence of string B:
 - Init two pointers for string A and B
 - If pointers match, move both pointers to the next letter
 - If no match, move pointer for String B to next letter
@@ -171,7 +188,7 @@ For an array of length n, there are:<br>
 - (n - 2) subarrays of length 3...<br>
 - So in total there are $$\frac{n(n+1)}{2}$$ subarrays
 
-Return len of longest subarray that sums < k:
+<b>Ex:</b> Return len of longest subarray that sums < k:
 ```python
 def subarr(array,k):
     i = j = 0
@@ -186,7 +203,8 @@ def subarr(array,k):
     
     return ans
 ```
-Return len of longest sequence of 1's in an array of 1s and 0s. You may flip one 0 (notice this is the same as saying longest array that contains at most one 0):
+
+<b>Ex:</b>Return len of longest sequence of 1's in an array of 1s and 0s. You may flip one 0 (notice this is the same as saying longest array that contains at most one 0):
 ```python
 def ones(array): #constraint in this problem is curr <= 1 zeros
     i = j = ans = 0
@@ -207,7 +225,7 @@ def ones(array): #constraint in this problem is curr <= 1 zeros
 - Suppose current window is (left, right). Number of valid subarrays up till right index  = len of window (because left can keep indexing until right).
 - Inside while loop, update answer: [Ans += current window length]
 
-Return num of subarrays whose product < k
+<b>Ex:</b> Return num of subarrays whose product < k
 ```python
 def subarr(array,k):
     if k <= 1:
@@ -231,7 +249,7 @@ def subarr(array,k):
 - build window: from index 0 to index (k -1)
 - add element at index i and keep window size by removing element at index<b> (i - k) </b> <br>
 
-Find sum of the subarray with the largest sum whose length is k:
+<b>Ex:</b> Find sum of the subarray with the largest sum whose length is k:
 ```python
 def subarr(nums,k):
     curr = 0 
@@ -272,7 +290,7 @@ def answer_queries(nums, queries, limit):
 ```
 <br>
 
-<b>Running Sum of 1d Array</b>: Given an array of integers nums, you start with an initial positive value startValue. In each iteration, you calculate the step by step sum of startValue plus elements in nums (from left to right).
+<b>Ex: Running Sum of 1d Array</b>: Given an array of integers nums, you start with an initial positive value startValue. In each iteration, you calculate the step by step sum of startValue plus elements in nums (from left to right).
 Return the minimum positive value of startValue such that the step by step sum is never less than 1. <br><br>
 Input: nums = [-3,2,-3,4,2] <br>
 Output: 5<br>
@@ -306,15 +324,14 @@ A hash function is a function that takes any input and converts to an integer (t
 - take up more space (arrays are more flexible with resizing)
 
 <h5><b><u>Checking for Existence</u></b></h5>
-Given an array of integers nums and an integer target, return indices of two numbers such that they add up to target. You cannot use the same index twice.<br>
-<b>***Algorithm</b>
+<b>Ex:</b> Given an array of integers nums and an integer target, return indices of two numbers such that they add up to target. You cannot use the same index twice.<br>
 - Store each (key, value) as (element, and it's index)
 - Iterate through the array, checking if  already exists in the dictionary
 - If not, initialize new entry
 - Else, return array[target - array[i]] (which is the index of the "target - array[i]" element)
 
 <b><u>Missing Number</u></b>
-Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array. <br>
+<b>Ex:</b> Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array. <br>
 - Approach 1: Sort and compare (return the index that is out of place compared to array element when sorted ascending)
 - Approach 2: Hashset (see which number missing from range [0,n] after creating a dictionary)
 - Approach 3 (clever trick): Sum Cancellation (sum of expected minus sum of array) 
@@ -322,7 +339,7 @@ Given an array nums containing n distinct numbers in the range [0, n], return th
 <h5><b><u>Counting</u></b></h5>
 - General tip: Use hashmaps for anything counting related
 
-Example 1: You are given a string s and an integer k. Find the length of the longest substring that contains at most k distinct characters.
+<b>Ex:</b> You are given a string s and an integer k. Find the length of the longest substring that contains at most k distinct characters.
 For example, given s = "eceba" and k = 2, return 3. The longest substring with at most 2 distinct characters is "ece".
 - Sliding windows + hashmap: Iterate through the string with sliding windows technique and update the hashmap (deleting elements from left and adding elements such that it satisfies the constraint of len(dict) <= 2) 
 
@@ -343,6 +360,29 @@ def find_longest_substring(s, k):
     
     return ans
 ```
+<br>
+<b><u>Anagrams</u></b>
+- Sorting the strings in alphabetical order, if they are anagrams they will be equal
+
+<b>Ex:</b> Given an array of strings strs, group the anagrams together. For example, given strs = ["eat","tea","tan","ate","nat","bat"], return [["bat"],["nat","tan"],["ate","eat","tea"]]. <br>
+```python
+def groupAnagrams(self, strs):
+    groups = defaultdict(list)
+    for s in strs:
+        key = "".join(sorted(s))
+        groups[key].append(s)
+    
+    return groups.values()
+```
+<br>
+
+<b>Ex: Minimum Consecutive Cards to Pick Up:</b> Given an integer array cards, find the length of the shortest subarray that contains at least one duplicate. If the array has no duplicates, return -1.
+- Initialize a dictionary storing all the indexes of the elements as values
+- The shortest array will have the same element in its first and last index
+- Check the distance between all adjacent pairs of values and find the minimum
+
+
+
 
 
 <br><br>
