@@ -381,9 +381,69 @@ def groupAnagrams(self, strs):
 - The shortest array will have the same element in its first and last index
 - Check the distance between all adjacent pairs of values and find the minimum
 
+<br><br>
+<h2>3. Linked Lists</h2><br>
+Even though head changes, ptr still refers to same node
+```python
+ptr = head
+head = head.next
+head = None
+```
+<br>
 
+<b><u>Single Linked Lists</u></b><br>
+Say we want to add a new element at position i. <br>
+We need a reference to the node at (i - 1) if we wanted to add or remove at (i)
 
+```python
+class ListNode:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
 
+def add_node(prev_node, node_to_add):
+    node_to_add.next = prev_node.next #next step for new element is to position itself at the next step of previous node (at i-1)
+    prev_node.next = node_to_add #set the next step of the previous node at (i-1) to make it i which becomes equal to the new element 
+```
+<br>
+<b><u>Doubly Linked Lists</u></b><br>
+Each node also contains pointer to previous node.
+
+```python
+class ListNode:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+        self.prev = None
+
+# Let node be the node at position i
+def add_node(node, node_to_add):
+    prev_node = node.prev
+    node_to_add.next = node
+    node_to_add.prev = prev_node
+    prev_node.next = node_to_add
+    node.prev = node_to_add
+
+# Let node be the node at position i
+def delete_node(node):
+    prev_node = node.prev
+    next_node = node.next
+    prev_node.next = next_node
+    next_node.prev = prev_node
+```
+
+<b><u>Fast and slow pointers</u></b><br>
+If we have one pointer moving twice as fast as the other, then by the time it reaches the end, the slow pointer will be halfway through since it is moving at half the speed.
+```python
+def get_middle(head):
+    slow = head
+    fast = head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+    
+    return slow.val
+```
 
 <br><br>
 <h2>Search</h2>
