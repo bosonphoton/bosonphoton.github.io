@@ -28,12 +28,10 @@ nav_order: 2
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<hr>
-<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
-    <div style="text-align: left;">
-        <b>Abstracted Gaussian Prototypes for One-Shot Concept Learning (in progress)</b>
-    </div>
-</body>
+<br>
+
+<b>[Abstracted Gaussian Prototypes for One-Shot Concept Learning](/assets/ZouICML.pdf)</b> (Undergrad Thesis)
+
 
 <hr>
 <body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">

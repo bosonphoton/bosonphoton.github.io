@@ -390,9 +390,14 @@ head = head.next
 head = None
 ```
 <br>
-
 <b><u>Single Linked Lists</u></b><br>
-Say we want to add a new element at position i. <br>
+We have a single "next" pointer, so we need a reference to node at i-1 to refer to previous <br>
+
+Say we want to add a new element X into position i. <br>
+1. We need a pointer at i-1
+2. The next element (which is at i) will be pushed to i+1
+2. Which becomes the next node of X
+3. X becomes the next node of pointer 
 We need a reference to the node at (i - 1) if we wanted to add or remove at (i)
 
 ```python
@@ -401,14 +406,16 @@ class ListNode:
         self.val = val
         self.next = None
 
-def add_node(prev_node, node_to_add):
-    node_to_add.next = prev_node.next #next step for new element is to position itself at the next step of previous node (at i-1)
+def add_node(prev_node, node_to_add): #prev_node at i-1
+    node_to_add.next = prev_node.next #
     prev_node.next = node_to_add #set the next step of the previous node at (i-1) to make it i which becomes equal to the new element 
 ```
-<br>
-<b><u>Doubly Linked Lists</u></b><br>
-Each node also contains pointer to previous node.
+<img src = "/assets/node1.png" width = '300' height = '200'>
+<img src = "/assets/node2.png" width = '300' height = '200'>
 
+<br><br>
+<b><u>Doubly Linked Lists</u></b><br>
+We now have a pointer to previous node as well, so unlike single lists, we only need reference to node at i.<br>
 ```python
 class ListNode:
     def __init__(self, val):
@@ -431,19 +438,126 @@ def delete_node(node):
     prev_node.next = next_node
     next_node.prev = prev_node
 ```
+<img src = "/assets/node3.png" width = '400' height = "200">
 
+<br><br>
+<b><u>Linked Lists w/ Sentinel Nodes</u></b><br>
+Head pointer @ start of list and tail pointer @ end of linked lists.<br>
+The real head of the linked list is head.next and the real tail is tail.prev. <br>
+The sentinel nodes themselves are not part of our linked list.
+
+<br>
 <b><u>Fast and slow pointers</u></b><br>
-If we have one pointer moving twice as fast as the other, then by the time it reaches the end, the slow pointer will be halfway through since it is moving at half the speed.
+
+- If we have one pointer moving twice as fast as the other, then by the time it reaches the end, the slow pointer will be halfway through since it is moving at half the speed.
+
 ```python
 def get_middle(head):
     slow = head
     fast = head
-    while fast and fast.next:
+    while fast and fast.next: #fast.next is necessary because if fast is last then fast.next is null and fast.next.next throws an error
         slow = slow.next
         fast = fast.next.next
     
     return slow.val
 ```
+
+<br>
+<b>Ex:</b> Checking if a linked list has a cycle/is closed (imagine a circular track)<br>
+- If the fast pointer eventually meets the slow pointer at some point, we can conclude its closed
+- Otherwise if the distance between fast and slow just keeps increasing with no end, its non-cyclical
+
+```python
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+        slow = head
+        fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast:
+                return True
+
+        return False
+```
+
+<b>Ex:</b> Given a linked list and an integer k, return the k'th from the tail end <br>
+- Position slow pointer at head and fast pointer k steps from head.
+- When fast pointer reaches the end, we know slow must be k'th distance away from tail.
+
+```python
+def find_node(head, k):
+    slow = head
+    fast = head
+    for _ in range(k):
+        fast = fast.next
+    
+    while fast:
+        slow = slow.next
+        fast = fast.next
+    
+    return slow
+```
+<b>Ex:</b> Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
+```python
+def duplicates(head):
+    current = head
+    while current and current.next:
+        if current == current.next: #if there is a duplicate
+          current.next = current.next.next #skip the duplicate (current.next) node
+        else:
+          current = current.next #increment as normal
+    
+    return head
+```
+<br>
+<b><u>Reversing Linked Lists</u></b><br>
+
+- At any given node curr, we can set curr.next = prev to switch direction of arrow
+- At every step through the list (driven by next_node), we switch the directional arrow  
+```python
+def reverse_list(head):
+    prev = None
+    curr = head
+    while curr:
+        next_node = curr.next # first, make sure we set the next node one step forward
+        curr.next = prev      # reverse the direction of the arrow
+        prev = curr           # now prev moves forward to the start curr location
+        curr = next_node      # move curr forward
+        
+    return prev
+```
+
+<b>Ex:</b> Swap Nodes in Pairs: <br>
+- Given the head of a linked list, swap every pair of nodes. For example, given a linked list 1 -> 2 -> 3 -> 4 -> 5 -> 6, return a linked list 2 -> 1 -> 4 -> 3 -> 6 -> 5.
+
+```python
+class Solution:
+    def swapPairs(self, head: ListNode) -> ListNode:
+        dummy = ListNode(0,head) #initialize dummy variable
+        prev, curr = dummy, head #dummy is set to the node before head
+
+        while curr and curr.next: 
+          # first define a few pointers
+          nextPair = curr.next.next
+          secondNode = curr.next
+          
+          secondNode.next = curr #point the next step of secondNode back to curr
+          curr.next = nextPair #point the next step of the first node to the next pair
+          
+          #now we know first node is in 2nd nodes position
+          prev.next = secondNode #swap 2nd node to first position
+          
+          #update pointers
+          prev = curr
+          curr = nextPair
+        
+        return dummy.next #which will always point to head
+```
+
+
+
+
 
 <br><br>
 <h2>Search</h2>
