@@ -173,10 +173,7 @@ plt.savefig(f"{ticker}_stock_price.png")
 ```
 Looks something like this. <img src="/assets/VOO_stock_price.png" alt="VOO Stock Price" width="400" height="240">
 
-Okay my model kinda sucks based on this pic but I promise it's only bc this pic was laying around from an earlier test model trained on like 30 epochs. 
-Whatever lets start building the app. It'll be a super basic interface for now since this is actually my first full stack project (not a CS major lol). 
-The goal is to have the user type in any ticker symbol and then have it display the predicted price of the next day and a visual plot. 
-
+Okay my model kinda sucks based on this pic. What are some ways we can improve?
 
 <br>
 <h3><b>Web App</b></h3>

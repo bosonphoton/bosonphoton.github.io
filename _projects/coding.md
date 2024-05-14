@@ -71,6 +71,16 @@ for row in range(numRows):
         newCol.append(matrix[col][row])
     transposed.append(newCol)
 ```
+<br>
+
+<b>Print the next index:<b>
+
+```python
+arr = [0,1,2,3,4]
+for i in range(len(arr) - 1):
+    print(arr[i], arr[i+1])
+```
+<br>
 
 <h5><b><u>Two Pointers</u></b></h5>
 <b>***Algorithm</b>
@@ -164,6 +174,8 @@ def subseq(a,b):
 ```
 <br>
 <h5><b><u>Sliding Window</u></b></h5>
+<b>size of window = right index - left index + 1 </b><br>
+
 Use sliding windows when the problem:
 1. Defines some constraint/attribute to make the subarray "valid" (valid if sum of subarray is < 10)
 2. Asks to find subarray in some way (i.e., longest, shortest, largest valid subarray)
@@ -512,12 +524,11 @@ def duplicates(head):
 ```
 <br>
 <b><u>Reversing Linked Lists</u></b><br>
-
 - At any given node curr, we can set curr.next = prev to switch direction of arrow
 - At every step through the list (driven by next_node), we switch the directional arrow  
 ```python
 def reverse_list(head):
-    prev = None
+    prev = Null #set prev to be before the head
     curr = head
     while curr:
         next_node = curr.next # first, make sure we set the next node one step forward
@@ -554,6 +565,112 @@ class Solution:
         
         return dummy.next #which will always point to head
 ```
+
+<br><br>
+<h2>4. Stacks</h2> <br> 
+- LIFO (last in first out) -- like a stack of plates
+- Push = append to list 
+- Pop = remove from end of list
+- Check conditions for stack[-1]
+<br>
+
+```python
+def isValid(s)
+    stack = []
+    matching = {"(": ")", "[": "]", "{": "}"}
+
+    for c in s:
+        if c in matching: # if c is an opening bracket
+            stack.append(c)
+        else: # c is either a closing bracket
+            if not stack: # or it DNE so return False
+                return False
+            previous_opening = stack.pop() # check for matching closing bracket
+            if matching[previous_opening] != c: #if does not match then return false
+                return False
+
+    return not stack # since we are popping/removing elements as we go, return True if empty
+```
+
+<br><br>
+<h4>Queues</h4> <br> 
+- FIFO (first in first out) -- like a fast food line <br>
+
+
+```python
+from collections import deque
+
+class RecentCounter:
+    def __init__(self):
+        self.queue = deque()
+
+    def ping(self, t: int) -> int:
+        while self.queue and self.queue[0] < t - 3000:
+            self.queue.popleft()
+        
+        self.queue.append(t)
+        return len(self.queue)
+
+
+# Your RecentCounter object will be instantiated and called as such:
+# obj = RecentCounter()
+# param_1 = obj.ping(t)
+```
+<br>
+<h5>Monotonic</h5> <br> 
+- For each index, find the number of days it is away from a warmer day
+
+```python
+class Solution:
+    def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
+        stack = [] #stores indices as long as temp keeps decreasing
+        answer = [0] * len(temperatures) # init array
+        
+        for i in range(len(temperatures)):
+            while stack and temperatures[stack[-1]] < temperatures[i]: #make sure stack is monotonic decreasing
+                j = stack.pop() 
+                answer[j] = i - j #find how many indices away it is from the element
+            stack.append(i) 
+        
+        return answer
+```
+
+<br><br>
+<h2>5. Binary Trees</h2> <br>
+<h5>Depth First Search (DFS):</h5> Travel down as deep as possible into tree in <b>one</b> direction
+```python
+def dfs(node):
+    if node == None:
+        return
+
+    dfs(node.left) # RECURSIVELY KEEP CALLING LEFT UNTIL NO LEFT NODE EXISTS...THEN CALL RIGHT
+    dfs(node.right)
+    return
+```
+<br>
+
+<b>Ex: Return Maximum Depth of Tree</b>
+```python
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        if not root:
+            return 0
+        
+        left = self.maxDepth(root.left)
+        right = self.maxDepth(root.right)
+        return max(left, right) + 1
+```
+<br>
+<h5>Breadth First Search (BFS): <h5>
+
+
+
 
 
 
