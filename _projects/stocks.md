@@ -171,12 +171,18 @@ plt.ylabel('Price')
 plt.legend()
 plt.savefig(f"{ticker}_stock_price.png")
 ```
-Looks something like this. <img src="/assets/VOO_stock_price.png" alt="VOO Stock Price" width="400" height="240">
 
-Okay my model kinda sucks based on this pic. What are some ways we can improve?
+[//]: # (Looks something like this. <img src="/assets/VOO_stock_price.png" alt="VOO Stock Price" width="400" height="240">)
 
-<br>
-<h3><b>Web App</b></h3>
-Finally, the LSTM model to actually predict the stock prices is complete. Now, I'll be developing a simple web application using Flask that
-allows the user to input any stock ticker symbol and predict tomorrow's price. 
+[//]: # ()
+[//]: # (Okay my model kinda sucks based on this pic. What are some ways we can improve?)
+
+[//]: # ()
+[//]: # (<br>)
+
+[//]: # (<h3><b>Web App</b></h3>)
+
+[//]: # (Finally, the LSTM model to actually predict the stock prices is complete. Now, I'll be developing a simple web application using Flask that)
+
+[//]: # (allows the user to input any stock ticker symbol and predict tomorrow's price. )
 
