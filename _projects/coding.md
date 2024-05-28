@@ -637,7 +637,29 @@ class Solution:
 
 <br><br>
 <h2>5. Binary Trees</h2> <br>
-<h5>Depth First Search (DFS):</h5> Travel down as deep as possible into tree in <b>one</b> direction
+
+<h4>Depth First Search (DFS): Travel down as deep as possible before wide </h4> 
+<br><br>
+
+<h5>Iterative Approach (Using Stacks): Returning DFS Order </h5>
+```python
+def DFS(root):
+    if not root: #base case
+      return []
+    
+    stack = [root] #initialize a stack with root node to keep track of current levels / nodes
+    answer = []
+    while stack: #while stack contains at least one node
+        current = stack.pop() #checks last node of stack (left to right since last element being pushed is left child below)
+        answer.append(current.val) #stores current node
+        if current.right: #if current node has a right child, then push onto stack
+            stack.append(current.right)
+        if current.left: #if current node has a left child, then push onto stack
+            stack.append(current.left)
+```
+<br>
+
+<h5>Recursive Approach: Returning DFS Order</h5>
 ```python
 def dfs(node):
     if node == None:
@@ -667,14 +689,97 @@ class Solution:
         return max(left, right) + 1
 ```
 <br>
-<h5>Breadth First Search (BFS): <h5>
+<h5>Breadth First Search (BFS):</h5> Traverse as <b>wide</b> as possible at given level first before deep <br>
+- init a queue
+- while queue:
+- init variable tracking length of queue (# of current nodes we need to iterate left/right for)
+- iterate over that many of times (to find left/right child of current nodes)
+- pop the queue so it clears for the next step
+- append the children (so queue only storing next nodes)
 
 
+```python
+from collections import deque
 
+def print_all_nodes(root):
+    queue = deque([root])  #stores all nodes at NEXT level from left to right
+    while queue:
+        nodes_in_current_level = len(queue) #we must iterate over this # of times to find left/right child for each
 
+        for _ in range(nodes_in_current_level): #iterate over each level
+            node = queue.popleft() #removes all nodes at CURRENT level
+    
+            print(node.val)
+            
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
+```
+<br>
+<b>Ex: Return all right values</b>
 
+```python
+def rightSideView(self, root):
+    if not root:
+        return []
+    
+    ans = []
+    queue = deque([root])
+    
+    while queue:
+        current_length = len(queue)
+        ans.append(queue[-1].val) # this is the rightmost node for the current level
+        
+        for _ in range(current_length):
+            node = queue.popleft()
+            if node.left:
+                queue.append(node.left)
+            if node.right:
+                queue.append(node.right)
+    
+    return ans
+```
+<br>
 
+<h5>Binary Search Trees:</h5> 
+- All left children are less than the parent, all right values are greater than the parent <br>
+<br>
 
+<b>Ex: Give a range [low,high], return sum of all tree values within that range </b>
+```python
+  def rangeSumBST(self, root, low, high):
+      if not root:
+          return 0
+
+      ans = 0
+      if low <= root.val <= high: 
+          ans += root.val
+      if low < root.val:
+          ans += self.rangeSumBST(root.left, low, high)
+      if root.val < high:
+          ans += self.rangeSumBST(root.right, low, high)
+
+      return ans
+```
+<b>Ex: Check if its a valid binary search tree </b>
+```python
+  def isValidBST(self, root: Optional[TreeNode]) -> bool:
+      def dfs(node, small, large):
+          if not node:
+              return True
+          
+          if not (small < node.val < large):
+              return False
+
+          left = dfs(node.left, small, node.val) #update the upper bound cuz left has to be smaller
+          right = dfs(node.right, node.val, large) #update the lower bound cuz right has to be greater
+
+          # tree is a BST if left and right subtrees are also BSTs
+          return left and right
+
+      return dfs(root, float("-inf"), float("inf"))
+```
 
 <br><br>
 <h2>Search</h2>
