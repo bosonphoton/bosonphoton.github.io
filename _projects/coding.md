@@ -660,6 +660,10 @@ def DFS(root):
 <br>
 
 <h5>Recursive Approach: Returning DFS Order</h5>
+- Preorder: Logic done on current node before moving onto children 
+- Inorder: Logic done after reaching node without left child 
+- Postorder: Logic done only after reaching leaf nodes
+
 ```python
 def dfs(node):
     if node == None:
@@ -669,27 +673,21 @@ def dfs(node):
     dfs(node.right)
     return
 ```
+
 <br>
 
 <b>Ex: Return Maximum Depth of Tree</b>
 ```python
-# Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, val=0, left=None, right=None):
-#         self.val = val
-#         self.left = left
-#         self.right = right
-class Solution:
-    def maxDepth(self, root: Optional[TreeNode]) -> int:
-        if not root:
-            return 0
-        
-        left = self.maxDepth(root.left)
-        right = self.maxDepth(root.right)
-        return max(left, right) + 1
+def maxDepth(self, root):
+    if not root:
+        return 0
+    
+    left = self.maxDepth(root.left)
+    right = self.maxDepth(root.right)
+    return max(left, right) + 1
 ```
 <br>
-<h5>Breadth First Search (BFS):</h5> Traverse as <b>wide</b> as possible at given level first before deep <br>
+<h4>Breadth First Search (BFS):</h4> Traverse as <b>wide</b> as possible at given level first before deep <br>
 - init a queue
 - while queue:
 - init variable tracking length of queue (# of current nodes we need to iterate left/right for)
@@ -780,6 +778,199 @@ def rightSideView(self, root):
 
       return dfs(root, float("-inf"), float("inf"))
 ```
+<br>
+
+<h2>6. Graphs</h2> <br>
+- Undirected (Bidirectional) vs Directed (Unidirectional)
+- Usually represented by a dictionary where each key is node, values are its outgoing connections from each node
+- Use a set "seen" to make sure node is only visited once (to prevent infinite loops in cyclical cases)
+
+<center>
+<img src = "/assets/graphs.png" width = '300' height = '200'>
+</center><br>
+
+<b>Input Type 1: Array of Edges</b> (pairs of edges)
+- edges = [[0, 1], [1, 2], [2, 0], [2, 3]]
+- each pair element in array represents an outgoing edge connection
+
+```python
+def build_graph(edges):
+    graph = {}
+    for x, y in edges:
+        graph[x].append(y)
+        # graph[y].append(x)
+        # uncomment the above line if the graph is undirected
+    
+    return graph
+```
+<br>
+
+<b>Input Type 2: Adjacency List</b> (index based)
+- graph = [[1], [2], [0, 3], []]
+- graph[i] = outgoing connections from node i
+- 
+<br><br>
+
+<b>Input Type 3: Adjacency Matrix</b> (matrix form of array of edges)
+- graph[i][j] = 1 if there is an outgoing connection from node i to node j
+- i.e., if graph[node][i] = 1 then i is a neighbor to node 
+- essentially the same as putting a 1 in the position of "array of edges" representation
+
+
+<center>$$
+\begin{bmatrix}
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+1 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+$$</center>
+<br><br>
+
+<h5>DFS Graphs</h5> <br>
+<b>Return the total number of closed cycle loops</b>
+- Init a set "seen" to prevent from revisiting nodes
+- Internal logic: If node[i]'s neighbor has not seen yet, then mark as seen and recursively check the neighbors on all of its neighbors (this will handle all connections in a cycle as "seen")
+- Iterate over all nodes and if something hasn't been seen yet, we know that's a new cycle
+
+```python
+def findCircleNum(self, isConnected: List[List[int]]) -> int:
+    
+  #internal logic: marks all neighbors in a province as seen
+  def dfs(node): 
+        for neighbor in graph[node]:
+            if neighbor not in seen:
+                seen.add(neighbor)
+                dfs(neighbor)
+    
+    def dfs(start): #iteratively instead of recursively
+        stack = [start]
+        while stack:
+            node = stack.pop()
+            for neighbor in graph[node]:
+                if neighbor not in seen:
+                    seen.add(neighbor)
+                    stack.append(neighbor)     
+                  
+                   
+    # build the graph
+    n = len(isConnected)
+    graph = defaultdict(list)
+    for i in range(n):
+        for j in range(i + 1, n): 
+        # instead of for j in i because if 1s are in the diagonal, 
+        # that would just indicate a node connection to itself 
+            if isConnected[i][j]:
+                graph[i].append(j)
+                graph[j].append(i)
+    
+    seen = set()
+    ans = 0
+    
+    for i in range(n): #checks for new provinces
+        if i not in seen:
+            # add all nodes of a connected component to the set
+            ans += 1
+            seen.add(i)
+            dfs(i)
+    
+    return ans
+```
+<br>
+
+<b>Ex: Return the minimum number of swaps needed for a directed graph to make them all lead into one node</b><br>
+- Indentify all edges pointing away from 0
+- Start DFS starting from node 0 (meaning we will always be moving away from 0)
+- Record the direction, if the original direction matches the DFS, then we need +1 swap (indicate moving towards)
+
+
+```python
+def minReorder(self, n: int, connections: List[List[int]]) -> int:
+    roads = set()
+    graph = defaultdict(list)
+    for x, y in connections:
+        graph[x].append(y)
+        graph[y].append(x)
+        roads.add((x, y))
+
+    def dfs(node):
+        ans = 0
+        for neighbor in graph[node]:
+            if neighbor not in seen:
+                if (node, neighbor) in roads:
+                    ans += 1
+                seen.add(neighbor)
+                ans += dfs(neighbor)
+        
+        return ans
+
+    seen = {0}
+    return dfs(0)
+
+    #iterative version 
+    ans = 0
+    stack = [0]
+    seen = {0}
+    while stack:
+        node = stack.pop()
+        for neighbor in graph[node]:
+            if neighbor not in seen:
+                if (node, neighbor) in roads:
+                    ans += 1
+                seen.add(neighbor)
+                stack.append(neighbor)
+    
+    return ans
+```
+<br>
+<b>Ex: rooms[i] is all keys to other rooms that can be found in that room. Return true if one can visit all rooms</b>
+
+```python
+def canVisitAll(rooms):
+  def dfs(node):
+    for neighbor in rooms[node]:
+      if neighbor not in seen:
+        seen.add(neighbor)
+        dfs(neighbor)
+
+  seen = set()
+  dfs(0)
+  return len(seen) == len(rooms)
+
+```
+<br>
+<b>Ex: Find islands</b><br>
+<img src = "/assets/island.png" width = '300' height = '200'>
+
+```python
+def numIslands(self, grid: List[List[str]]) -> int:
+    def valid(row, col):
+        return 0 <= row < m and 0 <= col < n and grid[row][col] == "1"
+    
+    def dfs(row, col):
+        for dx, dy in directions:
+            next_row, next_col = row + dy, col + dx
+            if valid(next_row, next_col) and (next_row, next_col) not in seen:
+                seen.add((next_row, next_col))
+                dfs(next_row, next_col)
+    
+    directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+    seen = set()
+    ans = 0
+    m = len(grid)
+    n = len(grid[0])
+    for row in range(m):
+        for col in range(n):
+            if grid[row][col] == "1" and (row, col) not in seen:
+                ans += 1
+                seen.add((row, col))
+                dfs(row, col)
+    
+    return ans
+```
+
+
+
 
 <br><br>
 <h2>Search</h2>
