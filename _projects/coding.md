@@ -52,6 +52,8 @@ def fn(i):
     print(i)
     fn(i + 1)
 ```
+<br>
+Random neat trick to flip between 1 and 0 is f(x) = 1 - x. f(1) = 0 and f(0) = 1.
 
 <br><br>
 <h2>1. Array and Strings</h2>
@@ -827,7 +829,9 @@ def build_graph(edges):
 $$</center>
 <br><br>
 
-<h5>DFS Graphs</h5> <br>
+<h5><b>DFS Graphs</b></h5> 
+- Exploring each node's neighbors recursively one by one
+
 <b>Return the total number of closed cycle loops</b>
 - Init a set "seen" to prevent from revisiting nodes
 - Internal logic: If node[i]'s neighbor has not seen yet, then mark as seen and recursively check the neighbors on all of its neighbors (this will handle all connections in a cycle as "seen")
@@ -968,6 +972,198 @@ def numIslands(self, grid: List[List[str]]) -> int:
     
     return ans
 ```
+<br><br>
+
+<h5><b>BFS Graphs</b></h5> (think of water ripples from a stone in pond) <br>
+- Explores all possible neighbors from starting node (level 0)
+- Better for finding <b>shortest path</b>
+- With BFS, every time we visit a node, we must have arrived in the fewest possible steps
+- Each "level" is the direct connection from the chosen node
+
+<b>Ex: Find shortest path of 0's from (0,0) to (n,n)<//b>
+```python
+def shortestPathBinaryMatrix(self, grid):
+    if grid[0][0] == 1:
+        return -1
+    
+    def valid(row, col):
+        return 0 <= row < n and 0 <= col < n and grid[row][col] == 0
+    
+    n = len(grid)
+    seen = {(0, 0)}
+    queue = deque([(0, 0, 1)]) # row, col, steps
+    directions = [(0, 1), (1, 0), (1, 1), (-1, -1), (-1, 1), (1, -1), (0, -1), (-1, 0)]
+    
+    while queue:
+        row, col, steps = queue.popleft()
+        if (row, col) == (n - 1, n - 1): #shortest path is a diagonal
+            return steps
+        
+        for dx, dy in directions:
+            next_row, next_col = row + dy, col + dx
+            if valid(next_row, next_col) and (next_row, next_col) not in seen:
+                seen.add((next_row, next_col))
+                queue.append((next_row, next_col, steps + 1))
+    
+    return -1
+```
+<br><br>
+
+<b>Ex: Given the root of binary tree, target node, and integer k, return all nodes that are k distance from target</b>
+from collections import deque
+
+```python
+def distanceK(self, root, target):
+  # converts tree to undirected graph
+    def dfs(node, parent): 
+        if not node:
+            return
+        
+        node.parent = parent
+        dfs(node.left, node)
+        dfs(node.right, node)
+    
+    dfs(root, None)
+    queue = deque([target]) #stores node at each level
+    seen = {target}
+    distance = 0 #ensures queue is at the kth level
+    
+    while queue and distance < k:
+        current_length = len(queue)
+        for _ in range(current_length): #iterate over all nodes at current level
+            node = queue.popleft()
+            for neighbor in [node.left, node.right, node.parent]: #all neighbors of tree
+                if neighbor and neighbor not in seen:
+                    seen.add(neighbor)
+                    queue.append(neighbor)
+        
+        distance += 1
+    
+    return [node.val for node in queue]
+```
+<br><br>
+
+<b>Ex: Find distance from 0 for each cell (i.e., Return matrix of values where each cell is k distances away from 0<b>
+- Start at all 0 nodes
+- Set all direct neighbors = 1, neighbors of neighbors = 2, and so on
+
+```python
+def updateMatrix(self, mat):
+    def valid(row, col): #check if in bounds and valid
+        return 0 <= row < m and 0 <= col < n and mat[row][col] == 1
+    
+    m = len(mat)
+    n = len(mat[0])
+    queue = deque()
+    seen = set()
+    
+    for row in range(m):
+        for col in range(n):
+            if mat[row][col] == 0:
+                queue.append((row, col, 1))
+                seen.add((row, col))
+    
+    directions = [(0, 1), (1, 0), (0, -1), (-1, 0)]
+
+    while queue:
+        row, col, steps = queue.popleft()
+        
+        for dx, dy in directions:
+            next_row, next_col = row + dy, col + dx
+            if (next_row, next_col) not in seen and valid(next_row, next_col):
+                seen.add((next_row, next_col))
+                queue.append((next_row, next_col, steps + 1))
+                mat[next_row][next_col] = steps
+    
+    return mat
+```
+<br>
+
+<h2>7. Heaps</h2> <br>
+- Used for repeatedly finding max or min element
+- Complete binary tree structure (all levels must be full except last) 
+
+Min Heapify: <br>
+1. Starts at the last nonleaf node
+2. Take min of (child 1, child 2, parent)
+3. Swap places with the min as the parent
+4. Keep doing this until we reach the root node which should then contain the min value
+<br>
+
+<b>Ex: Stones[i] is the weight of i'th stone. Choose heaviest two stones x and y. If x == y, both stones removed. If x < y, put back a stone with weight y - x.  Return weight of the last remaining stone.
+```python
+import heapq #min to max, heapop pops the min
+
+def lastStoneWeight(stones):
+        stones = [-stone for stone in stones] #bc heapq only does min heaps, take the negative for the max heap
+        heapq.heapify(stones) # turns an array into a heap in linear time
+        while len(stones) > 1:
+            first = abs(heapq.heappop(stones)) #pop heaviest stone
+            second = abs(heapq.heappop(stones)) #pop second heaviest stone
+            if first != second:
+                heapq.heappush(stones, -abs(first - second)) #push back the difference
+
+        return -stones[0] if stones else 0
+```
+<br>
+<h5><b>Two Heaps</b></h5> <br>
+
+- Good for finding the median <br>
+
+<b>Ex: Find median </b>
+- Max heap with lower half of data
+- Min heap with upper half of data
+- If even: Heappop average of both will return the median 
+- If odd: Heappop element of larger array is the median
+<br>
+1. Push num onto the max heap (as mentioned above we arbitrarily chose the max heap).
+2. Pop from the max heap, and push that element onto the min heap.
+3. After step 2, if the min heap has more elements than the max heap, pop from the min heap and push the result onto the max heap.
+
+
+```python
+def __init__(self):
+    self.min_heap = []
+    self.max_heap = []
+
+def addNum(self, num):
+    heapq.heappush(self.max_heap, -num) #add num to max heap
+    heapq.heappush(self.min_heap, -heapq.heappop(self.max_heap)) #pop from max heap and push to min heap
+    if len(self.min_heap) > len(self.max_heap): #if odd
+        heapq.heappush(self.max_heap, -heapq.heappop(self.min_heap)) #balances out
+
+def findMedian(self):
+    if len(self.max_heap) > len(self.min_heap): #the popped element of larger array is the median, otherwise it's the average
+        return -self.max_heap[0]
+    return (self.min_heap[0] - self.max_heap[0]) / 2
+```
+<br>
+
+<h5><b>Top K</b></h5> <br>
+- We want to find the "best" k elements of a collection
+- Use heap to keep popping off the "worst" elements to keep the top K elements in answer array
+
+
+```python
+def topKFrequent(nums,k):
+    counts = {}
+    heap = []
+    
+    for key, val in counts.items():
+        heapq.heappush(heap, (val, key))
+        if len(heap) > k: #keep popping off worse elements
+            heapq.heappop(heap)
+    
+    return [pair[1] for pair in heap]
+```
+
+
+
+
+
+
+
+
 
 
 
@@ -975,6 +1171,10 @@ def numIslands(self, grid: List[List[str]]) -> int:
 <br><br>
 <h2>Search</h2>
 <h5>Binary Search</h5>
+
+
+
+
 
 If we are asked to return the index of an element, rather than a for loop with O(n), we can do it in O(log(n)) using binary search. Divides each section in half recursively.
 
