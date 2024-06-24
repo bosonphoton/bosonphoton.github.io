@@ -34,6 +34,10 @@ category: work
 
 
 <h5>Big O & Recursion</h5>
+
+<img src = "/assets/bigo.jpeg" width = "500">
+<br>
+
 Log time $$O(log$$ $$n)$$: Means that somewhere in algo, input is <b>reduced by a percentage at each step</b> (i.e., binary search where step 1 is n/2 and step 2 is n/4, etc.)
 <br><br>
 Recursion:
@@ -1156,9 +1160,71 @@ def topKFrequent(nums,k):
     
     return [pair[1] for pair in heap]
 ```
+<br>
+
+<h2>8. Greedy Approaches</h2> <br>
+- Makes locally optimal decision at each step without accounting for future rewards
+- Usually will ask for max or min of something
+
+<b>Ex: Integer array arr and an integer X. If X < array[i], then X is destroyed. Else if X >= array[i], then X += array[i]. Return True if X can be greater than all elements in array
+
+```python
+def asteroidsDestroyed(array, X):
+    array.sort() #smallest to largest
+    for i in array:
+        if i > X: #return false if any element is greater than X 
+            return False
+        X += i  #otherwise, add i to X
+    
+    return True
+```
+<br>
+
+<b> Ex: Min # of subsequences needed where all elements inside each have max deviation of k</b>
+
+```python
+def solution(array, k)
+    subsets = 0
+    array.sort()
+    minimum = array[0] #smallest element
+    for i in range(1, len(array)):
+        if array[i] - minimum > k: #if the max difference is greater than k 
+            minimum = array[i]
+            subsets += 1
+    
+    return subsets
+```
+<br>
+
+<b> Ex: You are given n projects with arr profits and arr minimum capital required. You start with w capital. Completing a project gives you w += profits[i]. Return max w possible if you are allowed k projects.<b>
+- Create a max heap for profits that satisfy your capital w
+- Pop off the project you can do with max profits you can take on for each project
+
+```python
+import heapq
+
+def findMaximizedCapital(k, w, profits, capital):
+    n = len(profits)
+    projects = sorted(zip(capital, profits)) 
+    heap = []
+    i = 0
+    
+    for _ in range(k):
+        while i < n and projects[i][0] <= w:
+            heapq.heappush(heap, -projects[i][1])
+            i += 1
+        
+        if len(heap) == 0:
+            # not enough money to do any more projects
+            return w
+        
+        # minus because we stored negative numbers on the heap
+        w -= heapq.heappop(heap)
+    
+    return w
 
 
-
+```
 
 
 
