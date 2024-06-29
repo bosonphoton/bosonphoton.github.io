@@ -36,9 +36,16 @@ category: work
 <h5>Big O & Recursion</h5>
 
 <img src = "/assets/bigo.jpeg" width = "500">
-<br>
+<br><br>
 
+<h5><b>Intuition of O(log(n))</b></h5>
 Log time $$O(log$$ $$n)$$: Means that somewhere in algo, input is <b>reduced by a percentage at each step</b> (i.e., binary search where step 1 is n/2 and step 2 is n/4, etc.)
+- Recall that $$\log_b a = x$$ and $$b^x = a$$
+- Say we have an array with length $$n = 8$$ so $$\log_2 8 = 3$$ and $$2^3 = 8$$
+- Because $$x = 3$$, we now only need to halve our 8 element array 3 times to find an element
+- Instead of iterating through all the elements with complexity $$O(n)$$, we do it in $$O(log$$ $$n)$$
+
+
 <br><br>
 Recursion:
 ```python
@@ -1222,8 +1229,94 @@ def findMaximizedCapital(k, w, profits, capital):
         w -= heapq.heappop(heap)
     
     return w
+```
 
 
+<br><br>
+<h2>9. Binary Search</h2>
+- Worst case runs O(log n)
+- Usually space needs to be sorted prior 
+- Divides each section in half recursively
+
+<b>Ex: We want to find index of X in a sorted array.</b> 1) Start in the middle of a sorted array. If the middle is less than X, then throw away the lower half. Do this iteratively. <br> 
+
+Implementation: <br>
+```python
+left = 0
+right = len(arr) - 1
+
+while left <= right:
+    mid = (left + right) // 2 #check middle element
+    if arr[mid] == x: #then the element has been found, return.
+        return mid 
+    if arr[mid] > x: #then throw away top half: lower the upper bound to the midpoint (excluding)
+        right = mid - 1.
+    else arr[mid] < x:  #throw away bottom half: raise lower bound to midpoint
+        left = mid + 1
+#if you get to this point without arr[mid] = x, then the search was unsuccessful. 
+# The left pointer will be at index where x would need to be inserted to maintain sort
+return left
+```
+<br><br>
+
+
+<b>Ex: We want to find index of X in a sorted matrix</b>
+- <b>(row = i // items in each row)</b>
+- <b>(column index = i % items in each row)</b>
+- index i has position (m, n) = (i // n, i % n)
+- since there are n items in each row, we know that at index i, we've passed by n * _ = i elements
+- and the column index "resets" every n elements, so we need i % n
+
+```python
+def searchMatrix(matrix, target):
+    m, n = len(matrix), len(matrix[0])
+    left, right = 0, m * n - 1 #right pointer flattens matrix into array
+    
+    while left <= right:
+        mid = (left + right) // 2
+        row = mid // n
+        col = mid % n
+        num = matrix[row][col]
+        
+        if num == target:
+            return True
+        
+        if num < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    
+    return False
+```
+
+<br><br>
+<b> Ex: Find the number of candies each person can eat without exceeding their calorie limits<b>
+- Use prefix sum
+- Returning the left pointer tells us the max we reach before exceeding limit 
+
+```python
+def eatCandies(candies, calorieLimits):
+    candies = sorted(candies)
+    
+    prefix = [candies[0]]
+    for i in range(1, len(candies)):
+        prefix.append(candies[i] + prefix[-1])
+    
+    # Process each calorie limit
+    results = []
+    for limit in calorieLimits:
+        left = 0
+        right = len(prefix) - 1
+        while left <= right:
+            mid = (left + right) // 2
+            if prefix[mid] <= limit:
+                left = mid + 1
+            else:
+                right = mid - 1
+        
+        results.append(left) #returning left tells you the max you can go before exceeding limit (how far you can go down the line of candies)
+    
+    return results
 ```
 
 
@@ -1234,14 +1327,8 @@ def findMaximizedCapital(k, w, profits, capital):
 
 
 
+
+
+
+
 <br><br>
-<h2>Search</h2>
-<h5>Binary Search</h5>
-
-
-
-
-
-If we are asked to return the index of an element, rather than a for loop with O(n), we can do it in O(log(n)) using binary search. Divides each section in half recursively.
-
-
