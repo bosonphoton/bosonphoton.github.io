@@ -127,12 +127,17 @@ Output of a counterfactual explainer results in what features need to change by 
 
 <b>Neural Causal Models</b><br>
 - Goal is to approximate connections between variables by learning associational/interventional/counterfactual distributions
-- 
-- 
+<br><br><br>
 
+<h2><b> 5. Bayesian Networks</b> </h2>
+<br><br>
+<img src = "/assets/bayesnet.png" width = 500px> <br>
+- Notice how we don't factor in the rain when calculating probability of slipping. All we care about is that the ground is wet. 
+<br>
 
-
-
+Inference:
+Given a Bayesian Network describing P(X,Y,Z), what is P(Y)
+1. Enumeration (brute force)
 
 
 

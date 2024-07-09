@@ -64,7 +64,37 @@ def fn(i):
     fn(i + 1)
 ```
 <br>
-Random neat trick to flip between 1 and 0 is f(x) = 1 - x. f(1) = 0 and f(0) = 1.
+
+<b>Example</b>
+```python
+def tri_recursion(k):
+  if(k > 0):
+    result = k + tri_recursion(k - 1)
+    print(result)
+  else:
+    result = 0
+  return result
+
+print("\n\nRecursion Example Results")
+tri_recursion(6)
+```
+
+Initial Call: tri_recursion(6)
+- k is 6, which is greater than 0. 
+- It calls tri_recursion(5) 
+- which calls tri_recursion(4)
+- All the way to tri_recursion(1)
+- Which calls tri_recursion(0) hitting the base case, and = returns 0.
+
+Returning Back Up the Stack <br>
+- Returning to tri_recursion(1)
+- The result of tri_recursion(0) is 0.
+- It calculates and returns result = 1 + 0 = 1.
+- Returning to tri_recursion(2) which calculates result = 2 + 1 = 3.
+- Returning to tri_recursion(3) which calculates result = 3 + 3 = 6.
+- All the way to returning to tri_recursion(6), where result of tri_recursion(5) is 15.
+- It calculates result = 6 + 15 = 21
+
 
 <br><br>
 <h2>1. Array and Strings</h2>
@@ -673,19 +703,44 @@ def DFS(root):
 <br>
 
 <h5>Recursive Approach: Returning DFS Order</h5>
+- THE LINE AFTER RECURSIVE FUNCTION CALL IS ONLY EXECUTED AFTER BASE CASE IS MET
 - Preorder: Logic done on current node before moving onto children 
 - Inorder: Logic done after reaching node without left child 
 - Postorder: Logic done only after reaching leaf nodes
 
 ```python
 def dfs(node):
-    if node == None:
-        return
+1    if node == None:
+2        return #if base case is hit, return
 
-    dfs(node.left) # RECURSIVELY KEEP CALLING LEFT UNTIL NO LEFT NODE EXISTS...THEN CALL RIGHT
-    dfs(node.right)
-    return
+3    dfs(node.left) # RECURSIVELY KEEP CALLING LEFT UNTIL NO LEFT NODE EXISTS...THEN CALL RIGHT
+4    dfs(node.right)
+5    return
 ```
+- if base case is hit, return to previous node
+- 3 and 4 is done, so go to line 5
+- line 5 returns back to previous node
+
+
+```python
+def isSameTree(self, p, q):
+        # Are both p and q None? If so, we have reached all the way to the leaf nodes
+        if not p and not q:
+            return True 
+
+        # Is one of them Null? If so, the other must be a node and they are different
+        if not p or not q:
+            return False
+
+        # At this point, if above criteria still have not been met, we know both are nodes
+        # Are their values different?
+        if p.val != q.val:
+            return False
+
+        # Recursive call to the next level down
+        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+```
+
 
 <br>
 
@@ -1318,17 +1373,102 @@ def eatCandies(candies, calorieLimits):
     
     return results
 ```
+<br>
+
+<b>Implementation Tips</b><br>
+- Return left to find minimum
+- Return right to find maximum
+<br><br><br>
 
 
-
-
-
-
-
-
-
-
-
-
-
+<h2>10. Backtracking </h2>
+- Pruning non-solution paths to reduce the possibility space
+- Good for problems where you want to "find all" of something
+- Hint: If the input constraint is very small n <= ~15
+- 1. calling recursive backtrack() = moving to child of node
+- 2. remove modification = moving back to parent node
 <br><br>
+
+
+<b>Template</b><br>
+UNDO MODIFICATION; LINE AFTER RECURSIVE CALL IS ONLY EXECUTED AFTER BASE CASE
+
+```python
+#let curr represent the thing you are building
+#it could be an array or a combination of variables
+def backtrack(curr):
+    if base case:
+        increment / add to ans
+        return
+
+    for i in input:
+        modify curr
+        backtrack(curr) #recursion ends only after base case
+        undo whatever modification was done to curr
+```
+<br>
+
+<b>Ex: Find all permutations of array</b>
+
+```python
+def permute(nums):
+    def backtrack(curr):
+        if len(curr) == len(nums):
+            ans.append(curr[:])
+            return
+    
+        for num in nums:
+            if num not in curr: #only options left are the other values
+                curr.append(num)
+                backtrack(curr) #moving to the child node
+                             
+                #only AFTER recursion meets base case, then we end here with curr.pop()
+                curr.pop() #moving back to the parent node
+        
+    ans = []
+    backtrack([])
+    return ans
+```
+<br><br>
+
+
+
+<b>Ex: Find all subsets of array</b>
+- We do not want duplicates so only consider any number that comes AFTER that value
+
+```python
+def subsets(nums):
+    def backtrack(curr, i):
+        if i > len(nums): #if index is out of bounds
+            return
+
+        ans.append(curr[:]) #append copy of current subset
+        for j in range(i, len(nums)):
+            curr.append(nums[j]) #add nums[j] to current subset
+            backtrack(curr, j + 1) #recurse with next index
+            curr.pop() #remove last element to backtrack
+
+    ans = []
+    backtrack([], 0)
+    return ans
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br>
+Hacks:
+- Flip between 1 and 0 is f(x) = 1 - x. f(1) = 0 and f(0) = 1.
+
+
+
+
