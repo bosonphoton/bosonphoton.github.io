@@ -770,13 +770,13 @@
 </code></pre></div></div> <p><br></p> <p><b>Ex: Find all permutations of array</b></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">permute</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">backtrack</span><span class="p">(</span><span class="n">curr</span><span class="p">):</span>
         <span class="k">if</span> <span class="nf">len</span><span class="p">(</span><span class="n">curr</span><span class="p">)</span> <span class="o">==</span> <span class="nf">len</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
-            <span class="n">ans</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">curr</span><span class="p">[:])</span>
-            <span class="k">return</span>
+            <span class="n">ans</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">curr</span><span class="p">[:])</span> <span class="c1">#shallow copy curr so it's not mutable by ###ref###
+</span>            <span class="k">return</span>
     
         <span class="k">for</span> <span class="n">num</span> <span class="ow">in</span> <span class="n">nums</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">num</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">curr</span><span class="p">:</span> <span class="c1">#only options left are the other values
-</span>                <span class="n">curr</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
-                <span class="nf">backtrack</span><span class="p">(</span><span class="n">curr</span><span class="p">)</span> <span class="c1">#moving to the child node
+</span>                <span class="n">curr</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span> <span class="c1">###ref###
+</span>                <span class="nf">backtrack</span><span class="p">(</span><span class="n">curr</span><span class="p">)</span> <span class="c1">#moving to the child node
 </span>                             
                 <span class="c1">#only AFTER recursion meets base case, then we end here with curr.pop()
 </span>                <span class="n">curr</span><span class="p">.</span><span class="nf">pop</span><span class="p">()</span> <span class="c1">#moving back to the parent node
