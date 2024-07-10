@@ -12,7 +12,7 @@ description: notes from leetcode
 img: 
 
 
-importance: 4
+importance: 3
 
 
 category: work
@@ -1414,12 +1414,12 @@ def backtrack(curr):
 def permute(nums):
     def backtrack(curr):
         if len(curr) == len(nums):
-            ans.append(curr[:])
+            ans.append(curr[:]) #shallow copy curr so it's not mutable by ###ref###
             return
     
         for num in nums:
             if num not in curr: #only options left are the other values
-                curr.append(num)
+                curr.append(num) ###ref###
                 backtrack(curr) #moving to the child node
                              
                 #only AFTER recursion meets base case, then we end here with curr.pop()

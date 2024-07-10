@@ -7,7 +7,7 @@ description: notes from Dynamical Systems in Neuroscience, The Geometry of Excit
 
 img: 
 
-importance: 3
+importance: 7
 
 category: work
 ---

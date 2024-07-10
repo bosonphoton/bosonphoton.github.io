@@ -7,7 +7,7 @@ description: math/intuition behind VAEs
 
 img: 
 
-importance: 7
+importance: 5
 
 category: work
 ---

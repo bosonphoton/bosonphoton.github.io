@@ -7,7 +7,7 @@ description: notes from Transition to Higher Mathematics, Structure and Proof by
 
 img: 
 
-importance: 2
+importance: 1
 ---
 
 <style>

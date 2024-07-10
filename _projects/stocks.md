@@ -7,7 +7,7 @@ description: building a simple web app for direct forecasting of stock prices us
 
 img: 
 
-importance: 5
+importance: 4
 
 category: work
 ---
