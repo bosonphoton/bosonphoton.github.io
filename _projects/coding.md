@@ -1452,14 +1452,146 @@ def subsets(nums):
     backtrack([], 0)
     return ans
 ```
+<br><br>
+
+<b>Ex: N-Queens</b> Find number of unique solutions to place n queens on an n x n chessboard <br>
+- We need to use backtracking to figure out all possible placements (if the next step doesn't work, go back to previous)
+- We need to figure out which row, col, diagonol, antidiagonal is free
+
+<b>***HACK 1: Each diagonal has the same (row - col) value</b> because moving down and right, both row and col gets incremented so difference is same throughout <br><br>
+<b>***HACK 2: Each antidiagonal has the same (row + col) value</b> because moving down increments row and left decrements col so sum is preserved
+
+```python
+def totalNQueens(n):
+    def backtrack(row, diagonals, anti_diagonals, cols):
+        # Base case - N queens have been placed
+        if row == n: #if we have managed to reach the last row (after placing one queen on each)
+            return 1
+
+        solutions = 0
+        for col in range(n):
+            curr_diagonal = row - col
+            curr_anti_diagonal = row + col
+            # If the queen is not placeable on the col, diag, or antidiag then check other squares
+            if (col in cols 
+                  or curr_diagonal in diagonals 
+                  or curr_anti_diagonal in anti_diagonals):
+                continue 
+
+            # Otherwise its safe to "Add" the queen to the board
+            cols.add(col) 
+            diagonals.add(curr_diagonal)
+            anti_diagonals.add(curr_anti_diagonal)
+
+            # Move on to the next row with the updated board state
+            solutions += backtrack(row + 1, diagonals, anti_diagonals, cols)
+
+            # "Remove" the queen from the board since we have already
+            # explored all valid paths using the above function call
+            cols.remove(col)
+            diagonals.remove(curr_diagonal)
+            anti_diagonals.remove(curr_anti_diagonal)
+
+        return solutions
+
+    return backtrack(0, set(), set(), set())
+```
+<br><br>
+
+<h2>11. Dynamic Programming </h2>
+- Optimize recursion with memoization (storing results in hashmap to avoid repeated computations)
+
+Problems using DP will have 2 traits:
+1. Asking for an optimal value (max/min) of something, or the # of ways to do something
+2. At each step, you need to make decision that affects future decisions 
+<br><br>
 
 
+<b> Ex: Fibonacci with memoization </b>
+
+```python
+def fibonacci(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+
+    if n in memo:
+        return memo[n]
+    
+    memo[n] = fibonacci(n - 1) + fibonacci(n - 2)
+    return memo[n]
+
+memo = {}
+```
+<br><br>
 
 
+<h5><b>Framework for DP</b></h5><br>
+<b>Ex: Min Cost Climbing Stairs: You are given an array where array[i] is the cost of the i'th step. Once you pay, you can either go up one of two steps. Find min cost to reach top</b><br><br>
+
+<b>1. We need a function/data structure to compute answer:</b>
+- What is the function returning? (Returning the cost up to the i'th step)
+- What are the state inputs? (We need the i'th step as the state)
+  - so lets have dp(i)
+
+<br>
+<b>2. We need a recurrence relation for state transitions:</b>
+- Say we want to compute min cost to step 100
+- We know we needed to arrive from step 98 or 99 
+- So dp(100) = min(dp(99) + cost[99], dp(98) + cost[98])
+- we know dp(99) returns the min cost of getting to 99'th step and dp(98) returns min cost to get to 98'th step
+- So dp(i) = min(dp(i-1) + cost[i-1], dp(i-2) + cost[i-2])
+
+<br>
+<b>3. We need a base case:</b>
+- We start at steps 0 or 1 (which means cost is 0)
+- So dp(0) = dp(1) = 0
+<br><br>
+
+```python
+def minCostClimbingStairs(self, cost: List[int]) -> int:
+    # 1. A function that returns the answer
+    def dp(i):
+        if i <= 1:
+            # 3. Base cases
+            return 0
+        
+        if i in memo:
+            return memo[i]
+        
+        # 2. Recurrence relation
+        memo[i] = min(dp(i - 1) + cost[i - 1], dp(i - 2) + cost[i - 2])
+        return memo[i]
+    
+    memo = {}
+    return dp(len(cost))
+```
+<br><br>
 
 
+<b>Ex: Robbing Houses: array[i] represents how much money you gain from robbing house i. You cannot rob houses directly next to one another (so you can only skip one house). Return max amount you can rob </b><br>
+1. What is the input? --> the index i of the house
+2. What is the output? --> the max amount of money we get up to house i
+3. What is the recursive relation? --> at each index, we either don't rob the current house because we robbed the previous house dp(i-1) OR we robbed the prev.prev house plus the current house so array[i] + dp(i-2)   
+4. What is the base case? --> we rob either the first so dp(0) = array[0] or go to the second to see if it's more than the first dp(1) = max(array[0], max[array[1]). We need dp(1) otherwise the recurrence relation will use dp(-1).
 
+```python
+from functools import cache
 
+def rob(houses):
+    @cache #python memoization
+    def dp(i):
+        if i == 0:
+            return houses[0]
+        if i == 1:
+            return max(houses[0], houses[1])
+        else:
+            return max(dp(i-1), houses[i] + dp(i-2))
+
+    return dp(len(houses) - 1)
+
+```
 
 
 
