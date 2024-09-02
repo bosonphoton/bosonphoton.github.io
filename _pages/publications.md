@@ -28,9 +28,26 @@ nav_order: 2
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<br>
+<hr>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="text-align: left;">
+        <b><a href = "http://arxiv.org/abs/2408.17251">Abstracted Gaussian Prototypes for One-Shot Concept Learning</a></b>
+    </div>
+</body>
 
-<b>[Abstracted Gaussian Prototypes for One-Shot Concept Learning](/assets/ZouICML.pdf)</b> (Undergrad Thesis)
+<hr>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="text-align: left;">
+        <b><a href = "https://dl.acm.org/doi/10.1145/3610978.3640550">A Decision Framework for AR, Dialogue and Eye Gaze to Enhance Human-Robot Collaboration</a></b>
+    </div>
+</body>
+
+<hr>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="text-align: left;">
+        <b><a href = "https://arxiv.org/abs/2305.04685">ARDIE: AR, Dialogue, and Eye Gaze Policies for Human-Robot Collaboration</a></b>
+    </div>
+</body>
 
 
 <hr>
@@ -56,6 +73,4 @@ nav_order: 2
 
 <hr>
 
-
-<b>[An Evolutionary Partitioning Approach For an Ensemble Classifier](/assets/EA.pdf)</b>
-
+<a href = "/assets/EA.pdf"><b>An Evolutionary Partitioning Approach For an Ensemble Classifier</b></a>
