@@ -1,0 +1,68 @@
+---
+layout: page
+
+title: theoretical statistics
+
+description: course notes from STATS200
+
+img:
+
+importance: 8
+
+category: work
+---
+<br><br>
+
+<h2>I. Probability Review</h2><br>
+<h4> Laws of Probability Theory </h4>
+
+<b>De Morgans Laws:</b> <br>
+$$(A \cup B \cup C)^c = A^c \cap B^c \cap C^c$$
+
+<b>Law of Total Probability:</b> <br>
+- prob of event A occuring is equal to sum of event A occurring in all possible scenarios
+$$P(A) = P(A|B)P(B) + P(A|B^c)P(B^c)$$
+
+<b>Inclusion-Exclusion Principle:</b> <br>
+$$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
+
+<b>Conditional Probability:</b> <br>
+$$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
+$$P(A \cap B) = P(A|B)P(B) = {}^* P(B|A)P(A) $$
+<center> * Bayes Theorem! </center><br>
+
+<b>Marginal Independence:</b> <br>
+A and B are marginally independent if: <br>
+$$P(A|B) = P(A)$$
+$$P(A \cap B) = P(A)P(B)$$
+
+<b>Conditional Independence:</b> <br>
+A1 and A2 are conditionally independent given B if:
+$$P(A_1 \cap A_2 | B) = P(A_1|B)P(A_2|B)$$
+
+
+
+<br>
+
+<h4>Random Variables & Distributions</h4>
+
+<b>CDFs and PDFs: </b> <br>
+- By FTC, the PDF is equal to the derivative of the CDF <br>
+- Integrating the PDF from -∞ to x gives us the CDF
+$$F_X(x) = P(X \leq x)  = \int_{-\infty}^{x} f(t) \, dt$$
+$$f_X(x) = \frac{d}{dx} sF(x)$$
+
+
+<b>Expectation: </b> <br>
+$$\mathbb{E}[X] = \sum_{i} x_i P(X = x_i) \quad \text{(for discrete variables)}$$
+$$\mathbb{E}[X] = \int_{-\infty}^{\infty} x f_X(x) \, dx \quad \text{(for continuous variables)}$$
+(1) Linearity Rule:
+$$\mathbb{E}[aX + bY] = a\mathbb{E}[X] + b\mathbb{E}[Y]$$
+(2) Sum Rule:
+$$\mathbb{E}\left[\sum_{i=1}^{n} X_i\right] = \sum_{i=1}^{n} \mathbb{E}[X_i]$$
+
+<b>Variance: </b> <br>
+
+$$\text{Var}(X) = \mathbb{E}[X^2] - (\mathbb{E}[X])^2$$
+(1) Scaling Rule:
+$$\text{Var}(cX) = c^2 \text{Var}(X)$$
