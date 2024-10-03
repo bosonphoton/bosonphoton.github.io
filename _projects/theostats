@@ -50,7 +50,7 @@ $$P(A_1 \cap A_2 | B) = P(A_1|B)P(A_2|B)$$
 - By FTC, the PDF is equal to the derivative of the CDF <br>
 - Integrating the PDF from -∞ to x gives us the CDF
 $$F_X(x) = P(X \leq x)  = \int_{-\infty}^{x} f(t) \, dt$$
-$$f_X(x) = \frac{d}{dx} sF(x)$$
+$$f_X(x) = \frac{d}{dx} F(x)$$
 
 
 <b>Expectation: </b> <br>
@@ -66,3 +66,5 @@ $$\mathbb{E}\left[\sum_{i=1}^{n} X_i\right] = \sum_{i=1}^{n} \mathbb{E}[X_i]$$
 $$\text{Var}(X) = \mathbb{E}[X^2] - (\mathbb{E}[X])^2$$
 (1) Scaling Rule:
 $$\text{Var}(cX) = c^2 \text{Var}(X)$$
+
+$$\text{Var}(X + Y) = \text{Var}(X) + \text{Var}(Y) + 2\text{Cov}(X,Y)$$

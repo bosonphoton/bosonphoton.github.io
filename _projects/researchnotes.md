@@ -142,7 +142,7 @@ Output of a counterfactual explainer results in what features need to change by 
 <br><br>
 
 
-A Bayesian Network is a directed acyclical graph (DAG) with nodes and directed links 
+A Bayesian Network is a directed acyclical graph (DAG) with nodes and directed links that explains the probabilistic relationships (and influences) between variables:
 - Node = feature (or multiple features)
 - Link = indicates one node directly influences another
 
