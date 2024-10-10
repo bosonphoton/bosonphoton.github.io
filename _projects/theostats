@@ -16,14 +16,14 @@ category: work
 <h2>I. Probability Review</h2><br>
 <h4> Laws of Probability Theory </h4>
 
-<b>De Morgans Laws:</b> <br>
+(1) De Morgans Laws: <br>
 $$(A \cup B \cup C)^c = A^c \cap B^c \cap C^c$$
 
-<b>Law of Total Probability:</b> <br>
+(2) Law of Total Probability: <br>
 - prob of event A occuring is equal to sum of event A occurring in all possible scenarios
 $$P(A) = P(A|B)P(B) + P(A|B^c)P(B^c)$$
 
-<b>Inclusion-Exclusion Principle:</b> <br>
+(3) Inclusion-Exclusion Principle: <br>
 $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
 
 <b>Conditional Probability:</b> <br>
@@ -31,19 +31,18 @@ $$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
 $$P(A \cap B) = P(A|B)P(B) = {}^* P(B|A)P(A) $$
 <center> * Bayes Theorem! </center><br>
 
-<b>Marginal Independence:</b> <br>
-A and B are marginally independent if: <br>
+(1) Marginal Independence: <br>
+- A and B are marginally independent if: <br>
 $$P(A|B) = P(A)$$
 $$P(A \cap B) = P(A)P(B)$$
 
-<b>Conditional Independence:</b> <br>
-A1 and A2 are conditionally independent given B if:
+(2) Conditional Independence: <br>
+- A1 and A2 are conditionally independent given B if:
 $$P(A_1 \cap A_2 | B) = P(A_1|B)P(A_2|B)$$
 
 
 
-<br>
-
+<br><br>
 <h4>Random Variables & Distributions</h4>
 
 <b>CDFs and PDFs: </b> <br>
@@ -61,10 +60,83 @@ $$\mathbb{E}[aX + bY] = a\mathbb{E}[X] + b\mathbb{E}[Y]$$
 (2) Sum Rule:
 $$\mathbb{E}\left[\sum_{i=1}^{n} X_i\right] = \sum_{i=1}^{n} \mathbb{E}[X_i]$$
 
+(3) Expectation of a Function: <br>
+\[ E[g(X)] = \sum_{x} g(x) P(X = x) \]
+\[ E[g(X)] = \int_{-\infty}^{\infty} g(x) f_X(x) \,dx \]
+
+
+(4). Independence:
+\[ \text{If X and Y are independent} \rightarrow \quad E[XY] = E[X] \cdot E[Y] \]
+
+
+
+
 <b>Variance: </b> <br>
 
 $$\text{Var}(X) = \mathbb{E}[X^2] - (\mathbb{E}[X])^2$$
-(1) Scaling Rule:
+
 $$\text{Var}(cX) = c^2 \text{Var}(X)$$
 
-$$\text{Var}(X + Y) = \text{Var}(X) + \text{Var}(Y) + 2\text{Cov}(X,Y)$$
+$$\text{Var}(aX + bY) = a^2\text{Var}(aX) + b^2\text{Var}(bY) + 2ab\text{Cov}(X,Y)$$
+
+<br><br>
+<h4>Joint Variables</h4>
+- <b>Marginal Densities</b> tell us the probability of one variable by ignore the other (if given a joint dist. of weight and height, the marginal of weight tells us info on weight regardless of height)
+<br>
+- <b>Conditional Densities</b> tell us the probability of one variable given that you know the value of the other (if height is 5'6, whats prob that weight is 110?)
+
+<br><br>
+<b>Discrete</b>: <br>
+
+(1) Joint PMF:
+\[ P(X = x, Y = y) = p_{X,Y}(x,y) \]
+
+(2) Joint CDF:
+\[ F_{X,Y}(x,y) = P(X \leq x, Y \leq y) = \sum_{x' \leq x} \sum_{y' \leq y} p_{X,Y}(x', y') \]
+
+(3) Marginal PMFs can be obtained from the joint PMF:
+\[ p_X(x) = \sum_{y} p_{X,Y}(x,y) \]
+\[ p_Y(y) = \sum_{x} p_{X,Y}(x,y) \]
+
+<br>
+<b>Continuous</b>: <br>
+
+(1) Joint CDF is obtained by integrating the PDF:
+\[ F_{X,Y}(x,y) = P(X \leq x, Y \leq y) = \iint_{-\infty}^{(x,y)} f_{X,Y}(u,v) \,du\,dv \]
+
+(2) Marginals obtained by integrating over opposite variable:
+\[ f_X(x) = \int_{-\infty}^{\infty} f_{X,Y}(x,y) \,dy \]
+\[ f_Y(y) = \int_{-\infty}^{\infty} f_{X,Y}(x,y) \,dx \]
+
+
+<br>
+<b>Covariance: </b> <br>
+\[ \text{Cov}(X, Y) = E\left[(X - E[X])(Y - E[Y])\right] \]
+
+\[ \text{Cov}(X, Y) = E[XY] - E[X]E[Y] \]
+
+
+(1) Covariance of a Constant:
+\[ \text{Cov}(X, c) = 0 \]
+
+(2) Covariance of a Random Variable with Itself:
+\[ \text{Cov}(X, X) = \text{Var}(X) \]
+
+(3) Covariance of a Linear Combination:
+\[ \text{Cov}(aX + bY, Z) = a \, \text{Cov}(X, Z) + b \, \text{Cov}(Y, Z) \]
+
+(4) Correlation:
+\[ \text{Corr}(X, Y) = \frac{\text{Cov}(X, Y)}{\sigma_X \sigma_Y} \quad \sigma = \text{sd} \quad \sigma^2 = \text{var} \]
+
+
+
+
+
+
+
+
+<b>Covariance: </b> <br>
+
+
+<br><br>
+<h4>Moment Generating Functions (MGFs)</h4>
