@@ -165,9 +165,6 @@ MGFs can help us find the distributions of SUMS of independent RVs.
 
 
 
-
-
-
 <br><br>
 <b>Markov's Inequality</b>: <br>
 - "What is the highest possible probability that X is greater than a, given that we know the mean of X"? <br>
@@ -177,5 +174,28 @@ MGFs can help us find the distributions of SUMS of independent RVs.
 
 <b>Chebyshev's Inequality</b>: <br>
 - Quantifies how much the spread of a distribution can vary
-
 \[ \mathbb{P}(|X - \mu| \geq k\sigma) \leq \frac{1}{k^2} \quad \text{for } k > 0 \]
+
+
+<br><br>
+<h4>Transformations of Random Variables</h4>
+
+<b> Application: Generating iid RVs ~F from Uniform RVs! </b> <br>
+(1) Lets say I want to generate X1, X2,... Xn iid from some general distribution function F (given F is continuous and strictly increasing) <br>
+(2) We can sample U1, U2... Un iid from Unif(0,1) <br>
+(3) Then generate Xi = F^-1(Ui) <br><br>
+
+
+
+Choose the distribution \( X \) you want to sample from (e.g., exponential, uniform, normal, etc.).
+
+Determine the CDF \( F_X(x) \) of the desired distribution.
+
+Set the uniform random variable \( U \) equal to the CDF:
+\[U = F_X(x)\]
+
+Rearrange the equation to solve for \( x \) in terms of \( U \):
+\[x = F_X^{-1}(U)\]
+
+Use a random number generator to obtain values of \( U \) and apply the above equation to generate samples from the desired distribution. Pretty damn cool if you ask me.
+
