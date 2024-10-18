@@ -151,19 +151,31 @@ MGFs can help us find the distributions of SUMS of independent RVs.
 \[\mathbb{E}[X^k] = M_X^{(k)}(0) \]
 
 
+(3) Continuity Theorem: <br>
+<center>X_n and X are real-valued random variables:</center>
+
+\[ X_n \xrightarrow{d} X \quad \text{as} \quad n \to \infty \quad (\text{convergence in distribution}) \]
+
+<center>if and only if </center>
+
+\[ M_{X_n}(t) \to M_X(t) \quad \text{as} \quad n \to \infty \quad \text{for all} \quad t. \]
+
+
+
 
 <br><br>
 <h4>Central Limit Theorem (CLT) & Law of Large Numbers (LLN)</h4>
 
 (1) <b>CLT</b>: The sum of a large number of i.i.d RV's tend to follow a normal distribution. AKA "convergence in distribution" to a normal. <br>
-\[\overline{X}_n = \frac{1}{n} \sum_{i=1}^{n} X_i \quad \quad S_n = \sum_{i=1}^{n} X_i \]
-\[ \sqrt{n} (\frac{S_n}{n} - \mu) \quad \xrightarrow{d} \quad \mathcal{N}(0, \sigma^2) \quad \text{as } n \to \infty\]
-\[\frac{\overline{X}_n - \mu}{\sigma / \sqrt{n}} \quad \xrightarrow{d} \quad \mathcal{N}(0, \sigma^2) \quad \text{as } n \to \infty\]
+\[\overline{X}_n = \frac{1}{n} \sum_{i=1}^{n} X_i \quad \]
+\[ \sqrt{n} ( \overline{X}_n - \mu) \quad \xrightarrow{d} \quad \mathcal{N}(0, \sigma^2) \quad \text{as } n \to \infty\]
+<center>Rewriting this, we can say that</center>
+\[ \overline{X}_n \thicksim N( \mu, \frac{\sigma^2}{n} ) \]
+
 
 (2) <b>LLN</b>: As sample size n increases, sample mean converges to expected value. AKA "convergence to probability", the deviation of X from its mean tends to zero as n goes to infinity. <br>
 \[\overline{X}_n \xrightarrow{p} \mu \quad \text{as } n \to \infty\]
 \[\mathbb{P}(|\overline{X}_n - \mu| \geq \epsilon) \to 0 \quad \text{for any } \epsilon > 0 \text{ as } n \to \infty\]
-
 
 
 <br><br>

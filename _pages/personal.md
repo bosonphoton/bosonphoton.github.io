@@ -15,6 +15,7 @@ nav_order: 4
 <a href = "/thoughts/AGI.html">Intelligence and AGI</a><br>
 <a href = "/thoughts/academia.html">Academia Deromanticized</a><br>
 <a href = "/thoughts/fooc.html">Fear of Opportunity Cost</a><br>
+<a href = "/thoughts/machinepsych.html">Machine Psychology</a><br>
 <br><br>
 
 <hr>
