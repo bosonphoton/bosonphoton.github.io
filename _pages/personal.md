@@ -2,7 +2,7 @@
 layout: page
 permalink: /personal/
 title: personal
-description: Outside of research, I enjoy extreme sports (kitesurfing, paragliding, snowboarding, skiing, currently learning speedriding (skiing with a paraglide)), classical piano and electronic (mostly trap/bass/dubstep/ambient) music, philosophy of mind, & writing random stuff.
+description: Outside of research, I enjoy extreme sports (kitesurfing, paragliding, speedriding (skiing with a paraglide), surfing, snowboarding, skiing, electronic music (mostly deep house/future bass/trap/ambient/trance/dubstep), philosophy of mind, & writing random stuff.
 nav: true
 nav_order: 4
 ---
@@ -20,7 +20,7 @@ nav_order: 4
 
 <hr>
 
-<h3>bookshelf</h3>
+<h3>bookshelf recs</h3>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,46 +36,19 @@ nav_order: 4
 
 <ul>
   <li style="font-weight: bold;">Gödel, Escher, Bach: An Eternal Golden Braid by Douglas R. Hofstadter</li>
-  <li>I Am a Strange Loop by Douglas R. Hofstadter</li>
-  <li>The Mind's I by Daniel Dennet and Douglas Hofstadter</li> 
   <li style="font-weight: bold;">AI Superpowers: China, Silicon Valley, and the New World Order by Kai-Fu Lee</li>
   <li>AI 2041 by Kai-Fu Lee</li>
-  <li>Chip War by Chris Miller</li>
   <li style="font-weight: bold;">The Singularity is Near by Ray Kurzweil</li>
   <li>How to Create a Mind by Ray Kurzweil</li>
-  <li>Life 3.0 by Max Tegmark</li>
   <li style="font-weight: bold;">The Big Picture by Sean Carroll</li>
-  <li>Something Deeply Hidden by Sean Carroll</li>
-  <li>The Elegant Universe by Brian Green</li>
-  <li>The Order of Time by Carlo Rovelli</li>
   <li>Chaos by James Gleick</li>
-  <li>What is Life by Erwin Schrödinger</li>
   <li style="font-weight: bold;">The Drunkard's Walk: How Randomness Rules Our Lives by Leonard Mlodinow</li>
-  <li>Duelling Idiots & Other Probability Puzzlers by Paul J. Nahin</li>
   <li style="font-weight: bold;">Subliminal: How Your Unconscious Mind Rules Your Behavior by Leonard Mlodinow</li>
-  <li>Rethinking Consciousness by Micheal S.A. Graziano</li>
-  <li>A Thousand Brains: A New Theory of Intelligence by Jeff Hawkins</li>
   <li style="font-weight: bold;">Being You: A New Science of Consciousness by Anil Seth</li>
-  <li>The Conscious Mind by David Chalmers</li>
-  <li>Consciousness and Fundamental Reality by Philip Goff</li>
-  <li>Paradox: The Nine Greatest Enigmas in Physics by Jim Al-Khalili</li>
-  <li>Shape: The Hidden Geometry of Information, Biology, Strategy, Democracy, and Everything Else by Jordan Ellenberg</li>
-  <li>Fantastic Numbers and Where to Find Them by Antonio Padilla</li>
-  <li>The Case Against Reality by Donald Hoffman</li>
-  <li>This Idea Must Die by John Brockman</li>
-  <li>Thinking Fast and Slow by Daniel Kahneman</li>
   <li style="font-weight: bold;">The Book: On the Taboo Against Knowing Who You Are by Alan Watts</li>
-  <li>The Wisdom of Insecurity by Alan Watts</li>
-  <li>The Formula by Albert-Lásló Barabási</li>
   <li style="font-weight: bold;">The Black Swan by Nassim Taleb</li>
-  <li>Mastery by Robert Greene</li>
-  <li>Principles by Ray Dalio</li>
-  <li>Your Next Five Moves by Patrick Bet-David</li>
   <li>Atlas Shrugged by Ayn Rand</li>
   <li>Brave New World by Aldous Huxley</li>
-  <li>The Doors of Perception by Aldous Huxley</li>
-  <li>Nausea by Jean-Paul Sartre</li>
-  <li>The Myth of Sisyphus by Albert Camus</li>
   <li>Magic Tree House Series by Mary Pope Osborne (all time fave)</li>
 </ul>
 

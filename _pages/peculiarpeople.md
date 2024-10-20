@@ -28,13 +28,6 @@ They believe technology is advancing too quick and much of it is unnecessary to 
 We get to the topic of psychedelics, and they share their experience of meeting these celestial beings on DMT. Their impression is that the DMT entities exist objectively, but what they saw were just "projections" of the higher dimensional beings onto our reality, compressed in a way our brains can comprehend.
 
 
-<h4>Lake Tekapo Quacker</h4>
-<div style="font-size: 12px;">
-<b>Appearance:</b> Could not really tell in the dark but prob 50-60s man or woman<br>
-<b>Entry:</b> Stayed in a hostel for a night in Lake Tekapo. In the top bunk next to mine, someone begins snoring incredibly loud. A few minutes later, the snores turn into quacks? Consistently paced duck quacks. Something more strange happens. 
-This person leaves the room in the middle of the night (I assume to use the restroom), but remarkably, the quacking does not stop. They continue quacking on as they head out the door. Once they return to the room, the quacking stops. A few hours later, it begins again.
-
-
 <h4>Stuart and the Pigs</h4>
 <div style="font-size: 12px;">
 <b>Appearance:</b> 60s, gray messy hair, jeans and plaid farming clothes covered in dust and dirt, barefoot, covered in mud, bright blue eyes, strange friendly demeanor, thick farmer New Zealand accent<br>

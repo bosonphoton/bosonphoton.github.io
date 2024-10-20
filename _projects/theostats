@@ -212,3 +212,57 @@ Rearrange the equation to solve for \( x \) in terms of \( U \):
 
 Use a random number generator to obtain values of \( U \) and apply the above equation to generate samples from the desired distribution. Pretty damn cool if you ask me.
 
+<br><br>
+<h4>Convergence Theorems</h4>
+<b>1. Continuous Mapping Theorem (CMT) </b><br>
+The CMT allows us to apply continuous functions to converging sequences of random variables. <br>
+<center> If \(X_n \xrightarrow{d} X\), and \(g(\cdot)\) is a continuous function, then: </center>
+\[
+g(X_n) \xrightarrow{d} g(X)
+\]
+
+<br><br>
+
+<b>2. Delta Method</b><br>
+<center>If \(X_n\) is a sequence of random variables and \(g(\cdot)\) is differentiable: </center>
+\[
+\sqrt{n}(X_n - \theta) \xrightarrow{d} N(0, \sigma^2),
+\]
+
+\[
+\sqrt{n}(g(X_n) - g(\theta)) \xrightarrow{d} N(0, \sigma^2 [g'(\theta)]^2)
+\]
+
+<br><br>
+
+<b>3. Slutsky's Theorem</b><br>
+If there is convergence in BOTH distribution and probability:
+<center>Let \(X_n \xrightarrow{d} X\) and \(Y_n \xrightarrow{p} Y\). Then: </center>
+\[ \text{(1)} \quad X_n + Y_n \xrightarrow{d} X + Y\]
+\[\text{(2)} \quad X_n Y_n \xrightarrow{d} XY\]
+\[\text{(3)} \quad \frac{X_n}{Y_n} \xrightarrow{d} \frac{X}{Y}\]
+
+
+
+<br><br><br><br>
+<h2>II. Statistics of Sampling</h2><br>
+<h4>Confidence Interval</h4>
+
+Let \(\overline{X}\) be the sample mean of a random sample of size \(n\), \(\sigma\) the population standard deviation, and \(z_{\alpha/2}\) the critical value from the standard normal distribution for a confidence level of \(1 - \alpha\). A \((1 - \alpha)\%\) confidence interval for the population mean \(\mu\) is given by:
+\[
+\overline{X} \pm z_{\alpha/2} \frac{\sigma}{\sqrt{n}}
+\]
+This means the confidence interval is:
+\[
+\left( \overline{X} - z_{\alpha/2} \frac{\sigma}{\sqrt{n}}, \, \overline{X} + z_{\alpha/2} \frac{\sigma}{\sqrt{n}} \right)
+\]
+
+\section*{Confidence Interval for Mean with Unknown Variance}
+
+If the population variance \(\sigma^2\) is unknown, we use the sample standard deviation \(s\) and the \(t\)-distribution with \(n-1\) degrees of freedom. The confidence interval is given by:
+\[
+\overline{X} \pm t_{\alpha/2, n-1} \frac{s}{\sqrt{n}}
+\]
+where \(t_{\alpha/2, n-1}\) is the critical value from the \(t\)-distribution with \(n-1\) degrees of freedom.
+
+
