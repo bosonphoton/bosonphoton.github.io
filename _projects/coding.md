@@ -12,7 +12,7 @@ description: notes from leetcode
 img: 
 
 
-importance: 3
+importance: 8
 
 
 category: work
