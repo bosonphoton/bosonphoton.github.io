@@ -190,16 +190,16 @@ Use a random number generator to obtain values of \( U \) and apply the above eq
 <h4>Central Limit Theorem (CLT) & Law of Large Numbers (LLN)</h4>
 
 (1) <b>CLT</b>: The sum of a large number of i.i.d RV's tend to follow a normal distribution. AKA "convergence in distribution" to a normal. <br>
-\[\overline{X}_n = \frac{1}{n} \sum_{i=1}^{n} X_i \quad \quad Var(\overline{X}_n) = \frac{\sigma^2}{n} \]
-\[ \sqrt{n} ( \overline{X}_n - \mu) \quad \xrightarrow{d} \quad \mathcal{N}(0, \sigma^2) \quad \text{as } n \to \infty\]
+\[\bar{X}_n = \frac{1}{n} \sum_{i=1}^{n} X_i \quad \quad Var(\bar{X}_n) = \frac{\sigma^2}{n} \]
+\[ \sqrt{n} ( \bar{X}_n - \mu) \quad \xrightarrow{d} \quad \mathcal{N}(0, \sigma^2) \quad \text{as } n \to \infty\]
 <center>Rewriting this, we can say that</center>
 
-\[ \overline{X}_n \thicksim N( \mu, \frac{\sigma^2}{n} ) \quad \text{or} \quad \overline{X}_n \thicksim \mu + \frac{\sigma}{\sqrt{n}} Z  \]
+\[ \bar{X}_n \thicksim N( \mu, \frac{\sigma^2}{n} ) \quad \text{or} \quad \bar{X}_n \thicksim \mu + \frac{\sigma}{\sqrt{n}} Z  \]
 
 
 (2) <b>LLN</b>: As sample size n increases, sample mean converges to expected value. AKA "convergence to probability", the deviation of X from its mean tends to zero as n goes to infinity. <br>
-\[\overline{X}_n \xrightarrow{p} \mu \quad \text{as } n \to \infty\]
-\[\mathbb{P}(|\overline{X}_n - \mu| \geq \epsilon) \to 0 \quad \text{for any } \epsilon > 0 \text{ as } n \to \infty\]
+\[\bar{X}_n \xrightarrow{p} \mu \quad \text{as } n \to \infty\]
+\[\mathbb{P}(|\bar{X}_n - \mu| \geq \epsilon) \to 0 \quad \text{for any } \epsilon > 0 \text{ as } n \to \infty\]
 <br>
 <div style="margin-left: 20px;">
     <b>Sample Moments Using LLN</b><br>
@@ -223,19 +223,19 @@ Use a random number generator to obtain values of \( U \) and apply the above eq
 
 <div style="margin-left: 20px;">
 <b>Proof of Weak Law of Large Numbers using Chebyshev's Inequality </b><br>
-Show that sample mean \( \overline{X}_n \) converges in probability to \( \mu \) as \( n \to \infty \), i.e.,
+Show that sample mean \( \bar{X}_n \) converges in probability to \( \mu \) as \( n \to \infty \), i.e.,
 \[
-\forall \epsilon > 0, \lim_{n \to \infty} \mathbb{P}(|\overline{X}_n - \mu| \geq \epsilon) = 0
+\forall \epsilon > 0, \lim_{n \to \infty} \mathbb{P}(|\bar{X}_n - \mu| \geq \epsilon) = 0
 \]
 
-Apply this to the sample mean \( \overline{X}_n \). Since \( \mathbb{E}[\overline{X}_n] = \mu \) and \( \text{Var}(\overline{X}_n) = \frac{\sigma^2}{n} \), we have:
+Apply this to the sample mean \( \bar{X}_n \). Since \( \mathbb{E}[\bar{X}_n] = \mu \) and \( \text{Var}(\bar{X}_n) = \frac{\sigma^2}{n} \), we have:
 \[
-\mathbb{P}(|\overline{X}_n - \mu| \geq \epsilon) \leq \frac{\text{Var}(\overline{X}_n)}{\epsilon^2} = \frac{\sigma^2}{n \epsilon^2}
+\mathbb{P}(|\bar{X}_n - \mu| \geq \epsilon) \leq \frac{\text{Var}(\bar{X}_n)}{\epsilon^2} = \frac{\sigma^2}{n \epsilon^2}
 \]
 
 As \( n \to \infty \), the right-hand side \( \frac{\sigma^2}{n \epsilon^2} \) tends to 0. Therefore,
 \[
-\lim_{n \to \infty} \mathbb{P}(|\overline{X}_n - \mu| \geq \epsilon) = 0
+\lim_{n \to \infty} \mathbb{P}(|\bar{X}_n - \mu| \geq \epsilon) = 0
 \]
 </div>
 
@@ -279,37 +279,69 @@ If there is convergence in BOTH distribution and probability (to a constant):
 
 <br><br><br><br>
 <h2>II. Statistics of Sampling</h2><br>
+
+<h4>Confidence Interval</h4>
+<center><img src = "/assets/confidence.png" width = 400px> </center> <br>
+
+\[\mathbb{P}\left(-z_{\frac{\alpha}{2}} \leq \frac{\bar{X} - \mu}{\sigma_{\bar{X}}} \leq z_{\frac{\alpha}{2}}\right) = 1 - \alpha\]
+\[\mathbb{P}\left( \bar{X} - z_{\frac{\alpha}{2}}\sigma_{\bar{X}} \leq \mu \leq \bar{X} + z_{\frac{\alpha}{2}}\sigma_{\bar{X}} \right) = 1 - \alpha\]
+
+<br>
+When \( \sigma \) is <b>KNOWN</b>, we have \( \sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}} \). <br>
+But if \( \sigma \) us <b>UNKNOWN</b>  , we can obtain an estimator:
+\[ \hat{\sigma}^2 = \frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2  \quad \quad \text{(sample variance)} \]
+<br>
+
 <b>Sample Variance</b><br>
-- Sample variance \( \sigma^2_{\overline{X}} \) is <b>biased</b> estimator of population variance \( \sigma^2 \)
-\[
-\mathbb{E}[\sigma^2_{\overline{X}}] =
-\begin{cases}
-\frac{n-1}{n} \sigma^2 & \text{(with replacement)} \\
-\frac{n-1}{n} \frac{N}{N-1} \sigma^2 & \text{(without replacement)}
-\end{cases}
-\]
+- Sample variance \( \hat{\sigma}^2 \) is <b>biased</b> estimator of population variance \( \sigma^2 \). <br>
+- Intuitively, we know that \( X_i \) is closer to \( \bar{X} \) than the true mean so variance is lower, so the below formulas make sense
+\[ \mathbb{E}[\hat{\sigma}^2] = \frac{n-1}{n} \sigma^2 \]
 
-To obtain an <b>unbiased</b> estimator, we adjust and let \( S^2 = \frac{n}{n-1}\sigma^2_{\overline{X}} \)
 
-\[
-\hat{\sigma}^2_{\overline{X}} =
-\begin{cases}
-\frac{S^2}{n} & \text{(with replacement)} \\
-\frac{S^2}{n} (1 - \frac{n}{N}) & \text{(without replacement)}
-\end{cases}
-\]
+To obtain an <b>unbiased</b> estimator, we adjust by multiplying the inverse so we can get:
+\[ S^2 = \frac{n}{n-1} \hat{\sigma}^2 = \frac{1}{n-1} \sum_{i=1}^{n} (X_i - \bar{X})^2 \]
+\[ \mathbb{E}[\hat{\sigma}^2] = \sigma^2  \]
+
+* note that these are for sampling with replacement (WR) <br><br>
+
+<b>Differences between SD and SE</b>
+\[ SE(\bar{X}) = \frac{S}{\sqrt{n}} = \frac{\sigma}{\sqrt{n}} \]
+\[ SD(\bar{X}) = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2} \]
 
 <br><br>
 
+<h4> Chi-Squared \( \chi^2 \) and \( t\)  </h4><br>
+<b>(1) Chi-Squared</b> <br>
+- The Chi Squared distribution is represented by the <b>sum</b> of independent squared Normal random variables with n degrees of freedom:
+\[X \sim \chi^2_n \quad \text{where} \quad X = Z_1^2 + Z_2^2 + \dotsc Z_n^2 \quad \text{and} \quad Z \sim N(0,1)\]
+<center>and actually</center>
+\[\chi^2_n \sim \text{Gamma}(\frac{n}{2} , \frac{1}{2}) \]
+<center>CLT tells us</center>
+\[\chi^2_n \sim N(n, 2n) \]
+* Note if \( U \sim \chi^2_{n} \) and \( V \sim \chi^2_{m} \), and U and V are independent, then \( U + V \sim \chi^2_{n + m} \)
+<br><br><br>
 
+<b>(2) t-Distribution </b> <br>
+The t-distribution is useful for making inferences based on small sample sizes. If Z and X are independent:
+\[
+t = \frac{Z}{\sqrt{\frac{X}{n}}}, \quad Z \sim N(0,1), \quad X \sim \chi^2_n
+\]
 
-<h4>Confidence Interval</h4>
+* \( t_n \xrightarrow{d} Z \sim N(0,1) \) as n goes to infinity. <br>
+* t has a fatter tail distribution than Z, and as the n degrees of freedom increases, it slims and looks more like a Normal <br><br>
 
-<img src = "/assets/confidence.png" width = 400px> <br>
-\[\mathbb{P}\left(-z_{\frac{\alpha}{2}} \leq \frac{\overline{X} - \mu}{\sigma_{\overline{X}}} \leq z_{\frac{\alpha}{2}}\right) = 1 - \alpha\]
-\[\mathbb{P}\left( \overline{X} - z_{\frac{\alpha}{2}}\sigma_{\overline{X}} \leq \mu \leq \overline{X} + z_{\frac{\alpha}{2}}\sigma_{\overline{X}} \right) = 1 - \alpha\]
+Interested in the quantity
+\[
+\frac{\bar{X} - \mu}{SE(\bar{X})} \sim t_{n-1} =
+\]
+
 
 <br>
+<h4> Stats from Normal Population  </h4><br>
+<center><img src = "/assets/normal.png" width = 700px> </center> <br>
+
+
+
 
 
 
