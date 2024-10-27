@@ -302,8 +302,11 @@ To obtain an <b>unbiased</b> estimator, we adjust by multiplying the inverse so 
 \[ S^2 = \frac{n}{n-1} \hat{\sigma}^2 = \frac{1}{n-1} \sum_{i=1}^{n} (X_i - \bar{X})^2 \]
 \[ \mathbb{E}[\hat{\sigma}^2] = \sigma^2  \]
 
-* note that these are for sampling with replacement (WR) <br><br>
+* note that these are for sampling with replacement (WR). <br>
+Use <b>Finite Population Correction</b> for sampling WITHOUT replacement <br>
+\[(1 - \frac{n-1}{N-1})\]
 
+<br><br>
 <b>Differences between SD and SE</b>
 \[ SE(\bar{X}) = \frac{S}{\sqrt{n}} = \frac{\sigma}{\sqrt{n}} \]
 \[ SD(\bar{X}) = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (X_i - \bar{X})^2} \]
