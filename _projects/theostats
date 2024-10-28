@@ -134,8 +134,8 @@ $$\text{Var}(aX + bY) = a^2\text{Var}(aX) + b^2\text{Var}(bY) + 2ab\text{Cov}(X,
 <h4>Moment Generating Functions (MGFs)</h4>
 MGFs can help us find the distributions of SUMS of independent RVs. <br><br>
 (1) Zero'th moment is always = 1 <br>
-(2) First moment is always = 0 (expected deviation from mean is 0) <br>
-(3) Second moment is always = \( \sigma^2 \) <br>
+(2) First moment is always = \( E(X) \) <br>
+(3) Second moment is \( E(X^2) \) and can tell us the variance \( \sigma^2 = E(X^2) - [E(X)]^2 \) <br>
 
 
 \[ M_X(t) = \mathbb{E}[e^{tX}] = \begin{cases}
@@ -167,6 +167,18 @@ MGFs can help us find the distributions of SUMS of independent RVs. <br><br>
 
 <br><br>
 <h4>Transformations of Random Variables</h4>
+(1) We know some pdf \( f_X (x) \) <br>
+(2) We know some function \( Y = g(X) \) (where g is continuous and strictly monotone) <br>
+(3) We want to find the pdf \( f_Y (y) \) <br>
+(4) Find the inverse of \( Y = g(X) \), so solve for X <br>
+(5) Find the derivative of (4) <br>
+(6) Plug in \( f_Y (y) = f_X (4) * |5| \)
+<br><br>
+
+
+
+
+
 
 <b> Application: Generating iid RVs ~F from Uniform RVs! </b> <br>
 (1) Lets say I want to generate X1, X2,... Xn iid from some general distribution function F (given F is continuous and strictly increasing) <br>
