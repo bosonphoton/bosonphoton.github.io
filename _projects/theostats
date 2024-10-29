@@ -231,7 +231,8 @@ Use a random number generator to obtain values of \( U \) and apply the above eq
 <b>Chebyshev's Inequality</b>: <br>
 - Quantifies how much the spread of a distribution can vary <br>
 - Suppose k = 4, then the right side is 1/16. The probability that X lands 4 times away from its SD is less than 1/16.
-\[ \mathbb{P}(|X - \mu| \geq k\sigma) \leq \frac{1}{k^2} \quad \text{for } k > 0 \]
+\[ \mathbb{P}(|X - E[X]| \geq k) \leq \frac{Var(X)}{k^2} \quad \text{for } k > 0 \]
+\[ \mathbb{P}(|X - \mu| \geq k\sigma) \leq \frac{1}{k^2} \quad \text{for } k > 0  \]
 
 <div style="margin-left: 20px;">
 <b>Proof of Weak Law of Large Numbers using Chebyshev's Inequality </b><br>
@@ -354,6 +355,21 @@ Interested in the quantity
 <br>
 <h4> Stats from Normal Population  </h4><br>
 <center><img src = "/assets/normal.png" width = 700px> </center> <br>
+
+<br><br>
+<h4>Spherical Multivariate Normal</h4>
+A random vector \( \mathbf{X} = (X_1, \ldots X_n)^T \in \mathbb{R}^n \) follows a spherical multivariate normal distribution if:
+\[ \mathbf{X} \sim \mathcal{N}_n(\mathbf{\mu}, \Sigma) \]
+
+<br>
+For a matrix \( A \in \mathbb{R}^{d \times n} \) and a vector \( \mu \in \mathbb{R}^d \), which are NONRANDOM:
+
+\[ AZ + \mu \sim \mathcal{N}_d(\mu, A A^T) \]
+\[ \Sigma = A A^T \]
+
+If \( X \sim \mathcal{N}_d(\mu, \Sigma) \) then: <br><br>
+(1) \( \mathbb{E}[X] = \mu \in \mathbb{R}^d \) <br>
+(2) \( \text{Var}(X) = \text{Cov}(X) = \Sigma \in \mathbb{R}^{d \times d} \) where \( \Sigma_{i,j} = \text{Cov}(X_i, X_j) \).
 
 
 
