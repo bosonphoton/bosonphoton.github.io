@@ -77,7 +77,7 @@ $$\text{Var}(X) = \mathbb{E}[X^2] - (\mathbb{E}[X])^2$$
 
 $$\text{Var}(cX) = c^2 \text{Var}(X)$$
 
-$$\text{Var}(aX + bY) = a^2\text{Var}(aX) + b^2\text{Var}(bY) + 2ab\text{Cov}(X,Y)$$
+$$\text{Var}(aX + bY) = a^2\text{Var}(X) + b^2\text{Var}(Y) + 2ab\text{Cov}(X,Y)$$
 
 <br><br>
 <h4>Joint Variables</h4>
