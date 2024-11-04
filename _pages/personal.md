@@ -16,10 +16,9 @@ nav_order: 4
 <a href = "/thoughts/academia.html">Academia Deromanticized</a><br>
 <a href = "/thoughts/fooc.html">Fear of Opportunity Cost</a><br>
 <a href = "/thoughts/machinepsych.html">Machine Psychology</a><br>
-<br><br>
+<br>
 
 <hr>
-
 <h3>bookshelf recs</h3>
 <head>
   <meta charset="UTF-8">
@@ -35,24 +34,20 @@ nav_order: 4
 <body>
 
 <ul>
-  <li style="font-weight: bold;">Gödel, Escher, Bach: An Eternal Golden Braid by Douglas R. Hofstadter</li>
-  <li style="font-weight: bold;">AI Superpowers: China, Silicon Valley, and the New World Order by Kai-Fu Lee</li>
-  <li>AI 2041 by Kai-Fu Lee</li>
-  <li style="font-weight: bold;">The Singularity is Near by Ray Kurzweil</li>
-  <li>How to Create a Mind by Ray Kurzweil</li>
-  <li style="font-weight: bold;">The Big Picture by Sean Carroll</li>
-  <li>Chaos by James Gleick</li>
-  <li style="font-weight: bold;">The Drunkard's Walk: How Randomness Rules Our Lives by Leonard Mlodinow</li>
-  <li style="font-weight: bold;">Subliminal: How Your Unconscious Mind Rules Your Behavior by Leonard Mlodinow</li>
-  <li style="font-weight: bold;">Being You: A New Science of Consciousness by Anil Seth</li>
-  <li style="font-weight: bold;">The Book: On the Taboo Against Knowing Who You Are by Alan Watts</li>
-  <li style="font-weight: bold;">The Black Swan by Nassim Taleb</li>
-  <li>Atlas Shrugged by Ayn Rand</li>
-  <li>Brave New World by Aldous Huxley</li>
-  <li>Magic Tree House Series by Mary Pope Osborne (all time fave)</li>
+  <li>Gödel, Escher, Bach: An Eternal Golden Braid by Douglas R. Hofstadter</li>
+  <li>AI Superpowers: China, Silicon Valley, and the New World Order by Kai-Fu Lee</li>
+  <li>The Drunkard's Walk: How Randomness Rules Our Lives by Leonard Mlodinow</li>
+  <li>Subliminal: How Your Unconscious Mind Rules Your Behavior by Leonard Mlodinow</li>
+  <li>Being You: A New Science of Consciousness by Anil Seth</li>
+  <li>The Book: On the Taboo Against Knowing Who You Are by Alan Watts</li>
+  <li>The Black Swan by Nassim Taleb</li>
+  <li>The Singularity is Near by Ray Kurzweil</li>
+  <li>The Big Picture by Sean Carroll</li>
+  <li>Magic Tree House Series by Mary Pope Osborne</li>
 </ul>
 
 </body>
+<br>
 
 <hr>
 

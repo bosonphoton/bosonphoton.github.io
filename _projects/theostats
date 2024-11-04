@@ -357,20 +357,20 @@ Interested in the quantity
 <center><img src = "/assets/normal.png" width = 700px> </center> <br>
 
 <br><br>
-<h4>Spherical Multivariate Normal</h4>
-A random vector \( \mathbf{X} = (X_1, \ldots X_n)^T \in \mathbb{R}^n \) follows a spherical multivariate normal distribution if:
-\[ \mathbf{X} \sim \mathcal{N}_n(\mathbf{\mu}, \Sigma) \]
+<h4>Multivariate Normal</h4>
+A random vector \( \mathbf{X} \) follows a multivariate normal distribution if: (A is p x q)
+\[ \mathbf{X}  = AZ + \mu  \quad \sim \quad \mathcal{N}_p(\mathbf{\mu}, \Sigma) \quad \quad (\Sigma = A A^T) \]
+\[ \text{where} \quad \quad Z \sim N_q(0, I) \quad \quad \text{is a spherical normal} \]
 
-<br>
-For a matrix \( A \in \mathbb{R}^{d \times n} \) and a vector \( \mu \in \mathbb{R}^d \), which are NONRANDOM:
+(1) \( \mathbb{E}[X] = A*E[Z] + \mu = \mu \in \mathbb{R}^p \) <br>
+(2) \( \text{Var}(X) = \text{Cov}(X) = \Sigma \in \mathbb{R}^{p \times p} \) where \( \Sigma_{i,j} = \text{Cov}(X_i, X_j) \). <br>
 
-\[ AZ + \mu \sim \mathcal{N}_d(\mu, A A^T) \]
-\[ \Sigma = A A^T \]
 
-If \( X \sim \mathcal{N}_d(\mu, \Sigma) \) then: <br><br>
-(1) \( \mathbb{E}[X] = \mu \in \mathbb{R}^d \) <br>
-(2) \( \text{Var}(X) = \text{Cov}(X) = \Sigma \in \mathbb{R}^{d \times d} \) where \( \Sigma_{i,j} = \text{Cov}(X_i, X_j) \).
-
+<br><br>
+<h4>Cumulant Generating Functions and Kurtosis/Skew</h4><br>
+Let \( K(t) = log(M_X(t)) \) be the cumulant generating function of X and \( k_n = K^{(n)}(0) \)
+\[ \text{Skew}(X) = \frac{k_3}{k^{3/2}_2} = \frac{\mathbb{E}[(X - \mu)^3]}{\sigma^3} \]
+\[ \text{Kurt}(X) = 3 + \frac{k_4}{k^{2}_2} = \frac{\mathbb{E}[(X - \mu)^4]}{\sigma^4} \]
 
 
 
