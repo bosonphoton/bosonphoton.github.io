@@ -270,14 +270,14 @@ g(X_n) \xrightarrow{p} g(X)
 <br><br>
 
 <b>2. Delta Method</b><br>
-<center>If \(X_n\) is a sequence of random variables and \(g(\cdot)\) is differentiable: </center>
-\[
-\sqrt{n}(X_n - \theta) \xrightarrow{d} N(0, \sigma^2),
-\]
+If \(X_n\) is a sequence of random variables and \(g(\cdot)\) is differentiable:
+\[\sqrt{n}(X_n - \theta) \xrightarrow{d} N(0, \sigma^2)\]
+\[\sqrt{n}(g(X_n) - g(\theta)) \xrightarrow{d} N(0, \sigma^2 [g'(\theta)]^2)\]
+<br>
+Or we can also say that if \(\mathbb{E}[X_n] = \mu \) and \( Var(X_n) \) is small, then:
+\[ \mathbb{E}[f(X_n)] = f(\mu) \]
+\[  Var(f(X_n)) = \sigma^2(f'(\mu))^2 \]
 
-\[
-\sqrt{n}(g(X_n) - g(\theta)) \xrightarrow{d} N(0, \sigma^2 [g'(\theta)]^2)
-\]
 
 <br><br>
 
@@ -367,13 +367,89 @@ A random vector \( \mathbf{X} \) follows a multivariate normal distribution if: 
 
 
 <br><br>
-<h4>Cumulant Generating Functions and Kurtosis/Skew</h4><br>
+<h4>Method of Moments</h4>
+Goal: We have some data. We understand the properties of some known distributions. Let us describe the data as generated from some natural distribution.
+One way to describe distributions can be through its moments. For instance: <br><rb>
+- the first moment (mean) tells the central location <br>
+- the second moment shows the spread <br>
+- higher moments like skew and kurtosis describe the shape <br><br>
+
+Typically, the number of parameters we want to estimate = the number of moments we can find. We can express as a function of the moments:
+\[ \mu_k = \mathbb{E}[X^{(k)})] \]
+
+Suppose we want to estimate two parameters: The general form is
+\[ \theta_1 = f_1(\mu_1, \mu_2) \]
+\[ \theta_2 = f_2(\mu_1, \mu_2) \]
+
+but we want to estimate it using sample moments (bc we usually dont have access to the whole population)
+\[ \hat{\mu_k} = \frac{1}{n} \sum{X^{(k)}_i} \]
+\[ \hat{\theta_1} = f_1(\hat{\mu_1}, \hat{\mu_2}) \]
+\[ \hat{\theta_2} = f_2(\hat{\mu_1}, \hat{\mu_2}) \]
+
+<h5>Sampling Distributions of MOMs</h5>
+Goal: We want to see how stable our estimated parameters are. To do so, we analyze it's sampling distributions (mean, variance, SE) so we can also construct confidence intervals.
+There are two ways we can see the sampling distributions of these parameter estimates: bootstrap sampling and large sample approximations <br><br>
+
+(1) By bootstrap simulation, we can estimate standard error as the following <br>
+- Sample n datapoints like 1000 times <br>
+- Each iteration from 1 to 1000 provides us with an estimate of parameter p*
+
+\[ SE_{\hat{p}} = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (p^*_i - \bar{p})^2} \]
+
+<br>
+(2) Large sampling approximation is based on consistency (LLN): as the number of \( \hat{\theta} \) increase, the estimators become more correct to a true estimates, as well as asymptotic normality (CLT). <br>
+- See delta method
+
+<br><br><br>
+<b>Cumulant Generating Functions and Kurtosis/Skew</b><br>
 Let \( K(t) = log(M_X(t)) \) be the cumulant generating function of X and \( k_n = K^{(n)}(0) \)
 \[ \text{Skew}(X) = \frac{k_3}{k^{3/2}_2} = \frac{\mathbb{E}[(X - \mu)^3]}{\sigma^3} \]
 \[ \text{Kurt}(X) = 3 + \frac{k_4}{k^{2}_2} = \frac{\mathbb{E}[(X - \mu)^4]}{\sigma^4} \]
 
 
+<br><br>
+<h4>Maximum Likelihood</h4>
+Say we have datapoints \(X_1 \ldots X_n \) with a joint density function \( f(x_1 \ldots x_n | \theta) \). Our goal is to find the parameters \( \theta \) so that we maximize the probability of observing these datapoints \( X_i \). <br><br>
+
+If they are assumed to be iid, then the likelihood function is considered as a product of the individual densities of X given \( \theta \).
+But its easier to take the <b>log likelihood</b> since multiplying a bunch of probabilities < 1 will go to zero
+\[ l(\theta) = \sum{logf(X_i | \theta)} \]
+
+To find the \( \theta \) that maximizes the log likelihood function, we take its first derivative (or partial derivations) and set = 0 and solve for \(\theta \).
+\[ \text{score function} \quad l'(\theta) = 0 \]
+
+Local/Global Max: We can also (further) ensure that the root is at least a local max by checking \( l''(\hat{\theta}) < 0 \), or global for ex if the function is also concave. <br><br>
+<b>Likelihood Ratio</b> <br>
+- How much more probable it is that our estimated parameter is = to x than opposed to some other value y. <br><br>
+\[ \frac{l(\hat{\theta} = x)}{l(\hat{\theta} = y)} \]
+
+<b>Sampling distribution of MLE</b><br>
+- We can follow a similar approach as MOM (either bootstrapping or large sample approx) <br>
+- The SE of MLE is generally smaller and more optimal compared to other estimators like MOMs <br>
+- Under <b>regularity conditions</b> (where the bounds is NOT dependent on \( \theta \) -- so Unif(0,\(\theta\)) would be invalid) then:
+\[ \mathbb{E}[l'(\theta)] = 0 \]
+\[ \mathbb{E}[-l''(\theta)] = I(\theta) \]
+
+<b>Fisher Information \( I(\theta) \)</b><br>
+- For n iid RVs, \( I_{n}(\theta) = n I(\theta) \) <br>
+
+<br><br>
+<h5>(1) Consistency of MLE (LLN)</h5>
+If \(X_1 \ldots X_n\) are iid with a true value of \(\theta\)<br>
+\[ \hat{\theta}_{MLE}(X_1 \ldots X_n) \xrightarrow{p} \theta \]
+
+We can also show the relationship between the <b>KL divergence</b> and Fisher Information for small \(\hat{\theta} - \theta \)
+\[ D_{\text{KL}}(\theta,\hat{\theta}) = \frac{1}{2} (\hat{\theta} - \theta)^2 I(\hat{\theta}) \]
+
+<br>
+<h5>(2) Asymptotic Normality of MLE (CLT)</h5>
+
+\[ \sqrt{n}(\hat{\theta} - \theta) \xrightarrow{d} N\left( \theta, \frac{1}{n I(\theta)} \right) \]
 
 
+<br><br>
+<h5>Efficiency in MLE</h5>
+<b> Cramer-Roa Bound = the lowest possible variance for some unbiased estimator </b> <br>
+<b> Fisher Information = amount of info that our datapoints can provide about our true parameter, inversely proportional to variance if Normal</b> <br>
 
 
