@@ -274,7 +274,7 @@ If \(X_n\) is a sequence of random variables and \(g(\cdot)\) is differentiable:
 \[\sqrt{n}(X_n - \theta) \xrightarrow{d} N(0, \sigma^2)\]
 \[\sqrt{n}(g(X_n) - g(\theta)) \xrightarrow{d} N(0, \sigma^2 [g'(\theta)]^2)\]
 <br>
-Or we can also say that if \(\mathbb{E}[X_n] = \mu \) and \( Var(X_n) \) is small, then:
+Or we can also say that if \( \mathbb{E}[X_n] = \mu \) and \( Var(X_n) \) is small, then:
 \[ \mathbb{E}[f(X_n)] = f(\mu) \]
 \[  Var(f(X_n)) = \sigma^2(f'(\mu))^2 \]
 
@@ -431,7 +431,10 @@ Local/Global Max: We can also (further) ensure that the root is at least a local
 \[ \mathbb{E}[-l''(\theta)] = I(\theta) \]
 
 <b>Fisher Information \( I(\theta) \)</b><br>
-- For n iid RVs, \( I_{n}(\theta) = n I(\theta) \) <br>
+- The amount of information that our data can provide about our true parameter <br>
+- For n iid RVs, the Fisher Info of the total sample is \( I_{n}(\theta) = n I(\theta)\) <br>
+- Inversely proportional to variance under asymptotic normality and regularity conditions \( Var(\hat{\theta}) = \frac{1}{I(\theta)} \) <br>
+\[  I(\theta) = \mathbb{E}[-l''(\theta)]  \]
 
 <br><br>
 <h5>(1) Consistency of MLE (LLN)</h5>
@@ -443,13 +446,59 @@ We can also show the relationship between the <b>KL divergence</b> and Fisher In
 
 <br>
 <h5>(2) Asymptotic Normality of MLE (CLT)</h5>
-
-\[ \sqrt{n}(\hat{\theta} - \theta) \xrightarrow{d} N\left( \theta, \frac{1}{n I(\theta)} \right) \]
+*MLE is asymptotically efficient because the asymptotic variance is equal to bound given by Cramer Roa
+\[ \sqrt{n}(\hat{\theta} - \theta) \xrightarrow{d} N\left(0, \frac{1}{I(\theta)} \right) \]
 
 
 <br><br>
-<h5>Efficiency in MLE</h5>
-<b> Cramer-Roa Bound = the lowest possible variance for some unbiased estimator </b> <br>
-<b> Fisher Information = amount of info that our datapoints can provide about our true parameter, inversely proportional to variance if Normal</b> <br>
+<h5>Confidence Intervals for MLE</h5>
+The distribution of \( \sqrt{nI(\theta)}(\hat{\theta} - \theta) \) is approximately Standard Normal  \( \sim N(0,1) \) <br>
+\[ P(-z_{a/2} \leq \sqrt{nI(\theta)}(\hat{\theta} - \theta) \leq z_{a/2} ) = 1 - a \]
+\[ \hat{\theta} \pm z_{a/2} \frac{1}{\sqrt{nI(\hat{\theta})}} \]
 
+
+
+<br><br>
+<h5>Comparing Estimators</h5>
+We can assess which estimator (i.e., MOM vs MLE estimators) is better using the <b>Mean Squared Error</b>: <br>
+\[ MSE(\hat{\theta}) = \mathbb{E}[(\hat{\theta}(X) - \theta)^2] = \int (\hat{\theta}(X) - \theta)^2 f(x|\theta) dx\]
+
+<b>Variance-Bias Decomposition</b><br>
+\[ MSE(\hat{\theta}) = \mathbb{E}[(\hat{\theta}(X) - \theta)^2] = Var(\hat{\theta}) + [\mathbb{E}\hat{\theta} - \theta]^2 \]
+
+
+<br><br>
+<h5>Efficiency & Cramer Roa Bound in MLE</h5>
+<b>Cramer-Roa Bound</b>: the optimal (lowest possible) variance for some unbiased estimator. Functions as a benchmark against any estimator <br>
+
+<br>
+Suppose \( \bar{X} \sim N(\theta, \sigma_{n}^2) \) and \( \hat{\theta}_{a} = a\bar{X} \). We have \( Var(\hat{\theta}_{a}) = a^2 \sigma_{n}^2 \): <br>
+<b> - a = 1 </b>  unbiased, all variance<br>
+<b> - a = 0, </b>  all bias, no variance<br>
+
+\[ MSE(\hat{\theta}_{a}, \theta) =  a^2 \sigma_{n}^2  + (1 - a)^2 \theta^2 \]
+
+<br>
+If \( \hat{\theta} \) is unbiased: \( E\hat{\theta} = \theta \), then \(  MSE(\hat{\theta}_{a}, \theta) = Var(\hat{\theta}) \). So to compare two unbiased estimators, we just focus on comparing their variances. <br>
+\[ eff(\hat{\theta}_{1}, \hat{\theta}_{2}) = \frac{Var(\hat{\theta}_{1})}{Var(\hat{\theta}_{2})} \]
+
+<br>
+<b>Def: Cramer Roa Bound (CRB)</b><br>
+If \( \hat{\theta} \) is an unbiased estimator of \( \theta \), then the minimum possible variance of that estimator is shown below. If it achieves this, the estimator is said to be <b>efficient</b> (for some fixed n)
+\[ Var(\hat{\theta}) \geq \frac{1}{nI(\theta)} \]
+
+<b>Folk Theorem</b>: <br>
+- Shows MLE is asymptotically efficient<br>
+Combining asymptotic normality and CRB, it follows that if a sequence of estimators such as \( T_n \) is consistent and asy. normal, then:
+\[ \sqrt{n}(T_n - \theta) \xrightarrow{d} N(0, Var(\theta)) \]
+\[ Var(\theta) \geq \frac{1}{I(\theta)} \]
+
+And the approx CI is wider than the MLE interval, (showing MLE is optimal):
+\[ T_n \pm z_{a/2} \frac{Var(T_n)}{\sqrt{n}} \]
+
+<br><br>
+<h4>Hypothesis Testing</h4>
+<b>Likelihood Function</b><br>
+Tells us the probability of a null hypothesis compared to an alternative hypothesis.
+\[ \frac{L(p_0)}{L(p_a)} \]
 
