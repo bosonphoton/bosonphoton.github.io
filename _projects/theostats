@@ -500,5 +500,25 @@ And the approx CI is wider than the MLE interval, (showing MLE is optimal):
 <h4>Hypothesis Testing</h4>
 <b>Likelihood Function</b><br>
 Tells us the probability of a null hypothesis compared to an alternative hypothesis.
-\[ \frac{L(p_0)}{L(p_a)} \]
+\[ \frac{f(x | H_0)}{f(x | H_a)} \]
 
+
+<br>
+<b>Type I Error (False Positive):</b> Null is true but we accept alt <br>
+- Probability of Type I error denoted by \( \alpha \) <br>
+- Choose some \( C \) to control \( \alpha \) (where C is some threshold value to accept the null)
+\[ P_{\mu = 0} (\bar{X} > C) = P(Z > C\sqrt{n}) = 1 - \Phi(C\sqrt{n}) = \alpha \]
+
+<br>
+<b>Type II Error (False Negative):</b> Alt is true but we accept null <br>
+- Probability of Type II error denoted by \( \beta \) <br>
+- <b>Power (True Negative) = \( 1 - \beta \)
+\[ P(Z > z_{\alpha} - \mu_1 \sqrt{n}) = 1 - \Phi(z_{\alpha} - \mu_1 \sqrt{n}) = 1 - \beta \]
+\[ \beta = \Phi(z_{\alpha} - \mu_1 \sqrt{n})  = \Phi(-z_{\beta}) \] <br>
+
+<br>
+<b>Neyman-Pearson Lemma:</b><br>
+ Justifies likelihood ratio as the optimal way to maximize power (reduce false negatives) and control false positives (for simple tests with single probability distributions) <br>
+
+ Discreteness <br>
+In discrete cases, you can’t always hit your exact \( \alpha \). A theoretical fix is to add some randomness (like flipping another coin) to reach the exact level <br><br>
