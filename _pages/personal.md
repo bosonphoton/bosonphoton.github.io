@@ -2,7 +2,7 @@
 layout: page
 permalink: /personal/
 title: personal
-description: Outside of research, I enjoy extreme sports (kitesurfing, paragliding, speedriding (skiing with a paraglide), surfing, snowboarding, skiing, electronic music (mostly deep house/future bass/trap/ambient/trance/dubstep), philosophy of mind, & writing random stuff.
+description: Outside of research, I enjoy extreme sports like kitesurfing, paragliding, speedriding (skiing with a paraglide), surfing, snowboarding, skiing, electronic music (mostly deep house/future bass/trap/ambient/trance/dubstep), philosophy of mind, & writing random stuff.
 nav: true
 nav_order: 4
 ---

@@ -6,7 +6,7 @@ permalink: /research/
 
 title: research
 
-description: some ongoing research projects
+description: research stuff
 
 nav: true
 
@@ -60,7 +60,7 @@ nav_order: 2
 <hr>
 <body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
     <div style="text-align: left;">
-        <b><a href = "https://github.com/bosonphoton/BayesianConceptLearning">Bayesian Concept Learning</a></b>
+        <b><a href = "https://github.com/bosonphoton/BayesianConceptLearning">Bayesian Concept Learning (PSYC 359 project) </a></b>
     </div>
 </body>
 

@@ -517,8 +517,23 @@ Tells us the probability of a null hypothesis compared to an alternative hypothe
 \[ \beta = \Phi(z_{\alpha} - \mu_1 \sqrt{n})  = \Phi(-z_{\beta}) \] <br>
 
 <br>
-<b>Neyman-Pearson Lemma:</b><br>
- Justifies likelihood ratio as the optimal way to maximize power (reduce false negatives) and control false positives (for simple tests with single probability distributions) <br>
-
- Discreteness <br>
+Discreteness <br>
 In discrete cases, you can’t always hit your exact \( \alpha \). A theoretical fix is to add some randomness (like flipping another coin) to reach the exact level <br><br>
+
+<br>
+<b>Neyman-Pearson Lemma:</b><br>
+Justifies likelihood ratio as the optimal way to maximize power (reduce false negatives) and control false positives (for simple tests with single probability distributions) <br>
+- Usually used for simple tests (where all parameters are specified and known)
+- Can be extended to find the <b>uniformly most powerful</b>: if there are many possible values of the parameter, then these tests will be most powerful for every possible value of that parameter but only for one sided tests not two<br>
+- One-Sided: Tests if something is greater or less than a certain value<br>
+- Two-Sided: Tests if something is different from a certain value<br>
+
+<br>
+<b> p-value </b><br>
+Smallest significance value at which null would be rejected<br>
+The confidence interval contains all those values for which the null hypothesis is accepted.
+
+<br><br>
+<h5>Generalized Likelihood Ratio</h5>
+\[ \log \Lambda = \max_{\theta \in \omega_0} \ell(\theta) - \max_{\theta \in (\omega_0 \cup \omega_1)} \ell(\theta) \]
+
