@@ -415,7 +415,7 @@ If they are assumed to be iid, then the likelihood function is considered as a p
 But its easier to take the <b>log likelihood</b> since multiplying a bunch of probabilities < 1 will go to zero
 \[ l(\theta) = \sum{logf(X_i | \theta)} \]
 
-To find the \( \theta \) that maximizes the log likelihood function, we take its first derivative (or partial derivations) and set = 0 and solve for \(\theta \).
+To find the \( \theta \) that maximizes the log likelihood function, we take its first derivative (or partial derivations) wrt the unknown parameter and set = 0 and solve for \(\theta \).
 \[ \text{score function} \quad l'(\theta) = 0 \]
 
 Local/Global Max: We can also (further) ensure that the root is at least a local max by checking \( l''(\hat{\theta}) < 0 \), or global for ex if the function is also concave. <br><br>
@@ -498,21 +498,32 @@ And the approx CI is wider than the MLE interval, (showing MLE is optimal):
 
 <br><br>
 <h4>Hypothesis Testing</h4>
-<b>Likelihood Function</b><br>
+<b>Simple Hypothesis</b>: All parameters are fully specified <br>
+- H0 = Data is Normal \( \sim N(0,1) \) <br>
+- Ha = Data is Poisson  \( \sim Pois(\lambda = 5) \) <br><br>
+
+<b>Composite Hypothesis</b>: Some parameters are unknown <br>
+- H0 = Data is Normal \( \sim N(\mu,\sigma^2) \) <br>
+- Ha = Data is Poisson  \( \sim Pois(\lambda) \) <br><br>
+
+<br>
+<h5>Likelihood Ratio (for simple tests)</h5>
 Tells us the probability of a null hypothesis compared to an alternative hypothesis.
 \[ \frac{f(x | H_0)}{f(x | H_a)} \]
 
+Reject \( H_0 \) when \( \frac{f(x | H_0)}{f(x | H_a)} < c \) <br>
+- c is some constant that allows us to find X = some threshold to accept/reject (this is called the <b>test statistic</b>)<br>
+- c controls tradeoff between probabilities two types of errors (i.e., accepting null when alt is true and vice versa)
+
+
+<br><br><br>
+<b>\( \alpha \) : Type I Error (False Positive):</b> Null is true but we reject null to accept alt <br>
+- Choose some \( c \) to control \( \alpha \)
+\[ P_{\mu = 0} (\bar{X} > c) = P(Z > c\sqrt{n}) = 1 - \Phi(c\sqrt{n}) = \alpha \]
 
 <br>
-<b>Type I Error (False Positive):</b> Null is true but we accept alt <br>
-- Probability of Type I error denoted by \( \alpha \) <br>
-- Choose some \( C \) to control \( \alpha \) (where C is some threshold value to accept the null)
-\[ P_{\mu = 0} (\bar{X} > C) = P(Z > C\sqrt{n}) = 1 - \Phi(C\sqrt{n}) = \alpha \]
-
-<br>
-<b>Type II Error (False Negative):</b> Alt is true but we accept null <br>
-- Probability of Type II error denoted by \( \beta \) <br>
-- <b>Power (True Negative) = \( 1 - \beta \)
+<b> \( \beta \) : Type II Error (False Negative):</b> Alt is true but we reject alt to accept null <br>
+- <b>Power</b> (True Negatives) = \( 1 - \beta \) (more power = less false negatives)
 \[ P(Z > z_{\alpha} - \mu_1 \sqrt{n}) = 1 - \Phi(z_{\alpha} - \mu_1 \sqrt{n}) = 1 - \beta \]
 \[ \beta = \Phi(z_{\alpha} - \mu_1 \sqrt{n})  = \Phi(-z_{\beta}) \] <br>
 
@@ -521,19 +532,60 @@ Discreteness <br>
 In discrete cases, you can’t always hit your exact \( \alpha \). A theoretical fix is to add some randomness (like flipping another coin) to reach the exact level <br><br>
 
 <br>
-<b>Neyman-Pearson Lemma:</b><br>
-Justifies likelihood ratio as the optimal way to maximize power (reduce false negatives) and control false positives (for simple tests with single probability distributions) <br>
-- Usually used for simple tests (where all parameters are specified and known)
-- Can be extended to find the <b>uniformly most powerful</b>: if there are many possible values of the parameter, then these tests will be most powerful for every possible value of that parameter but only for one sided tests not two<br>
-- One-Sided: Tests if something is greater or less than a certain value<br>
-- Two-Sided: Tests if something is different from a certain value<br>
+<b>Neyman-Pearson Lemma:</b> <br>
+Justifies likelihood ratio as the optimal way to maximize power as the <b>uniformly most powerful test</b> - a hypothesis test which has the greatest power among all possible tests <br>
+- One-Sided: Tests if \( \mu_0 \leq \mu_a \)<br>
+- Two-Sided: Tests if \( \mu_0 \neq \mu_a \)<br>
 
 <br>
 <b> p-value </b><br>
 Smallest significance value at which null would be rejected<br>
 The confidence interval contains all those values for which the null hypothesis is accepted.
 
-<br><br>
-<h5>Generalized Likelihood Ratio</h5>
+<br><br><br>
+<h5>Generalized Likelihood Ratio GLR (for composite tests)</h5>
+For composite tests, since params are unknown, we need to compute the "most likely" values using MLE
 \[ \log \Lambda = \max_{\theta \in \omega_0} \ell(\theta) - \max_{\theta \in (\omega_0 \cup \omega_1)} \ell(\theta) \]
+
+Reject \( H_0 \) for some \( \log \Lambda < c \) <br>
+* GLR tests equal to two-sided z tests
+
+<br><br>
+<h6><b>Wilks Theorem</b></h6>
+\( X_1, X_2, \dots, X_n \) are independent and identically distributed as \( f(x \mid \theta) \), where \( \theta \in \Omega \). Under regularity conditions, and if \( \theta \in \omega_0 \), then as \( n \to \infty \):
+\[ -2 \log \Lambda \overset{d}{\to} \chi^2_{q - q_0} \]
+
+where q = # of unknown parameters = dimensionality of parameter space
+
+<br><br>
+<h6><b>GLR Tests for Multinomial Distribution</b></h6>
+- Binomial distribution but with more than two outcomes (rolling 6-sided die) <br>
+
+1. Compute two MLE (restricted and unrestricted maxima) <br>
+2. Restricted: \( \max_{\theta \in \omega_0} \ell(p(\theta)) \) <br>
+3. Unrestricted: \( \max_{\theta \in \Omega} \ell(p) \) subject to \(\sum p_k = 1 \) <br>
+
+\[ -2\log(\Lambda) = 2\sum_{j=1}^m O_j \log\left(\frac{O_j}{E_j}\right) \approx \chi^2_{m - q_0} \]
+* \( O_j = n \hat{p_j} \) (Observed counts) <br>
+* \( E_j = n p_j(\hat{\theta}) \) (Expected counts under H0 predicted by model)<br>
+
+<br><br><br>
+<h5>Comparing Two Samples</h5>
+\[X_1, \ldots, X_n \overset{\text{iid}}{\sim} N(\mu_X, \sigma^2) \quad \quad
+Y_1, \ldots, Y_m \overset{\text{iid}}{\sim} N(\mu_Y, \sigma^2)\]
+
+\[\Delta = \mu_X - \mu_Y \quad \quad \hat{\Delta} = \bar{X} - \bar{Y}\]
+
+\[\text{Var}(\hat{\Delta}) = \sigma^2 \left(\frac{1}{n} + \frac{1}{m}\right)\quad \quad \text{se}(\hat{\Delta}) = \sigma \sqrt{\frac{1}{n} + \frac{1}{m}} \]
+
+If \(\sigma \) is known, then the confidence interval is:
+\[ \hat{\Delta} \pm z_{\alpha/2} \cdot \text{se}(\hat{\Delta})\]
+
+For unknown \( \sigma \) we have:
+\[s_p^2 = \frac{(n-1)s_X^2 + (m-1)s_Y^2}{n + m - 2}\]
+\[\widehat{\text{se}}(\hat{\Delta}) = s_p \sqrt{\frac{1}{n} + \frac{1}{m}}\]
+\[t = \frac{\hat{\Delta} - \Delta}{\widehat{\text{se}}(\hat{\Delta})} \sim t_{\nu}, \quad \nu = n + m - 2\]
+\[\hat{\Delta} \pm t_{\nu, \alpha/2} \cdot \widehat{\text{se}}(\hat{\Delta})\]
+
+
 
