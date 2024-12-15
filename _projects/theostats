@@ -412,8 +412,11 @@ Let \( K(t) = log(M_X(t)) \) be the cumulant generating function of X and \( k_n
 Say we have datapoints \(X_1 \ldots X_n \) with a joint density function \( f(x_1 \ldots x_n | \theta) \). Our goal is to find the parameters \( \theta \) so that we maximize the probability of observing these datapoints \( X_i \). <br><br>
 
 If they are assumed to be iid, then the likelihood function is considered as a product of the individual densities of X given \( \theta \).
+
+\[ \mathcal{L}(\theta) = \prod_{i=1}^{n} f(x_i \mid \theta)\]
+
 But its easier to take the <b>log likelihood</b> since multiplying a bunch of probabilities < 1 will go to zero
-\[ l(\theta) = \sum{logf(X_i | \theta)} \]
+\[ log\mathcal{L}(\theta) = l(\theta) = \sum{logf(X_i | \theta)} \]
 
 To find the \( \theta \) that maximizes the log likelihood function, we take its first derivative (or partial derivations) wrt the unknown parameter and set = 0 and solve for \(\theta \).
 \[ \text{score function} \quad l'(\theta) = 0 \]
@@ -421,7 +424,7 @@ To find the \( \theta \) that maximizes the log likelihood function, we take its
 Local/Global Max: We can also (further) ensure that the root is at least a local max by checking \( l''(\hat{\theta}) < 0 \), or global for ex if the function is also concave. <br><br>
 <b>Likelihood Ratio</b> <br>
 - How much more probable it is that our estimated parameter is = to x than opposed to some other value y. <br><br>
-\[ \frac{l(\hat{\theta} = x)}{l(\hat{\theta} = y)} \]
+\[ \frac{\mathcal{L}(\hat{\theta} = x)}{\mathcal{L}(\hat{\theta} = y)} \]
 
 <b>Sampling distribution of MLE</b><br>
 - We can follow a similar approach as MOM (either bootstrapping or large sample approx) <br>
@@ -509,9 +512,9 @@ And the approx CI is wider than the MLE interval, (showing MLE is optimal):
 <br>
 <h5>Likelihood Ratio (for simple tests)</h5>
 Tells us the probability of a null hypothesis compared to an alternative hypothesis.
-\[ \frac{f(x | H_0)}{f(x | H_a)} \]
+\[ \frac{\mathcal{L}(\theta_{H_0})}{\mathcal{L}(\theta_{H_1})} = \frac{f(x | H_0)}{f(x | H_1)} \]
 
-Reject \( H_0 \) when \( \frac{f(x | H_0)}{f(x | H_a)} < c \) <br>
+Reject \( H_0 \) when \( \frac{f(x | H_0)}{f(x | H_1)} < c \) <br>
 - c is some constant that allows us to find X = some threshold to accept/reject (this is called the <b>test statistic</b>)<br>
 - c controls tradeoff between probabilities two types of errors (i.e., accepting null when alt is true and vice versa)
 
@@ -546,6 +549,10 @@ The confidence interval contains all those values for which the null hypothesis 
 <h5>Generalized Likelihood Ratio GLR (for composite tests)</h5>
 For composite tests, since params are unknown, we need to compute the "most likely" values using MLE
 \[ \log \Lambda = \max_{\theta \in \omega_0} \ell(\theta) - \max_{\theta \in (\omega_0 \cup \omega_1)} \ell(\theta) \]
+
+Generally we use:
+\[-2 \log \Lambda = -2 \left( \ell(\hat{\theta}_0) - \ell(\hat{\theta}_1) \right)\]
+
 
 Reject \( H_0 \) for some \( \log \Lambda < c \) <br>
 * GLR tests equal to two-sided z tests
@@ -587,5 +594,5 @@ For unknown \( \sigma \) we have:
 \[t = \frac{\hat{\Delta} - \Delta}{\widehat{\text{se}}(\hat{\Delta})} \sim t_{\nu}, \quad \nu = n + m - 2\]
 \[\hat{\Delta} \pm t_{\nu, \alpha/2} \cdot \widehat{\text{se}}(\hat{\Delta})\]
 
-
+done.
 
