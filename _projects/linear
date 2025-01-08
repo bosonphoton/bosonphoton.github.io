@@ -1,0 +1,65 @@
+---
+
+layout: page
+
+title: matrix methods
+
+description: notes from linear algebra
+
+img:
+
+importance: 4
+
+category: work
+
+---
+
+<style>
+    body {
+      font-size: 16px; /* Adjust the font size as needed */
+      line-height: 1; /* Adjust the line height as needed */
+    }
+    p {
+      margin-bottom: 8px; /* Adjust the margin bottom for paragraphs as needed */
+    }
+    .math {
+      font-size: 15px; /* Adjust the font size for math expressions as needed */
+    }
+</style>
+
+
+<br><br>
+
+<h2> Vectors </h2>
+<br><br>
+<h4>Canonical Unit Vectors (standard basis vectors)</h4>
+
+\( \mathbb{e}_i\) = where the i-th position is 1 and all other positions are 0. For example, in \( \mathbb{R}^3 \):
+\[
+\mathbf{e}_1 = (1, 0, 0), \quad \mathbf{e}_2 = (0, 1, 0), \quad \mathbf{e}_3 = (0, 0, 1)
+\]
+
+Any vector \( \mathbf{v} \in \mathbb{R}^n \) can be expressed as:
+\[
+\mathbf{v} = v_1 \mathbf{e}_1 + v_2 \mathbf{e}_2 + \cdots + v_n \mathbf{e}_n
+\]
+
+<br><br><br>
+<h4>Inner Products (dot products)</h4>
+\[ a \cdot b = a^T b \]
+
+ 
+<b>Properties: </b><br>
+1. \( b^T a = a^T b \) <br><br>
+2. \( (\gamma a)^T b = \gamma (a^T b)\)
+<br> scaling <b>a</b> then taking dot product with <b>b</b> is same as taking the dot product of <b>a</b> and <b>b</b> then scaling it <br><br>
+3. \( (a + b)^T c = a^T c + b^T c \)
+<br> the dot product of <b>c</b> with the sum of <b>a</b> and <b>b</b> is the same as the dot product of (a and c) plus (b and c) <br><br>
+
+<br>
+<b>Operations: </b><br>
+1. Picking out the i'th element: \( \quad e_{i}^T a = a_{i}   \) <br><br>
+2. Sum of elements: \( \quad 1_n a = a_1 + a_2 + a_3 ... a_n    \)  <br><br>
+3. Sum of squares: \( \quad  a^T a = a_{1}^2 + a_{2}^2 + a_{3}^2 ... a_{n}^2  \) \( \quad \quad a^T a = 0 \quad \text{iff} \quad a = 0 \) <br><br>
+
+
