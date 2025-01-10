@@ -62,4 +62,42 @@ Any vector \( \mathbf{v} \in \mathbb{R}^n \) can be expressed as:
 2. Sum of elements: \( \quad 1_n a = a_1 + a_2 + a_3 ... a_n    \)  <br><br>
 3. Sum of squares: \( \quad  a^T a = a_{1}^2 + a_{2}^2 + a_{3}^2 ... a_{n}^2  \) \( \quad \quad a^T a = 0 \quad \text{iff} \quad a = 0 \) <br><br>
 
+<br><br><br>
+<h2> Linear Functions </h2>
+Satisfies superposition property (both homogeneity + additivity): <br><br>
+<b>
+1. Homogeneity: \( f(ax) = a f(x) \) <br>
+2. Additivity: \( f(x + y) = f(x) + f(y) \) </b><br><br>
+
+- Any linear function can be represented as an inner product \(f(x) = a^T x \) and any inner product function is linear (for some fixed vector <b>a</b> <br><br>
+\[ f(c_1 x + c_2 y) = \]
+\[ a^T (c_1 x + c_2 y) = a^T (c_1 x) + a^T (c_2 y) = c_1(a^T x) + c_2(a^T y) \]
+\[ = c_1 f(x) + c_2 f(y) \]
+
+
+
+<h4>Affine Functions</h4>
+Affine functions are linear functions \( f(x) = a^T x \) but offset by some b (linear always go through (0,0), affine functions need not):
+\[ f(x) = a^T x + b \]
+
+<h4>Taylor Approximation</h4>
+A first order taylor series is a linear approximation of the function f. <br>
+Using a nearby point z, we can approximate f(x) using:
+\[ \hat{f}(x) = f(z) + \Delta f(z)(x - z) \]
+
+
+<br><br><br>
+<h2> Norm and Distance </h2>
+\[ ||x|| = \sqrt{x_{1}^2 + x_{2}^2 ...} = \sqrt{x^T x} \]
+
+Properties: <br><br>
+1. \( ||cx|| = |c|||x|| \) <br>
+2. \( ||x + y|| \leq ||x|| + ||y|| \)<br>
+3. \( ||x|| \geq 0 \)<br>
+4. \( ||x|| = 0 \quad \) iff \( \quad x = 0 \)<br><br><br>
+
+RMS Value: <br>
+Mean square value: \( \frac{||x||^2}{n} \) <br>
+Root Mean square value (RMS): \( \frac{||x||}{\sqrt{n}} \) <br>
+- Tells us what a typical value of \( |x_i| \) is <br><br><br>
 
