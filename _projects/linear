@@ -69,7 +69,7 @@ Satisfies superposition property (both homogeneity + additivity): <br><br>
 1. Homogeneity: \( f(ax) = a f(x) \) <br>
 2. Additivity: \( f(x + y) = f(x) + f(y) \) </b><br><br>
 
-- Any linear function can be represented as an inner product \(f(x) = a^T x \) and any inner product function is linear (for some fixed vector <b>a</b> <br><br>
+<b> Any linear function can be represented as a dot product \(f(x) = a^T x \) and any dot product function is linear (for some fixed vector a)</b> <br><br>
 \[ f(c_1 x + c_2 y) = \]
 \[ a^T (c_1 x + c_2 y) = a^T (c_1 x) + a^T (c_2 y) = c_1(a^T x) + c_2(a^T y) \]
 \[ = c_1 f(x) + c_2 f(y) \]
@@ -96,8 +96,20 @@ Properties: <br><br>
 3. \( ||x|| \geq 0 \)<br>
 4. \( ||x|| = 0 \quad \) iff \( \quad x = 0 \)<br><br><br>
 
-RMS Value: <br>
-Mean square value: \( \frac{||x||^2}{n} \) <br>
-Root Mean square value (RMS): \( \frac{||x||}{\sqrt{n}} \) <br>
-- Tells us what a typical value of \( |x_i| \) is <br><br><br>
 
+Mean square value: \( \frac{||x||^2}{n} \) <br>
+Root Mean square value (RMS): \( \frac{||x||}{\sqrt{n}} \quad \) (i.e., typical value of \( |x_i| \))<br><br><br>
+
+Block (stacked) Vectors: <br>
+\[ ||(a,b,c)||^2 = a^T a + b^T b + c^T c = ||a||^2 + ||b||^2 + ||c||^2 \]
+
+<br><br>
+Chebyshev's Inequality: <br><br>
+- "You can't have many large outliers, otherwise vector norm would be huge as well " <br>
+- Most numbers in a vector can't be much bigger than RMS <br><br>
+
+Suppose k elements in vector x is larger than some a. Then:
+\[ \frac{||x||^2}{a^2} \geq k \quad \text{or} \quad \frac{k}{n} \leq (\frac{RMS(x)}{a})^2 \]
+Number of elements \( |x_i| > a \) is no more than \( ||x||^2 / a^2 \)<br><br>
+
+The percentage of elements \( |x_i| \geq a RMS(x) \)  is  \( \leq \frac{1}{a^2} \) <br><br>
