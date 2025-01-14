@@ -89,7 +89,7 @@ Using a nearby point z, we can approximate f(x) using:
 <br><br><br>
 <h2> Norm and Distance </h2>
 \[ ||x|| = \sqrt{x_{1}^2 + x_{2}^2 ...} = \sqrt{x^T x} \]
-
+\[ ||x||^2 = \textbf{sum of squares} = x_{1}^2 + x_{2}^2 ... = x^T x \]
 Properties: <br><br>
 1. \( ||cx|| = |c|||x|| \) <br>
 2. \( ||x + y|| \leq ||x|| + ||y|| \)<br>
@@ -104,12 +104,40 @@ Block (stacked) Vectors: <br>
 \[ ||(a,b,c)||^2 = a^T a + b^T b + c^T c = ||a||^2 + ||b||^2 + ||c||^2 \]
 
 <br><br>
-Chebyshev's Inequality: <br><br>
-- "You can't have many large outliers, otherwise vector norm would be huge as well " <br>
-- Most numbers in a vector can't be much bigger than RMS <br><br>
+<b>Chebyshev's Inequality: </b><br><br>
+- Judges the size of a vector <br>
+- Most numbers in a vector can't be much bigger than its RMS <br><br>
 
-Suppose k elements in vector x is larger than some a. Then:
-\[ \frac{||x||^2}{a^2} \geq k \quad \text{or} \quad \frac{k}{n} \leq (\frac{RMS(x)}{a})^2 \]
-Number of elements \( |x_i| > a \) is no more than \( ||x||^2 / a^2 \)<br><br>
+Suppose k elements in vector x is larger than some a. Then: <br>
+- Number of elements \( |x_i| > a \) is no more than \( ||x||^2 / a^2 \)<br>
+- The percentage of elements \( |x_i| \geq a RMS(x) \)  is  \( \leq \frac{1}{a^2} \) <br>
 
-The percentage of elements \( |x_i| \geq a RMS(x) \)  is  \( \leq \frac{1}{a^2} \) <br><br>
+\[ \frac{||x||^2}{a^2} \geq k \quad \text{or} \quad \frac{k}{n} \leq (\frac{RMS(x)}{a})^2 \]<br>
+
+<b>Distance: </b><br><br>
+Distance between a and b is: \( || a - b || \) <br><br>
+
+<b>Triangle Inequality</b>: Sum of twox sides must be greater than or equal to third side<br>
+<img src = "/assets/tri.png" width = 200px>
+<br><br><br>
+
+<b>Cauchy Schwartz Inequality: \( |a \cdot b| \leq ||a||||b|| \) </b><br><br>
+<img src = "/assets/cauchy.png" width = 200px>
+<br><br><br><br>
+
+Average of \( x = \frac{ x_1 + x_2 + ...}{n} = \frac{1^T x }{n} \) <br><br>
+Demeaned vector \( \tilde{x} = x - avg(x)1 \) <br><br>
+Standard deviation of \( x = rms(\tilde{x}) = \frac{||x - avg(x)1|| }{\sqrt{n}} \) <br><br>
+\( rms(x)^2 = avg(x)^2 + std(x)^2 \) <br><br>
+Standardized vector \( z = \frac{\tilde{x}}{std(x)}\) <br><br>
+
+
+<br><br><br>
+<h2> Angles </h2>
+\[\theta = \cos^{-1}\left(\frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{a}\| \|\mathbf{b}\|}\right)\]
+<img src = "/assets/angle.png" width = 700px>
+
+
+
+<br><br><br>
+
