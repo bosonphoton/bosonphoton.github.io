@@ -129,7 +129,15 @@ Average of \( x = \frac{ x_1 + x_2 + ...}{n} = \frac{1^T x }{n} \) <br><br>
 Demeaned vector \( \tilde{x} = x - avg(x)1 \) <br><br>
 Standard deviation of \( x = rms(\tilde{x}) = \frac{||x - avg(x)1|| }{\sqrt{n}} \) <br><br>
 \( rms(x)^2 = avg(x)^2 + std(x)^2 \) <br><br>
-Standardized vector \( z = \frac{\tilde{x}}{std(x)}\) <br><br>
+Standardized vector \( z = \frac{\tilde{x}}{std(x)}\) <br><br><br>
+
+<b>Example in Finance:</b> <br>
+x = time series of returns <br>
+avd(x) = average return <br>
+std(x) = volatility <br><br>
+
+Risk-Reward Plot: <br>
+<img src = "/assets/finance.png" width = 200px>
 
 
 <br><br><br>
