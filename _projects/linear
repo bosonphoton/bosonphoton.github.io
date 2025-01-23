@@ -200,4 +200,51 @@ This process continues for all \( \mathbf{v}_i \) to produce orthonormal vectors
 <br><br><br><br>
 
 
-<h4></h4>
+<h2>Matrices</h2>
+<br>
+<h5>Lower Triangular Matrices</h5>
+\[
+\begin{bmatrix}
+a_{11} & 0      & 0      & 0      \\
+a_{21} & a_{22} & 0      & 0      \\
+a_{31} & a_{32} & a_{33} & 0      \\
+a_{41} & a_{42} & a_{43} & a_{44}
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{bmatrix}
+=
+\begin{bmatrix}
+a_{11}x_1 \\
+a_{21}x_1 + a_{22}x_2 \\
+a_{31}x_1 + a_{32}x_2 + a_{33}x_3 \\
+a_{41}x_1 + a_{42}x_2 + a_{43}x_3 + a_{44}x_4
+\end{bmatrix}
+\]
+
+<br><br>
+<h5>Difference Matrices</h5>
+\[
+\begin{bmatrix}
+-1 & 1 &  0  &  0  \\
+0 &  -1 & 1  &  0  \\
+0 &  0 &  -1  & 1
+\end{bmatrix}
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+x_3 \\
+x_4
+\end{bmatrix}
+=
+\begin{bmatrix}
+x_2 - x_1 \\
+x_3 - x_2 \\
+x_4 - x_3
+\end{bmatrix}
+\]
+
+
