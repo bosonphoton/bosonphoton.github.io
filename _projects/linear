@@ -248,3 +248,77 @@ x_4 - x_3
 \]
 
 
+
+<br><br>
+<h5>Rotation Matrices</h5>
+A 2D rotation matrix for an angle $\theta$ is given by:
+\[
+    R(\theta) = \begin{bmatrix}
+        \cos\theta & -\sin\theta \\
+        \sin\theta & \cos\theta
+    \end{bmatrix}
+\]
+
+<br><br>
+<h5>Incidence Matrix</h5>
+<img src = "/assets/incidence.png" width = 300px><br>
+For a simple undirected graph with m edges and n nodes, the incidence matrix \( A \in \mathbb{R}^{nodes \times edges} \) is defined as:
+\[
+    A_{i,j} = \begin{cases}
+        1, & \text{if edge } j \text{ incoming to } i \\
+        -1, & \text{if edge } j \text{ leaving } i \\
+        0, & \text{no connection}
+    \end{cases}
+\]
+
+<br><br>
+<h5>Incidence Matrix</h5>
+A simple example of a 1D convolution smoothing matrix with a 3-point moving average kernel is:
+\[
+    C = \begin{bmatrix}
+        \frac{1}{3} & \frac{1}{3} & \frac{1}{3} & 0 & \dots & 0 \\
+        0 & \frac{1}{3} & \frac{1}{3} & \frac{1}{3} & \dots & 0 \\
+        \vdots & \vdots & \vdots & \vdots & \ddots & \vdots \\
+        0 & 0 & 0 & \dots & \frac{1}{3} & \frac{1}{3} & \frac{1}{3}
+    \end{bmatrix}
+\]
+
+
+<br><br><br><br><br>
+<h2>Linear Mapping</h2>
+A <b>linear</b> mapping \( f: \mathbb{R}^n \to \mathbb{R}^m \) can be represented by a matrix \( A_{m \times n} \) such that for any vector \( x \in \mathbb{R}^n \):
+\[
+    f(x) = Ax
+\]
+<b> 1. f will always send 0 to 0 </b><br>
+If f(0) \( \neq \) 0, f is NOT linear <br>
+If f(0) \(=\) 0, f may or may not be linear
+<br><br>
+2. \( f(\alpha x + \beta y) = A(\alpha x + \beta y) = \alpha Ax + \beta Ay \)<br><br>
+<b> 3. If f does not have a matrix representation, it is NONLINEAR</b><br><br><br><br>
+
+
+<h4>Finding A Given x</h4>
+For an \(n\)-vector \(\mathbf{x} = (x_1, \dots, x_n)\), we use the standard unit vectors to write:
+\[
+\mathbf{x} = x_1 \mathbf{e}_1 + x_2 \mathbf{e}_2 + \cdots + x_n \mathbf{e}_n
+\]
+Since \(f\) is linear, we have:
+\[
+f(\mathbf{x}) = x_1 f(\mathbf{e}_1) + x_2 f(\mathbf{e}_2) + \cdots + x_n f(\mathbf{e}_n)
+\]
+
+Now, we put together the \(m \times n\) matrix \(A\) column by column:
+\[
+A = \left[ f(\mathbf{e}_1) \,\, f(\mathbf{e}_2) \,\, \cdots \,\, f(\mathbf{e}_n) \right]
+\]
+Thus, we can write:
+\[
+f(\mathbf{x}) = x_1 f(\mathbf{e}_1) + x_2 f(\mathbf{e}_2) + \cdots + x_n f(\mathbf{e}_n) = A
+\begin{bmatrix}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{bmatrix}
+\]
