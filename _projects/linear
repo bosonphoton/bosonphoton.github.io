@@ -322,3 +322,74 @@ x_2 \\
 x_n
 \end{bmatrix}
 \]
+
+
+
+<h4>Price-Demand Elasticity Model</h4>
+
+- Prices are given by an \( n \)-vector \( p \).<br>
+- Demand (e.g., units sold) is given as an \( n \)-vector \( d \).<br>
+- The fractional (percent) change in price of good \( i \) is:
+    \[
+    \delta_{price_i} = \frac{p_i^{\text{new}} - p_i}{p_i}
+    \]
+    The fractional (percent) change in demand of good \( i \) is:
+    \[
+    \delta_{dem_i} = \frac{d_i^{\text{new}} - d_i}{d_i}
+    \]
+
+
+The price-demand elasticity model assumes:
+\[
+\delta_{dem} = E \delta_{price}
+\]
+
+\[
+E =
+\begin{bmatrix}
+-0.3 & 0.1 & \cdots \\
+\vdots & \vdots & \vdots \\
+\vdots & \vdots & \vdots
+\end{bmatrix}
+\]
+
+\[
+\delta_{dem_1} = -0.3 \delta_{price_1} + 0.1 \delta_{price_2} + \cdots
+\]
+
+Interpretation:
+If price of item 1 decreases by 30%, price of item 2 increases by 10%
+
+<br><br><br><br><br>
+
+<h4>Balancing Chemical Equations</h4>
+The given redox reaction \(Ra = Pb\), solve for a and b:<br><br>
+\[
+a_1 \text{Cr}_2\text{O}_7^{2-} + a_2 \text{Fe}^{2+} + a_3 \text{H}^+
+\rightarrow b_1 \text{Cr}^{3+} + b_2 \text{Fe}^{3+} + b_3 \text{H}_2\text{O}
+\]
+<br><br>
+<center>
+\(
+R =
+\begin{bmatrix}
+2 & 0 & 0 \\
+7 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+-2 & 2 & 1
+\end{bmatrix}
+\quad \quad \)
+
+
+\(
+P =
+\begin{bmatrix}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+0 & 0 & 2 \\
+3 & 3 & 0
+\end{bmatrix}
+\)
+<center>
