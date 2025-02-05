@@ -63,6 +63,25 @@ Any vector \( \mathbf{v} \in \mathbb{R}^n \) can be expressed as:
 3. Sum of squares: \( \quad  a^T a = a_{1}^2 + a_{2}^2 + a_{3}^2 ... a_{n}^2  \) \( \quad \quad a^T a = 0 \quad \text{iff} \quad a = 0 \) <br><br>
 
 <br><br><br>
+<h4>Tensor Product (Outer Product) </h4>
+\[
+\mathbf{a} \otimes \mathbf{b} = \mathbf{a} \mathbf{b}^T
+\]
+
+\[
+a = \begin{bmatrix} a^0 \\ a^1 \\ a^2 \\ a^3 \end{bmatrix}, \quad
+b = \begin{bmatrix} b^0 \\ b^1 \\ b^2 \\ b^3 \end{bmatrix} \quad \quad
+
+a \otimes b =
+\begin{bmatrix}
+a^0 b^0 & a^0 b^1 & a^0 b^2 & a^0 b^3 \\
+a^1 b^0 & a^1 b^1 & a^1 b^2 & a^1 b^3 \\
+a^2 b^0 & a^2 b^1 & a^2 b^2 & a^2 b^3 \\
+a^3 b^0 & a^3 b^1 & a^3 b^2 & a^3 b^3
+\end{bmatrix}
+\]
+
+<br><br><br>
 <h2> Linear Functions </h2>
 Satisfies superposition property (both homogeneity + additivity): <br><br>
 <b>
@@ -73,7 +92,6 @@ Satisfies superposition property (both homogeneity + additivity): <br><br>
 \[ f(c_1 x + c_2 y) = \]
 \[ a^T (c_1 x + c_2 y) = a^T (c_1 x) + a^T (c_2 y) = c_1(a^T x) + c_2(a^T y) \]
 \[ = c_1 f(x) + c_2 f(y) \]
-
 
 
 <h4>Affine Functions</h4>
@@ -369,6 +387,7 @@ a_1 \text{Cr}_2\text{O}_7^{2-} + a_2 \text{Fe}^{2+} + a_3 \text{H}^+
 \rightarrow b_1 \text{Cr}^{3+} + b_2 \text{Fe}^{3+} + b_3 \text{H}_2\text{O}
 \]
 <br><br>
+
 <center>
 \(
 R =
@@ -392,4 +411,19 @@ P =
 3 & 3 & 0
 \end{bmatrix}
 \)
-<center>
+</center>
+
+
+
+
+<br><br><br><br><br>
+<h2>Linear Dynamical Systems</h2>
+
+A linear dynamical system is defined by relating the state at time \( t \) to the state at time \( t + 1 \). It is a linear system if this relationship is linear.
+
+\[
+\mathbf{x}_{t+1} = \mathbf{A}_t \mathbf{x}_t
+\]
+
+- \(\mathbf{x}_t \in \mathbb{R}^n\) is the state vector at time \( t \) <br>
+- \(\mathbf{A}_t \in \mathbb{R}^{n \times n}\) is the **dynamics matrix** at time \( t \).
