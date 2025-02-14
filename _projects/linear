@@ -301,6 +301,34 @@ A simple example of a 1D convolution smoothing matrix with a 3-point moving aver
     \end{bmatrix}
 \]
 
+<br><br>
+<h5>Matrix Powers and Adjacency Matrix</h5>
+<img src = "/assets/adjmatrix.png" width = 400px><br><br>
+<b>Matrix Powers:</b> The k'th power of an adjacency matrix \( A^k \) tells us number of paths of length k between 2 vertices<br>
+- Node 0 to 2 has length 2<br>
+- The entry at (0,2) of AA = 2
+<br><br>
+
+
+
+
+
+
+<br><br>
+<h5>Convolution Matrices</h5>
+\[
+c_k = \sum_{i+j=k+1} a_i b_j
+\]
+
+\( c_1 \) means k = 2, so compute sum of products where (i = 1, j = 1) <br><br>
+\( c_2 \) means k = 3, so compute sum of products where (i = 1, j = 2) and (i = 2, j = 1) <br><br>
+\( c_2 \) means k = 4, so compute sum of products where (i = j = 2), (j = 1, i = 3), and (j = 3, i = 1)<br><br><br>
+
+<b>Polynomial Multiplication</b><br><br>
+\(c_k\) gives us the coefficients in \(p(x)q(x)\)
+\[ p(x) = a_1 + a_2 x + a_3 x^2 + \ldots a_n x^{n-1} \quad \quad q(x) = b_1 + b_2 x + b_3 x^2 \ldots b_m x^{m-1} \]
+\[ p(x)q(x) = c_1 + c_2 x + c_3 x^2 + \ldots c_{n+m-1} x^{n+m-2} \]
+
 
 <br><br><br><br><br>
 <h2>Linear Mapping</h2>
@@ -427,3 +455,117 @@ A linear dynamical system is defined by relating the state at time \( t \) to th
 
 - \(\mathbf{x}_t \in \mathbb{R}^n\) is the state vector at time \( t \) <br>
 - \(\mathbf{A}_t \in \mathbb{R}^{n \times n}\) is the **dynamics matrix** at time \( t \).
+
+
+
+
+<br><br><br><br>
+<h2>QR Factorization via Gram-Schmidt</h2>
+
+Given a matrix \( A \) with linearly independent columns, run the Gram-Schmidt process to obtain orthonormal vectors \( q_1, \dots, q_k \), forming matrix \( Q \):
+\[
+    A = \begin{bmatrix} a_1 & a_2 & \dots & a_k \end{bmatrix} \quad \quad Q = \begin{bmatrix} q_1 & q_2 & \dots & q_k \end{bmatrix}
+\]</p>
+
+<p>which satisfies:</p>
+
+<p>\[
+    Q^T Q = I_k
+\]</p>
+
+<br>
+Expressing \( A \) in terms of \( Q \) and \( R \):
+
+<p>\[
+    a_1 = R_{11} q_1
+\]</p>
+
+<p>\[
+    a_2 = R_{12} q_1 + R_{22} q_2
+\]</p>
+
+<p>\[
+    a_3 = R_{13} q_1 + R_{23} q_2 + R_{33} q_3
+\]</p>
+
+<p>\[
+    a_i = R_{1i} q_1 + R_{2i} q_2 + \dots + R_{ii} q_i
+\]</p>
+
+<p>where:</p>
+
+<p>\[
+    R_{ij} = q_i^T a_j \quad \text{for } i < j, \quad R_{ii} = \| \tilde{q}_i \|
+\]</p>
+
+<p>The matrix \( R \) is an upper triangular \( k \times k \) matrix:</p>
+
+<p>\[
+    R =
+    \begin{bmatrix}
+        R_{11} & R_{12} & R_{13} & \dots & R_{1k} \\
+        0 & R_{22} & R_{23} & \dots & R_{2k} \\
+        0 & 0 & R_{33} & \dots & R_{3k} \\
+        \vdots & \vdots & \vdots & \ddots & \vdots \\
+        0 & 0 & 0 & \dots & R_{kk}
+    \end{bmatrix}
+\]</p>
+
+<h4>QR Factorization:</h4>
+
+<p>\[
+    A = QR
+\]</p>
+
+<p>where \( Q \) has orthonormal columns and \( R \) is upper triangular with positive diagonal entries.</p>
+
+<br><br>
+<p>Key properties:</p>
+<ul>
+    <li>\( A = QR \) is the QR factorization of \( A \).</li>
+    <li>\( Q^T Q = I_k \), meaning \( Q \) has orthonormal columns.</li>
+    <li>\( R \) is upper triangular with positive diagonal entries.</li>
+    <li>QR factorization can be computed using the Gram-Schmidt algorithm.</li>
+</ul>
+
+<br><br><br><br>
+<h2>Invertible Matrices</h2>
+
+<b>Left Inverse</b>: Matrix \( A \) has a left inverse if there exists a matrix \( L \) such that \(L A = I \) <br>
+- A's columns are linearly independent<br>
+<br>
+<b>Right Inverse</b>: Matrix \( A \) has a right inverse if there exists a matrix \( R \) such that \(A R = I \) <br>
+- A's rows are linearly independent<br>
+<br><br>
+
+<b>Invertible</b> if A has both a left and a right inverse, meaning there exists a matrix \( A^{-1} \) such that:</p>
+<p>\[
+    A A^{-1} = A^{-1} A = I
+\]</p>
+<p>If \( A \) is invertible:</p>
+<ul>
+    <li>\( A \) must be square</li>
+    <li>\( \det(A) \neq 0 \).</li>
+    <li>\( Ax = b \) has unique solution \(x = A^{-1} b \)</li>
+    <li>\( (A^{-1})^{-1} = A \)</li>
+</ul>
+<br>
+<b>Pseudoinverse:</b>
+If \( A \) is not square or not invertible, the <em>pseudoinverse</em> \( A^+ \) is used, which satisfies:</p>
+<p>\[
+    A^+ = (A^T A)^{-1} A^T \quad \text{(if } A \text{ has full column rank)}
+\]</p>
+<p>\[
+    A^+ = A^T (A A^T)^{-1} \quad \text{(if } A \text{ has full row rank)}
+\]</p>
+
+
+
+<br><br><br>
+<h2>Least Squares Approximation</h2>
+
+Given an overdetermined (A is tall) system of equations \( Ax = b \), an exact solution x may not exist. Instead, find \( \hat{x} \) that minimizes the least squares error:
+\[ \min_x \| Ax - b \|^2 \]</p>
+
+<b>Solution</b>
+\[ \hat{x} = (A^T A)^{-1} A^T b = A^+ b  \]
