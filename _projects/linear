@@ -565,7 +565,24 @@ If \( A \) is not square or not invertible, the <em>pseudoinverse</em> \( A^+ \)
 <h2>Least Squares Approximation</h2>
 
 Given an overdetermined (A is tall) system of equations \( Ax = b \), an exact solution x may not exist. Instead, find \( \hat{x} \) that minimizes the least squares error:
-\[ \min_x \| Ax - b \|^2 \]</p>
+\[ J = \| Ax - b \|^2 \]</p>
 
 <b>Solution</b>
 \[ \hat{x} = (A^T A)^{-1} A^T b = A^+ b  \]
+
+<br>
+<h5>Multi- Objecive Least Squares Approximation</h5>
+    <p>
+        The multi-objective least squares problem can be formulated as:
+    </p>
+    <p>
+        \[
+        J = \sum_{i=1}^{m} w_i \| A_i x - b_i \|^2
+        \]
+
+                \[
+        J = \left\| \begin{bmatrix} \sqrt{w_1} A_1 \\ \sqrt{w_2} A_2 \\ \vdots \\ \sqrt{w_m} A_m \end{bmatrix} x - \begin{bmatrix} \sqrt{w_1} b_1 \\ \sqrt{w_2} b_2 \\ \vdots \\ \sqrt{w_m} b_m \end{bmatrix} \right\|^2
+        \]
+    </p>
+    <p>
+  

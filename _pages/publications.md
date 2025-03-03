@@ -57,12 +57,6 @@ nav_order: 2
     </div>
 </body>
 
-<hr>
-<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
-    <div style="text-align: left;">
-        <b><a href = "https://github.com/bosonphoton/BayesianConceptLearning">Bayesian Concept Learning (PSYC 359 project) </a></b>
-    </div>
-</body>
 
 <hr>
 <body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
