@@ -16,6 +16,7 @@ nav_order: 4
 <a href = "/thoughts/academia.html">Academia Deromanticized</a><br>
 <a href = "/thoughts/fooc.html">Fear of Opportunity Cost</a><br>
 <a href = "/thoughts/machinepsych.html">Machine Psychology</a><br>
+<a href = "/thoughts/itsdoomed.html">Machine Learning Research is Doomed</a><br>
 <br>
 
 <hr>
