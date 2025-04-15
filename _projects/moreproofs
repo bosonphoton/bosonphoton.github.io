@@ -1,0 +1,94 @@
+---
+layout: page
+
+title: more math proofs
+
+description: notes from math56
+
+img:
+
+importance: 2
+---
+
+<h2> Groups (G, *) </h2>
+
+A <strong>group</strong> is a set \( G \) together with operation \( * \colon G \times G \to G \) (takes two elements and returns one) satisfying the following axioms:
+<br><br>
+
+<strong>1. Associativity:</strong><br>
+\( (a * b) * c = a * (b * c) \quad \quad \forall a,b,c \in G\)
+
+<br><br>
+<strong>2. Identity:</strong><br>
+\(\exists e \) such that \(a * e = a \quad \quad \forall a,e \in G) \)
+
+<br><br>
+<strong>3. Inverse:</strong><br>
+\(\exists a^{-1}\) such that \( a * a^{-1} = e \quad \quad \forall a, a^{-1}, e \in G \)
+
+<br><br>
+<strong>**4. Commutative (Abelian Group):</strong><br>
+\(a * b = b * a \quad \quad \forall a,b \in G\)
+
+
+
+
+
+
+<br><br><br><br>
+<h2>Fields (F, +, \( \cdot \))</h2>
+
+A <strong>field</strong> is a set \( F \) with two operations <br>
+\( + \colon F \times F \to F \) <br>
+\( \cdot \colon F \times F \to F \)
+
+<br><br>
+
+<strong>1. \((F, +)\) is an abelian group:</strong><br>
+\( a + b = b + a \), associativity, identity \(0\), and additive inverse \( -a \quad \forall a, b \in F \)
+<br><br>
+
+<strong>2. \((F \setminus \{0\}, \cdot)\) is an abelian group:</strong><br>
+\( a \cdot b = b \cdot a \), associativity, identity \(1\), and multiplicative inverse \( a^{-1} \quad \forall a \neq 0 \)
+<br><br>
+
+<strong>3. Distributivity:</strong><br>
+\( a \cdot (b + c) = a \cdot b + a \cdot c \quad \quad \forall a, b, c \in F \)
+
+
+
+<br><br><br><br>
+<h2>Vector Spaces (V)</h2>
+
+A <strong>vector space</strong> over a field \( F \) is a set \( V \) equipped with:
+<br><br>
+
+• Closed under <strong>Addition</strong> \( + \colon V \times V \to V \), where \( u + v \in V \) for all \( u, v \in V \).<br>
+• Closed under <strong>Scalar multiplication</strong> \( \cdot \colon F \times V \to V \), where \( \lambda v \in V \) for each \( \lambda \in F \), \( v \in V \).
+
+<br><br>
+
+<strong>1. Commutativity:</strong><br>
+\( u + v = v + u \quad \forall u, v \in V \)
+
+<br><br>
+<strong>2. Associativity:</strong><br>
+\( (u + v) + w = u + (v + w) \quad \forall u, v, w \in V \)<br>
+\( (ab)v = a(bv) \quad \forall a, b \in F, \, v \in V \)
+
+<br><br>
+<strong>3. Additive Identity:</strong><br>
+\( \exists 0 \in V \) such that \( v + 0 = v \quad \forall v \in V \)
+
+<br><br>
+<strong>4. Additive Inverse:</strong><br>
+\( \forall v \in V, \, \exists w \in V \) such that \( v + w = 0 \)
+
+<br><br>
+<strong>5. Multiplicative Identity:</strong><br>
+\( 1v = v \quad \forall v \in V \)
+
+<br><br>
+<strong>6. Distributivity:</strong><br>
+\( a(u + v) = au + av \quad \forall a \in F, \, u, v \in V \)<br>
+\( (a + b)v = av + bv \quad \forall a, b \in F, \, v \in V \)
