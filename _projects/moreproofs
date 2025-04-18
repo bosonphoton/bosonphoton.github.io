@@ -92,3 +92,25 @@ A <strong>vector space</strong> over a field \( F \) is a set \( V \) equipped w
 <strong>6. Distributivity:</strong><br>
 \( a(u + v) = au + av \quad \forall a \in F, \, u, v \in V \)<br>
 \( (a + b)v = av + bv \quad \forall a, b \in F, \, v \in V \)
+
+
+<br><br><br><br>
+<h2>Modular Arithmetic</h2>
+
+The set \( \mathbb{Z}/n\mathbb{Z} = \{0, 1, 2, \ldots , n-1\} \) where each element corresponds to the set of integers that when divided by n, has that remainder.
+<br><br>
+
+For n = 3, we have \( \mathbb{Z}/3\mathbb{Z} = \{[0], [1], [2]\} \) <br>
+• \([0] = \{0,3,6,9, \ldots\}\)<br>
+• \([1] = \{1,4,7,10, \ldots\}\)<br>
+• \([2] = \{2,5,8,11, \ldots\}\)<br>
+
+<br><br>
+
+<strong>Field Property:</strong><br>
+If \( p \) is prime, then \( \mathbb{Z}/p\mathbb{Z} \) forms a <strong>field \( \mathbb{F} \)</strong>: every nonzero element has a multiplicative inverse.<br>
+
+
+<br><br><br><br>
+<b>Injectivity: </b><br>
+If f(x) = f(y), then x = y
