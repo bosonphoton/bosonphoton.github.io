@@ -204,7 +204,7 @@ Use a random number generator to obtain values of \( U \) and apply the above eq
 (1) <b>CLT</b>: The sum of a large number of i.i.d RV's tend to follow a normal distribution. AKA "convergence in distribution" to a normal. <br>
 \[\bar{X}_n = \frac{1}{n} \sum_{i=1}^{n} X_i \quad \quad Var(\bar{X}_n) = \frac{\sigma^2}{n} \]
 \[ \sqrt{n} ( \bar{X}_n - \mu) \quad \xrightarrow{d} \quad \mathcal{N}(0, \sigma^2) \quad \text{as } n \to \infty\]
-<center>Rewriting this, we can say that</center>
+<center>Reblog this, we can say that</center>
 
 \[ \bar{X}_n \thicksim N( \mu, \frac{\sigma^2}{n} ) \quad \text{or} \quad \bar{X}_n \thicksim \mu + \frac{\sigma}{\sqrt{n}} Z  \]
 

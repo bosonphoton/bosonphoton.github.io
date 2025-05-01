@@ -38,16 +38,19 @@ pagination:
 
 
 
+<h2><a href = "https://bosonphoton.github.io/personal/">thoughts</a></h2>
+short essays (under personal)
 
-<h1><a href = "https://medium.com/@capuchipu">my medium blog</a></h1>
+<br><br>
+<h2><a href = "https://medium.com/@capuchipu">my medium articles</a></h2>
 
 <div class="post">
-  {% assign blog_name_size = site.blog_name | size %}
-  {% assign blog_description_size = site.blog_description | size %}
+  {% assign _name_size = site._name | size %}
+  {% assign _description_size = site._description | size %}
 
-  {% if blog_name_size > 0 or blog_description_size > 0 %}
+  {% if _name_size > 0 or _description_size > 0 %}
   <div class="header-bar">
-    <h2><a href = "https://medium.com/@capuchipu">medium articles</a> & writing stuff</h2>
+    <h2><a href = "https://medium.com/@capuchipu">medium articles</a> & blog stuff</h2>
   </div>
   {% endif %}
 

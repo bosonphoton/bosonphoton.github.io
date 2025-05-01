@@ -93,13 +93,59 @@ A <strong>vector space</strong> over a field \( F \) is a set \( V \) equipped w
 \( a(u + v) = au + av \quad \forall a \in F, \, u, v \in V \)<br>
 \( (a + b)v = av + bv \quad \forall a, b \in F, \, v \in V \)
 
+<br><br><br><br>
+<h2>Subspaces (\(U \subseteq V\))</h2>
+
+A <strong>subspace</strong> \( U \) of a vector space \( V \) (over a field \( F \)) is a non-empty subset of \( V \) that is itself a vector space under the same operations.
+<br><br>
+
+&bull; <strong>Contains the zero vector</strong> &nbsp;&nbsp;\( 0 \in U \).<br>
+&bull; <strong>Closed under Addition</strong> &nbsp;&nbsp;\( u_1 + u_2 \in U \quad \forall\, u_1,u_2 \in U \).<br>
+&bull; <strong>Closed under Scalar Multiplication</strong> &nbsp;&nbsp;\( \lambda u \in U \quad \forall\, \lambda \in F,\; u \in U \).
+
+<br><br>
+
+<strong>1. Non-emptiness (Zero Vector):</strong><br>
+\( 0 \in U \Longrightarrow U \neq \varnothing \)
+
+<br><br>
+<strong>2. Additive Closure:</strong><br>
+\( u + v \in U \quad \forall\, u,v \in U \)
+
+<br><br>
+<strong>3. Scalar Closure:</strong><br>
+\( \alpha u \in U \quad \forall\, \alpha \in F,\; u \in U \)
+
+<br><br><br>
+<h2>Dimensionality of a Subspace</h2>
+
+The <strong>dimension</strong> of a subspace \( U \) is the number of vectors in any basis of \( U \).
+<br><br>
+
+&bull; <strong>Basis of \(U\)</strong> &nbsp;&nbsp;A set \( \{u_1,\dots,u_k\} \subset U \) is a <em>basis</em> if it is linearly independent and spans \( U \).  Then \( \dim U = k \).<br>
+&bull; <strong>Sum of Subspaces</strong> &nbsp;&nbsp;For subspaces \( U, W \subseteq V \):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;\( \dim(U + W) = \dim U + \dim W - \dim(U \cap W) \).
+
+<br><br><br><br>
+<h4>Injective (one to one)</h4>
+<b>Different inputs must produce different outputs</b> (ex: x^2 is not injective because both -1 and 1 map to 1)
+<br><br>
+<h4>Surjective (onto)</h4>
+<b>Every value in the output space (codomain) is hit</b>
+
+<br><br>
+
+
+
+
 
 <br><br><br><br>
 <h2>Modular Arithmetic</h2>
 
 The set \( \mathbb{Z}/n\mathbb{Z} = \{0, 1, 2, \ldots , n-1\} \) where each element corresponds to the set of integers that when divided by n, has that remainder.
+<br>
+Think of each element in \( \mathbb{Z}/n\mathbb{Z} as being a "label" for some set of numbers:
 <br><br>
-
 For n = 3, we have \( \mathbb{Z}/3\mathbb{Z} = \{[0], [1], [2]\} \) <br>
 • \([0] = \{0,3,6,9, \ldots\}\)<br>
 • \([1] = \{1,4,7,10, \ldots\}\)<br>
@@ -114,3 +160,11 @@ If \( p \) is prime, then \( \mathbb{Z}/p\mathbb{Z} \) forms a <strong>field \( 
 <br><br><br><br>
 <b>Injectivity: </b><br>
 If f(x) = f(y), then x = y
+
+
+
+
+
+
+
+
