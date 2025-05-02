@@ -144,7 +144,7 @@ The <strong>dimension</strong> of a subspace \( U \) is the number of vectors in
 
 The set \( \mathbb{Z}/n\mathbb{Z} = \{0, 1, 2, \ldots , n-1\} \) where each element corresponds to the set of integers that when divided by n, has that remainder.
 <br>
-Think of each element in \( \mathbb{Z}/n\mathbb{Z} as being a "label" for some set of numbers:
+Think of each element in \( \mathbb{Z}/n\mathbb{Z} \) as being a "label" for some set of numbers:
 <br><br>
 For n = 3, we have \( \mathbb{Z}/3\mathbb{Z} = \{[0], [1], [2]\} \) <br>
 • \([0] = \{0,3,6,9, \ldots\}\)<br>
