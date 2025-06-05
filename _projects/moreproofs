@@ -127,16 +127,90 @@ The <strong>dimension</strong> of a subspace \( U \) is the number of vectors in
 &nbsp;&nbsp;&nbsp;&nbsp;\( \dim(U + W) = \dim U + \dim W - \dim(U \cap W) \).
 
 <br><br><br><br>
+
+<h2>Linear Maps \( T: U \to V \)</h2>
+
+Let \( U \) and \( V \) be vector spaces, and let \( T \in L(U, V) \) be a linear map from \( U \) to \( V \).
+
+<br><br>
+
+<strong>1. Pick a basis for \( U \): (think of it like building blocks for a space U)</strong><br>
+\[
+\{ u_1, u_2, \dots, u_n \}
+\]
+
+<br><br>
+
+<strong>2. Write any vector \( x \in U \) as a linear combination of the basis:</strong> (build a new vector x using those building blocks)<br>
+\[
+x = a_1 u_1 + a_2 u_2 + \dots + a_n u_n
+\]
+
+<br><br>
+
+<strong>3. Apply the linear map \( T \) to the vector \( x \):</strong> (feed this vector x into some machine T) <br>
+\[
+T(x) = T(a_1 u_1 + \dots + a_n u_n) = a_1 T(u_1) + \dots + a_n T(u_n)
+\]
+
+<br><br>
+
+<strong>4. Each \( T(u_i) \in V \): </strong>(the transformed building blocks are now part of a new space V) <br>
+
+<br>So you can write any vector \(x \in U\) as ( T(x) \) which is a linear combination of vectors in \( V \)
+
+<br><br>
+
+<h3>The kernel of \( T \):</h3>
+The kernel of \( T \), denoted \( \text{Ker}(T) \), is the set of all vectors in \( U \) that map to the zero vector in \( V \):
+
+\[
+\text{Ker}(T) = \{ x \in U \mid T(x) = 0 \}
+\]
+
+
+Then \( x \in \text{Ker}(T) \) if:
+
+\[
+T(x) = a_1 T(u_1) + a_2 T(u_2) + \dots + a_n T(u_n) = 0
+\]
+
+So the kernel is the set of all linear combinations of \( u_i \) that are destroyed (sent to zero) by \( T \).
+
+<br><br>
+
+<strong>3. Important facts:</strong><br>
+
+• \( \text{Ker}(T) \) is always a <em>subspace</em> of \( U \).<br>
+• If \( \text{Ker}(T) = \{0\} \), then \( T \) is called <strong>injective</strong> (one-to-one).<br>
+• The dimension of the kernel is called the <strong>nullity</strong> of \( T \).
+
+<br><br>
+<h3>The range of \( T \):</h3>
+The range (or image) of \( T \) is the set of all vectors in \( V \) that are outputs of \( T \):
+
+\[
+\text{Range}(T) = \{ T(x) \mid x \in U \}
+\]
+
+\[
+\text{Range}(T) = \text{span} \{ T(u_1), T(u_2), \dots, T(u_n) \} \subseteq V
+\]
+
+<br><br>
+• \( \text{Range}(T) \) is always a <em>subspace</em> of \( V \).<br>
+• If \( \text{Range}(T) = V \), then \( T \) is called <strong>surjective</strong> (onto).
+
+
+
+<br><br><br><br>
 <h4>Injective (one to one)</h4>
-<b>Different inputs must produce different outputs</b> (ex: x^2 is not injective because both -1 and 1 map to 1)
+<b>- Different inputs must produce different outputs</b> (ex: x^2 is not injective because both -1 and 1 map to 1)
+<br><b>- If f(x) = f(y), then x = y</b>
+
 <br><br>
 <h4>Surjective (onto)</h4>
-<b>Every value in the output space (codomain) is hit</b>
-
-<br><br>
-
-
-
+<b>- Every value in the output space (codomain) is hit</b>
 
 
 <br><br><br><br>
@@ -157,10 +231,69 @@ For n = 3, we have \( \mathbb{Z}/3\mathbb{Z} = \{[0], [1], [2]\} \) <br>
 If \( p \) is prime, then \( \mathbb{Z}/p\mathbb{Z} \) forms a <strong>field \( \mathbb{F} \)</strong>: every nonzero element has a multiplicative inverse.<br>
 
 
-<br><br><br><br>
-<b>Injectivity: </b><br>
-If f(x) = f(y), then x = y
 
+<br><br><br><br>
+<h2>Proof by Induction</h2>
+• Verify the base case \(n=1\).<br>
+• Assume the formula for \(n=k\) (inductive hypothesis).<br>
+• Show this assumption forces the formula for \(n=k+1\).<br>
+• Conclude the result holds for every integer \(n\ge1\).<br>
+
+<br><br>
+We want to show for all integers \(n \ge 1\):
+<br><br>
+
+\[
+1 + 2 + \cdots + n \;=\;\frac{n(n+1)}2.
+\]
+<br><br>
+
+<strong>Base Case (\(n=1\)):</strong><br>
+\[
+1 \;=\;\frac{1\cdot(1+1)}2 \;=\;1.
+\]
+<br><br>
+
+<strong>Inductive Step:</strong><br>
+Assume for some \(k\ge1\):
+\[
+1 + 2 + \cdots + k \;=\;\frac{k(k+1)}2.
+\]
+Then
+\[
+1 + 2 + \cdots + k + (k+1)
+\;=\;\frac{k(k+1)}2 + (k+1)
+\;=\;(k+1)\Bigl(\tfrac{k}{2}+1\Bigr)
+\;=\;\frac{(k+1)(k+2)}2.
+\]
+Thus if it holds at \(k\), it holds at \(k+1\).
+
+<br><br>
+
+<strong>Conclusion:</strong><br>
+By induction, the formula is true for all \(n\ge1\).
+
+
+<br><br><br><br>
+<h2>Proof by Contradiction</h2>
+• Assume the opposite of the claim<br>
+• Reach a direct contradiction with the assumption<br>
+• Conclude the original claim must be true<br>
+
+<br><br>
+<strong>Claim:</strong> There is no largest natural number. <br>
+1. <em>Assume, for sake of contradiction,</em> that there exists a largest natural number \(N\).<br><br>
+2. By definition of natural numbers, \(N + 1\) is also a natural number.<br>
+3. Notice then that
+\[
+N + 1 \;>\; N,
+\]
+which contradicts our assumption that \(N\) was the largest.<br><br>
+4. Since the assumption leads to an impossibility, it must be false.<br><br>
+
+<strong>Conclusion:</strong><br>
+Therefore, there is no largest natural number.
+<br><br>
 
 
 
