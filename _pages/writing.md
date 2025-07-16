@@ -32,5 +32,7 @@ nav_order: 1
 <a href="https://medium.com/@bosonphoton/probability-theory-introduction-2c1903a9a44b" target="_blank" rel="noopener">Probability Theory: Introduction</a><br>
 <a href="https://medium.com/@bosonphoton/mathematical-introduction-to-dynamical-systems-2d581fcb2444" target="_blank" rel="noopener">Mathematical Introduction to Dynamical Systems</a><br>
 <a href="https://medium.com/@bosonphoton/theoretical-explorations-of-consciousness-d88d527c7a58" target="_blank" rel="noopener">Theoretical Explorations of Consciousness</a><br>
-<a href="https://medium.com/@bosonphoton/patterns-of-the-emergent-universe-abstractions-in-chaos-theory-and-quantum-physics-f95a85393dba" target="_blank" rel="noopener">Patterns of the Emergent Universe: Abstractions in Chaos Theory and Quantum Physics</a><br>
-<a href="https://medium.com/@bosonphoton/revolutionizing-technology-with-neuroscience-research-a-hypothetical-approach-e48b883dabe8" target="_blank" rel="noopener">Revolutionizing Technology With Neuroscience Research (A Hypothetical Approach)</a><br>
+<a href="https://medium.com/@bosonphoton/patterns-of-the-emergent-universe-abstractions-in-chaos-theory-and-quantum-physics-f95a85393dba" target="_blank" rel="noopener">Patterns of the Emergent Universe: Abstractions in Chaos Theory</a><br>
+<a href="https://medium.com/@bosonphoton/revolutionizing-technology-with-neuroscience-research-a-hypothetical-approach-e48b883dabe8" target="_blank" rel="noopener">Revolutionizing Technology With Neuroscience Research</a><br>
+
+<br>
