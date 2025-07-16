@@ -4,11 +4,11 @@ title: notes
 permalink: /notes/
 description: ML, math, & research notes (constantly in progress/updated)
 nav: true
-nav_order: 1
+nav_order: 2
 horizontal: false
 ---
 
-<!-- pages/projects.md -->
+<!-- pages/notes.md -->
 
 <div class="projects">
 
