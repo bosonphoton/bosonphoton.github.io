@@ -8,9 +8,7 @@
 
 <a href="https://singularityhub.com/">Singularity Hub</a> Cool tech stuff
 
-<a href="https://brainstellar.com/puzzles">Brain Stellar</a> Fun math riddles
-
-<a href="https://arithmetic.zetamac.com/">Zetamac</a> Mental math speed game
+<a href="https://brainstellar.com/puzzles">Brain Stellar</a> Fun riddles
 
 <a href="https://live-closer-to-truth.pantheonsite.io/">Closer To Truth</a> Cool science/philosophy stuff
 
