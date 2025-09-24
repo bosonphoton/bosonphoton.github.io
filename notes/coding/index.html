@@ -1,191 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-  <!-- Head -->
-  <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">    <!-- Metadata, OpenGraph and Schema.org -->
-    
-
-    <!-- Standard metadata -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>data structures &amp; algos | Chelsea  Zou</title>
-    <meta name="author" content="Chelsea  Zou">
-    <meta name="description" content="notes from leetcode">
-    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
-
-
-    <!-- Bootstrap & MDB -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04">
-    <!-- <link rel="stylesheet" href="/assets/css/mdb.min.css?62a43d1430ddb46fc4886f9d0e3b49b8"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous">
-
-    <!-- Bootstrap Table -->
-    <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css">
-
-    <!-- Fonts & Icons -->
-    <link rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
-
-    <!-- Code Syntax Highlighting -->
-    <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?19f3075a2d19613090fe9e16b564e1fe" media="" id="highlight_theme_light">
-
-    
-
-    
-
-    <!-- Styles -->
-    
-    <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A7%A0&lt;/text&gt;&lt;/svg&gt;">
-    
-    <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e">
-    <link rel="canonical" href="https://bosonphoton.github.io/notes/coding/">
-
-    <!-- Dark Mode -->
-    
-    <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?e74e74bf055e5729d44a7d031a5ca6a5" media="none" id="highlight_theme_dark">
-    <script src="/assets/js/theme.js?96d6b3e1c3604aca8b6134c7afdd5db6"></script>
-    <script src="/assets/js/dark_mode.js?9b17307bb950ffa2e34be0227f53558f"></script>
-    
-
-  </head>
-
-  <!-- Body -->
-  <body class="fixed-top-nav ">
-
-    <!-- Header -->
-    <header>
-
-      <!-- Nav Bar -->
-      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
-        <div class="container">
-          <a class="navbar-brand title font-weight-lighter" href="//"><span class="font-weight-bold">Chelsea </span><span class="font-weight-bold">Zou</span></a>
-          <!-- Navbar Toggle -->
-          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar top-bar"></span>
-            <span class="icon-bar middle-bar"></span>
-            <span class="icon-bar bottom-bar"></span>
-          </button>
-
-          <div class="collapse navbar-collapse text-right" id="navbarNav">
-            <ul class="navbar-nav ml-auto flex-nowrap">
-
-              <!-- About -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/">about</a>
-              </li>
-<!--              -->
-<!--              &lt;!&ndash; blog &ndash;&gt;-->
-<!--              <li class="nav-item ">-->
-<!--                <a class="nav-link" href="/blog/">blog-->
-<!---->
-<!--                </a>-->
-<!--              </li>-->
-<!---->
-
-              <!-- Other pages -->
-              <li class="nav-item ">
-                <a class="nav-link" href="/writing/">writing</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/notes/">notes</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/research/">research</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/coolstuff/">cool stuff</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/personal/">personal</a>
-              </li>
-              <li class="nav-item ">
-                <a class="nav-link" href="/peculiarpeople/">peculiar people</a>
-              </li>
-
-              <!-- Toogle theme mode -->
-              <li class="toggle-container">
-                <button id="light-toggle" title="Change theme">
-                  <i class="fa-solid fa-moon"></i>
-                  <i class="fa-solid fa-sun"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      <!-- Scrolling Progress Bar -->
-      <progress id="progress" value="0">
-        <div class="progress-container">
-          <span class="progress-bar"></span>
-        </div>
-      </progress>
-    </header>
-
-
-    <!-- Content -->
-    <div class="container mt-5">
-      
-        <!-- page.html -->
-<div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">data structures &amp; algos</h1>
-    <p class="post-description">notes from leetcode</p>
-  </header>
-
-  <article>
-    <style>
-    body {
-      font-size: 16px; /* Adjust the font size as needed */
-      line-height: 1; /* Adjust the line height as needed */
-    }
-    p {
-      margin-bottom: 8px; /* Adjust the margin bottom for paragraphs as needed */
-    }
-    .math {
-      font-size: 15px; /* Adjust the font size for math expressions as needed */
-    }
-</style>
-
-<h5>Big O &amp; Recursion</h5>
-
-<p><img src="/assets/bigo.jpeg" width="500">
-<br><br></p>
-
-<h5><b>Intuition of O(log(n))</b></h5>
-<p>Log time \(O(log\) \(n)\): Means that somewhere in algo, input is <b>reduced by a percentage at each step</b> (i.e., binary search where step 1 is n/2 and step 2 is n/4, etc.)</p>
-<ul>
-  <li>Recall that \(\log_b a = x\) and \(b^x = a\)</li>
-  <li>Say we have an array with length \(n = 8\) so \(\log_2 8 = 3\) and \(2^3 = 8\)</li>
-  <li>Because \(x = 3\), we now only need to halve our 8 element array 3 times to find an element</li>
-  <li>Instead of iterating through all the elements with complexity \(O(n)\), we do it in \(O(log\) \(n)\)</li>
-</ul>
-
-<p><br><br>
-Recursion:</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title>data structures &amp; algos | Chelsea Zou</title> <meta name="author" content="Chelsea Zou"> <meta name="description" content="notes from leetcode"> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <link rel="stylesheet" href="/assets/css/bootstrap.min.css?a4b3f509e79c54a512b890d73235ef04"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.css"> <link rel="stylesheet" href="/assets/css/academicons.min.css?f0b7046b84e425c55f3463ac249818f5"> <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons"> <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?19f3075a2d19613090fe9e16b564e1fe" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%F0%9F%A7%A0&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?d41d8cd98f00b204e9800998ecf8427e"> <link rel="canonical" href="https://bosonphoton.github.io/notes/coding/"> <link rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?e74e74bf055e5729d44a7d031a5ca6a5" media="none" id="highlight_theme_dark"> <script src="/assets/js/theme.js?96d6b3e1c3604aca8b6134c7afdd5db6"></script> <script src="/assets/js/dark_mode.js?9b17307bb950ffa2e34be0227f53558f"></script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"><span class="font-weight-bold">Chelsea </span><span class="font-weight-bold">Zou</span></a> <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse text-right" id="navbarNav"> <ul class="navbar-nav ml-auto flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about</a> </li> <li class="nav-item "> <a class="nav-link" href="/writing/">writing</a> </li> <li class="nav-item "> <a class="nav-link" href="/notes/">notes</a> </li> <li class="nav-item "> <a class="nav-link" href="/research/">research</a> </li> <li class="nav-item "> <a class="nav-link" href="/coolstuff/">cool stuff</a> </li> <li class="nav-item "> <a class="nav-link" href="/personal/">personal</a> </li> <li class="nav-item "> <a class="nav-link" href="/peculiarpeople/">peculiar people</a> </li> <li class="toggle-container"> <button id="light-toggle" title="Change theme"> <i class="fa-solid fa-moon"></i> <i class="fa-solid fa-sun"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5"> <div class="post"> <header class="post-header"> <h1 class="post-title">data structures &amp; algos</h1> <p class="post-description">notes from leetcode</p> </header> <article> <style>body{font-size:16px;line-height:1}p{margin-bottom:8px}.math{font-size:15px}</style> <h5>Big O &amp; Recursion</h5> <p><img src="/assets/bigo.jpeg" width="500"> <br><br></p> <h5><b>Intuition of O(log(n))</b></h5> <p>Log time \(O(log\) \(n)\): Means that somewhere in algo, input is <b>reduced by a percentage at each step</b> (i.e., binary search where step 1 is n/2 and step 2 is n/4, etc.)</p> <ul> <li>Recall that \(\log_b a = x\) and \(b^x = a\)</li> <li>Say we have an array with length \(n = 8\) so \(\log_2 8 = 3\) and \(2^3 = 8\)</li> <li>Because \(x = 3\), we now only need to halve our 8 element array 3 times to find an element</li> <li>Instead of iterating through all the elements with complexity \(O(n)\), we do it in \(O(log\) \(n)\)</li> </ul> <p><br><br> Recursion:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="nf">print</span><span class="p">(</span><span class="nf">f</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-</code></pre></div></div>
-<ul>
-  <li>This function would never stop running</li>
-  <li>We need a <b>BASE CASE</b> which specifies when the recursion ends</li>
-</ul>
-
-<p><b><u>Base cases</u></b> are specified at the start of the function</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">fn</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+</code></pre></div></div> <ul> <li>This function would never stop running</li> <li>We need a <b>BASE CASE</b> which specifies when the recursion ends</li> </ul> <p><b><u>Base cases</u></b> are specified at the start of the function</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">fn</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
         <span class="k">return</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
     <span class="nf">fn</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-</code></pre></div></div>
-<p><br></p>
-
-<p><b>Example</b></p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">tri_recursion</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
+</code></pre></div></div> <p><br></p> <p><b>Example</b></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">tri_recursion</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
   <span class="nf">if</span><span class="p">(</span><span class="n">k</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="n">k</span> <span class="o">+</span> <span class="nf">tri_recursion</span><span class="p">(</span><span class="n">k</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
@@ -195,42 +15,7 @@ Recursion:</p>
 
 <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="se">\n\n</span><span class="s">Recursion Example Results</span><span class="sh">"</span><span class="p">)</span>
 <span class="nf">tri_recursion</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>Initial Call: tri_recursion(6)</p>
-<ul>
-  <li>k is 6, which is greater than 0.</li>
-  <li>It calls tri_recursion(5)</li>
-  <li>which calls tri_recursion(4)</li>
-  <li>All the way to tri_recursion(1)</li>
-  <li>Which calls tri_recursion(0) hitting the base case, and = returns 0.</li>
-</ul>
-
-<p>Returning Back Up the Stack <br></p>
-<ul>
-  <li>Returning to tri_recursion(1)</li>
-  <li>The result of tri_recursion(0) is 0.</li>
-  <li>It calculates and returns result = 1 + 0 = 1.</li>
-  <li>Returning to tri_recursion(2) which calculates result = 2 + 1 = 3.</li>
-  <li>Returning to tri_recursion(3) which calculates result = 3 + 3 = 6.</li>
-  <li>All the way to returning to tri_recursion(6), where result of tri_recursion(5) is 15.</li>
-  <li>It calculates result = 6 + 15 = 21</li>
-</ul>
-
-<p><br><br></p>
-<h2>1. Array and Strings</h2>
-<h5><b><u>Rows &amp; Columns</u></b></h5>
-<p>Transpose matrix</p>
-<ul>
-  <li>Iterate through number of row
-    <ul>
-      <li>Iterate through number of columns</li>
-      <li>switch rows and columns so matrix[columns][rows]</li>
-    </ul>
-  </li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numRows</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
+</code></pre></div></div> <p>Initial Call: tri_recursion(6)</p> <ul> <li>k is 6, which is greater than 0.</li> <li>It calls tri_recursion(5)</li> <li>which calls tri_recursion(4)</li> <li>All the way to tri_recursion(1)</li> <li>Which calls tri_recursion(0) hitting the base case, and = returns 0.</li> </ul> <p>Returning Back Up the Stack <br></p> <ul> <li>Returning to tri_recursion(1)</li> <li>The result of tri_recursion(0) is 0.</li> <li>It calculates and returns result = 1 + 0 = 1.</li> <li>Returning to tri_recursion(2) which calculates result = 2 + 1 = 3.</li> <li>Returning to tri_recursion(3) which calculates result = 3 + 3 = 6.</li> <li>All the way to returning to tri_recursion(6), where result of tri_recursion(5) is 15.</li> <li>It calculates result = 6 + 15 = 21</li> </ul> <p><br><br></p> <h2>1. Array and Strings</h2> <h5><b><u>Rows &amp; Columns</u></b></h5> <p>Transpose matrix</p> <ul> <li>Iterate through number of row <ul> <li>Iterate through number of columns</li> <li>switch rows and columns so matrix[columns][rows]</li> </ul> </li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">numRows</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">)</span>
 <span class="n">numCols</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">transposed</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">numRows</span><span class="p">):</span>
@@ -238,27 +23,10 @@ Recursion:</p>
     <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">numCols</span><span class="p">):</span>
         <span class="n">newCol</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="n">col</span><span class="p">][</span><span class="n">row</span><span class="p">])</span>
     <span class="n">transposed</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">newCol</span><span class="p">)</span>
-</code></pre></div></div>
-<p><br></p>
-
-<p><b>Print the next index:<b></b></b></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+</code></pre></div></div> <p><br></p> <p><b>Print the next index:<b></b></b></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">])</span>
-</code></pre></div></div>
-<p><br></p>
-
-<h5><b><u>Two Pointers</u></b></h5>
-<p><b>***Algorithm</b></p>
-<ul>
-  <li>Start with two pointers left and right</li>
-  <li>Iterate these two pointers along an array or string index</li>
-  <li>*Usually start code with while left &lt; right</li>
-</ul>
-
-<p><b>Ex:</b> Check if string is palindrome:</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">palindrome</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</code></pre></div></div> <p><br></p> <h5><b><u>Two Pointers</u></b></h5> <p><b>***Algorithm</b></p> <ul> <li>Start with two pointers left and right</li> <li>Iterate these two pointers along an array or string index</li> <li>*Usually start code with while left &lt; right</li> </ul> <p><b>Ex:</b> Check if string is palindrome:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">palindrome</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">right</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
     
@@ -270,15 +38,7 @@ Recursion:</p>
             <span class="n">right</span> <span class="o">-=</span> <span class="mi">1</span>
     
     <span class="k">return</span> <span class="bp">True</span>
-</code></pre></div></div>
-<p><br>
-<b>Ex:</b> Check if there exists a target = sum of two numbers, in sorted array:</p>
-<ul>
-  <li>Start summing left and right</li>
-  <li>Because array is sorted, we can just move right pointer left if sum is too big, and left pointer right if too small</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sorted_twosum</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+</code></pre></div></div> <p><br> <b>Ex:</b> Check if there exists a target = sum of two numbers, in sorted array:</p> <ul> <li>Start summing left and right</li> <li>Because array is sorted, we can just move right pointer left if sum is too big, and left pointer right if too small</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sorted_twosum</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
     <span class="n">left</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">right</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">array</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
     
@@ -292,17 +52,7 @@ Recursion:</p>
             <span class="n">right</span> <span class="o">-=</span> <span class="mi">1</span>
     
     <span class="k">return</span> <span class="bp">False</span>
-</code></pre></div></div>
-<p><br>
-Using two pointers to iterate through two arrays:</p>
-<ul>
-  <li>Start both pointers at the first index</li>
-  <li>Use while loop until one pointer reaches end</li>
-  <li>At each iteration of the loop, move one or both of the pointers forward</li>
-</ul>
-
-<p><b>Ex:</b> Merge two sorted arrays:</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span> <span class="n">arr2</span><span class="p">):</span>
+</code></pre></div></div> <p><br> Using two pointers to iterate through two arrays:</p> <ul> <li>Start both pointers at the first index</li> <li>Use while loop until one pointer reaches end</li> <li>At each iteration of the loop, move one or both of the pointers forward</li> </ul> <p><b>Ex:</b> Merge two sorted arrays:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="n">arr1</span><span class="p">,</span> <span class="n">arr2</span><span class="p">):</span>
     <span class="n">ans</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nf">len</span><span class="p">(</span><span class="n">arr1</span><span class="p">)</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nf">len</span><span class="p">(</span><span class="n">arr2</span><span class="p">):</span>
@@ -324,16 +74,7 @@ Using two pointers to iterate through two arrays:</p>
         <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
     
     <span class="k">return</span> <span class="n">ans</span>
-</code></pre></div></div>
-<p><br>
-<b>Ex:</b> Check if string A is a subsequence of string B:</p>
-<ul>
-  <li>Init two pointers for string A and B</li>
-  <li>If pointers match, move both pointers to the next letter</li>
-  <li>If no match, move pointer for String B to next letter</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">subseq</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
+</code></pre></div></div> <p><br> <b>Ex:</b> Check if string A is a subsequence of string B:</p> <ul> <li>Init two pointers for string A and B</li> <li>If pointers match, move both pointers to the next letter</li> <li>If no match, move pointer for String B to next letter</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">subseq</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">):</span>
     <span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nf">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nf">len</span><span class="p">(</span><span class="n">b</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">b</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
@@ -342,48 +83,7 @@ Using two pointers to iterate through two arrays:</p>
             <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span> <span class="c1">#will move b if no match
 </span>            
     <span class="k">return</span> <span class="n">i</span> <span class="o">==</span> <span class="nf">len</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1">#True only if we iterated all through a
-</span></code></pre></div></div>
-<p><br></p>
-<h5><b><u>Sliding Window</u></b></h5>
-<p><b>size of window = right index - left index + 1 </b><br></p>
-
-<p>Use sliding windows when the problem:</p>
-<ol>
-  <li>Defines some constraint/attribute to make the subarray “valid” (valid if sum of subarray is &lt; 10)</li>
-  <li>Asks to find subarray in some way (i.e., longest, shortest, largest valid subarray)</li>
-</ol>
-
-<p>Examples of problems include:</p>
-<ul>
-  <li>Find the longest subarray with a sum less than or equal to k</li>
-  <li>Find the longest substring that has at most one “0”</li>
-  <li>Find the number of subarrays that have a product less than k</li>
-</ul>
-
-<p><b>***Algorithm:</b> Left and right bound of subarray can be defined by two pointers:</p>
-<ul>
-  <li>initialize two pointers left = right = 0</li>
-  <li>increment right to add new valid elements to subarray</li>
-  <li>increment left to remove elements that make subarray invalid</li>
-  <li>keep track of constraint using a variable “curr”” and then do “curr += nums[right]” etc. (to maintain O(1))</li>
-  <li>use <b>for loop</b> to increment <b>right to </b>add elements</li>
-  <li>use <b>while loop</b> to <b>remove</b> elements until array valid</li>
-  <li>update answer after exiting while loop</li>
-</ul>
-
-<p>For an array of length n, there are:<br></p>
-<ul>
-  <li>n subarrays of length 1 <br>
-</li>
-  <li>(n - 1) subarrays of length 2 <br>
-</li>
-  <li>(n - 2) subarrays of length 3…<br>
-</li>
-  <li>So in total there are \(\frac{n(n+1)}{2}\) subarrays</li>
-</ul>
-
-<p><b>Ex:</b> Return len of longest subarray that sums &lt; k:</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">subarr</span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+</span></code></pre></div></div> <p><br></p> <h5><b><u>Sliding Window</u></b></h5> <p><b>size of window = right index - left index + 1 </b><br></p> <p>Use sliding windows when the problem:</p> <ol> <li>Defines some constraint/attribute to make the subarray “valid” (valid if sum of subarray is &lt; 10)</li> <li>Asks to find subarray in some way (i.e., longest, shortest, largest valid subarray)</li> </ol> <p>Examples of problems include:</p> <ul> <li>Find the longest subarray with a sum less than or equal to k</li> <li>Find the longest substring that has at most one “0”</li> <li>Find the number of subarrays that have a product less than k</li> </ul> <p><b>***Algorithm:</b> Left and right bound of subarray can be defined by two pointers:</p> <ul> <li>initialize two pointers left = right = 0</li> <li>increment right to add new valid elements to subarray</li> <li>increment left to remove elements that make subarray invalid</li> <li>keep track of constraint using a variable “curr”” and then do “curr += nums[right]” etc. (to maintain O(1))</li> <li>use <b>for loop</b> to increment <b>right to </b>add elements</li> <li>use <b>while loop</b> to <b>remove</b> elements until array valid</li> <li>update answer after exiting while loop</li> </ul> <p>For an array of length n, there are:<br></p> <ul> <li>n subarrays of length 1 <br> </li> <li>(n - 1) subarrays of length 2 <br> </li> <li>(n - 2) subarrays of length 3…<br> </li> <li>So in total there are \(\frac{n(n+1)}{2}\) subarrays</li> </ul> <p><b>Ex:</b> Return len of longest subarray that sums &lt; k:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">subarr</span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
     <span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">curr</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1">#constraint checker
 </span>    <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
@@ -395,10 +95,7 @@ Using two pointers to iterate through two arrays:</p>
         <span class="n">ans</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="n">right</span> <span class="o">-</span> <span class="n">left</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="n">ans</span>
-</code></pre></div></div>
-
-<p><b>Ex:</b>Return len of longest sequence of 1’s in an array of 1s and 0s. You may flip one 0 (notice this is the same as saying longest array that contains at most one 0):</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">ones</span><span class="p">(</span><span class="n">array</span><span class="p">):</span> <span class="c1">#constraint in this problem is curr &lt;= 1 zeros
+</code></pre></div></div> <p><b>Ex:</b>Return len of longest sequence of 1’s in an array of 1s and 0s. You may flip one 0 (notice this is the same as saying longest array that contains at most one 0):</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">ones</span><span class="p">(</span><span class="n">array</span><span class="p">):</span> <span class="c1">#constraint in this problem is curr &lt;= 1 zeros
 </span>    <span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">=</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">curr</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">array</span><span class="p">)):</span>
@@ -411,16 +108,7 @@ Using two pointers to iterate through two arrays:</p>
         <span class="n">ans</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="n">right</span> <span class="o">-</span> <span class="n">left</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">ans</span>
-</code></pre></div></div>
-<p><br>
-<b>Number of Subarrays</b> <br></p>
-<ul>
-  <li>Suppose current window is (left, right). Number of valid subarrays up till right index  = len of window (because left can keep indexing until right).</li>
-  <li>Inside while loop, update answer: [Ans += current window length]</li>
-</ul>
-
-<p><b>Ex:</b> Return num of subarrays whose product &lt; k</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">subarr</span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+</code></pre></div></div> <p><br> <b>Number of Subarrays</b> <br></p> <ul> <li>Suppose current window is (left, right). Number of valid subarrays up till right index = len of window (because left can keep indexing until right).</li> <li>Inside while loop, update answer: [Ans += current window length]</li> </ul> <p><b>Ex:</b> Return num of subarrays whose product &lt; k</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">subarr</span><span class="p">(</span><span class="n">array</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
     
@@ -436,17 +124,7 @@ Using two pointers to iterate through two arrays:</p>
 </span>        <span class="n">ans</span> <span class="o">+=</span> <span class="n">windowlen</span>
         
     <span class="k">return</span> <span class="n">answer</span>
-</code></pre></div></div>
-<p><br>
-<b>Fixed Window Size</b> (problems that require subarrays to be some fixed length k)<br></p>
-<ul>
-  <li>build window: from index 0 to index (k -1)</li>
-  <li>add element at index i and keep window size by removing element at index<b> (i - k) </b> <br>
-</li>
-</ul>
-
-<p><b>Ex:</b> Find sum of the subarray with the largest sum whose length is k:</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">subarr</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+</code></pre></div></div> <p><br> <b>Fixed Window Size</b> (problems that require subarrays to be some fixed length k)<br></p> <ul> <li>build window: from index 0 to index (k -1)</li> <li>add element at index i and keep window size by removing element at index<b> (i - k) </b> <br> </li> </ul> <p><b>Ex:</b> Find sum of the subarray with the largest sum whose length is k:</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">subarr</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
     <span class="n">curr</span> <span class="o">=</span> <span class="mi">0</span> 
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span> <span class="c1">#build first window 
 </span>        <span class="n">curr</span> <span class="o">+=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1">#sum of first window
@@ -457,21 +135,7 @@ Using two pointers to iterate through two arrays:</p>
 </span>        <span class="n">ans</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="n">curr</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="n">an</span>
-</code></pre></div></div>
-<p><br></p>
-<h5><b><u>Prefix Sum</u></b></h5>
-<ul>
-  <li>Create array prefix where prefix[i] is the sum of all elements up to i</li>
-  <li>Sum from i to j = prefix[j] - prefix[i-1] &lt;– (which is the sum before index i)</li>
-</ul>
-
-<p>Given int array nums, queries (pertaining to index of nums) where queries[i] = [x, y] and a limit, return bool arr true if the sum from x to y is less than limit: <br>
-nums = [1, 6, 3, 2, 7, 2]<br>
-queries = [[0, 3], [2, 5], [2, 4]]<br>
-limit = 13<br>
-the answer is [true, false, true]</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">answer_queries</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">queries</span><span class="p">,</span> <span class="n">limit</span><span class="p">):</span>
+</code></pre></div></div> <p><br></p> <h5><b><u>Prefix Sum</u></b></h5> <ul> <li>Create array prefix where prefix[i] is the sum of all elements up to i</li> <li>Sum from i to j = prefix[j] - prefix[i-1] &lt;– (which is the sum before index i)</li> </ul> <p>Given int array nums, queries (pertaining to index of nums) where queries[i] = [x, y] and a limit, return bool arr true if the sum from x to y is less than limit: <br> nums = [1, 6, 3, 2, 7, 2]<br> queries = [[0, 3], [2, 5], [2, 4]]<br> limit = 13<br> the answer is [true, false, true]</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">answer_queries</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span> <span class="n">queries</span><span class="p">,</span> <span class="n">limit</span><span class="p">):</span>
     <span class="c1">#builds the prefix array
 </span>    <span class="n">prefix</span> <span class="o">=</span> <span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span> <span class="c1">#start with first element in nums so [-1] index won't be empty
 </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nf">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span> <span class="c1">#start adding the last value of prefix with the next value in nums
@@ -483,22 +147,7 @@ the answer is [true, false, true]</p>
 </span>        <span class="n">ans</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">curr</span> <span class="o">&lt;</span> <span class="n">limit</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">ans</span>
-</code></pre></div></div>
-<p><br></p>
-
-<p><b>Ex: Running Sum of 1d Array</b>: Given an array of integers nums, you start with an initial positive value startValue. In each iteration, you calculate the step by step sum of startValue plus elements in nums (from left to right).
-Return the minimum positive value of startValue such that the step by step sum is never less than 1. <br><br>
-Input: nums = [-3,2,-3,4,2] <br>
-Output: 5<br>
-Explanation: If you choose startValue = 4, in the third iteration your step by step sum is less than 1.<br></p>
-<ul>
-  <li>Make prefix sum array</li>
-  <li>Find minimum of prefix array (pref_min)</li>
-  <li>Find X such that sum(X,pref_min) is 1</li>
-  <li>If X is less than 1, return 1</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">minStartValue</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">):</span>
+</code></pre></div></div> <p><br></p> <p><b>Ex: Running Sum of 1d Array</b>: Given an array of integers nums, you start with an initial positive value startValue. In each iteration, you calculate the step by step sum of startValue plus elements in nums (from left to right). Return the minimum positive value of startValue such that the step by step sum is never less than 1. <br><br> Input: nums = [-3,2,-3,4,2] <br> Output: 5<br> Explanation: If you choose startValue = 4, in the third iteration your step by step sum is less than 1.<br></p> <ul> <li>Make prefix sum array</li> <li>Find minimum of prefix array (pref_min)</li> <li>Find X such that sum(X,pref_min) is 1</li> <li>If X is less than 1, return 1</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">minStartValue</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">):</span>
         <span class="n">prefix</span> <span class="o">=</span> <span class="p">[</span><span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="nf">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
             <span class="n">prefix</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">prefix</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
@@ -506,54 +155,7 @@ Explanation: If you choose startValue = 4, in the third iteration your step by s
         <span class="k">if</span> <span class="mi">1</span> <span class="o">-</span> <span class="nf">min</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">:</span>
             <span class="k">return</span> <span class="mi">1</span>
         <span class="k">return</span> <span class="mi">1</span> <span class="o">-</span> <span class="nf">min</span><span class="p">(</span><span class="n">prefix</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p><br><br></p>
-<h2>2. Hashing</h2>
-<p>A hash function is a function that takes any input and converts to an integer (that is less than some determined value).<br></p>
-
-<p><b>PROS</b></p>
-<ul>
-  <li>Hashmaps (dictionaries) are all O(1) for the following: adding key value pairs, delete element if exists, check existence.<br>
-</li>
-</ul>
-
-<p><b>CONS</b></p>
-<ul>
-  <li>slower for smaller input sizes</li>
-  <li>collisions (when different keys convert to same integer)</li>
-  <li>take up more space (arrays are more flexible with resizing)</li>
-</ul>
-
-<h5><b><u>Checking for Existence</u></b></h5>
-<p><b>Ex:</b> Given an array of integers nums and an integer target, return indices of two numbers such that they add up to target. You cannot use the same index twice.<br></p>
-<ul>
-  <li>Store each (key, value) as (element, and it’s index)</li>
-  <li>Iterate through the array, checking if  already exists in the dictionary</li>
-  <li>If not, initialize new entry</li>
-  <li>Else, return array[target - array[i]] (which is the index of the “target - array[i]” element)</li>
-</ul>
-
-<p><b><u>Missing Number</u></b>
-<b>Ex:</b> Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array. <br></p>
-<ul>
-  <li>Approach 1: Sort and compare (return the index that is out of place compared to array element when sorted ascending)</li>
-  <li>Approach 2: Hashset (see which number missing from range [0,n] after creating a dictionary)</li>
-  <li>Approach 3 (clever trick): Sum Cancellation (sum of expected minus sum of array)</li>
-</ul>
-
-<h5><b><u>Counting</u></b></h5>
-<ul>
-  <li>General tip: Use hashmaps for anything counting related</li>
-</ul>
-
-<p><b>Ex:</b> You are given a string s and an integer k. Find the length of the longest substring that contains at most k distinct characters.
-For example, given s = “eceba” and k = 2, return 3. The longest substring with at most 2 distinct characters is “ece”.</p>
-<ul>
-  <li>Sliding windows + hashmap: Iterate through the string with sliding windows technique and update the hashmap (deleting elements from left and adding elements such that it satisfies the constraint of len(dict) &lt;= 2)</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_longest_substring</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+</code></pre></div></div> <p><br><br></p> <h2>2. Hashing</h2> <p>A hash function is a function that takes any input and converts to an integer (that is less than some determined value).<br></p> <p><b>PROS</b></p> <ul> <li>Hashmaps (dictionaries) are all O(1) for the following: adding key value pairs, delete element if exists, check existence.<br> </li> </ul> <p><b>CONS</b></p> <ul> <li>slower for smaller input sizes</li> <li>collisions (when different keys convert to same integer)</li> <li>take up more space (arrays are more flexible with resizing)</li> </ul> <h5><b><u>Checking for Existence</u></b></h5> <p><b>Ex:</b> Given an array of integers nums and an integer target, return indices of two numbers such that they add up to target. You cannot use the same index twice.<br></p> <ul> <li>Store each (key, value) as (element, and it’s index)</li> <li>Iterate through the array, checking if already exists in the dictionary</li> <li>If not, initialize new entry</li> <li>Else, return array[target - array[i]] (which is the index of the “target - array[i]” element)</li> </ul> <p><b><u>Missing Number</u></b> <b>Ex:</b> Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array. <br></p> <ul> <li>Approach 1: Sort and compare (return the index that is out of place compared to array element when sorted ascending)</li> <li>Approach 2: Hashset (see which number missing from range [0,n] after creating a dictionary)</li> <li>Approach 3 (clever trick): Sum Cancellation (sum of expected minus sum of array)</li> </ul> <h5><b><u>Counting</u></b></h5> <ul> <li>General tip: Use hashmaps for anything counting related</li> </ul> <p><b>Ex:</b> You are given a string s and an integer k. Find the length of the longest substring that contains at most k distinct characters. For example, given s = “eceba” and k = 2, return 3. The longest substring with at most 2 distinct characters is “ece”.</p> <ul> <li>Sliding windows + hashmap: Iterate through the string with sliding windows technique and update the hashmap (deleting elements from left and adding elements such that it satisfies the constraint of len(dict) &lt;= 2)</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_longest_substring</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="n">counts</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">left</span> <span class="o">=</span> <span class="n">ans</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">right</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">s</span><span class="p">)):</span>
@@ -567,53 +169,17 @@ For example, given s = “eceba” and k = 2, return 3. The longest substring wi
         <span class="n">ans</span> <span class="o">=</span> <span class="nf">max</span><span class="p">(</span><span class="n">ans</span><span class="p">,</span> <span class="n">right</span> <span class="o">-</span> <span class="n">left</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="n">ans</span>
-</code></pre></div></div>
-<p><br>
-<b><u>Anagrams</u></b></p>
-<ul>
-  <li>Sorting the strings in alphabetical order, if they are anagrams they will be equal</li>
-</ul>
-
-<p><b>Ex:</b> Given an array of strings strs, group the anagrams together. For example, given strs = [“eat”,”tea”,”tan”,”ate”,”nat”,”bat”], return [[“bat”],[“nat”,”tan”],[“ate”,”eat”,”tea”]]. <br></p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">groupAnagrams</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">):</span>
+</code></pre></div></div> <p><br> <b><u>Anagrams</u></b></p> <ul> <li>Sorting the strings in alphabetical order, if they are anagrams they will be equal</li> </ul> <p><b>Ex:</b> Given an array of strings strs, group the anagrams together. For example, given strs = [“eat”,”tea”,”tan”,”ate”,”nat”,”bat”], return [[“bat”],[“nat”,”tan”],[“ate”,”eat”,”tea”]]. <br></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">groupAnagrams</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">strs</span><span class="p">):</span>
     <span class="n">groups</span> <span class="o">=</span> <span class="nf">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">strs</span><span class="p">:</span>
         <span class="n">key</span> <span class="o">=</span> <span class="sh">""</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="nf">sorted</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
         <span class="n">groups</span><span class="p">[</span><span class="n">key</span><span class="p">].</span><span class="nf">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="n">groups</span><span class="p">.</span><span class="nf">values</span><span class="p">()</span>
-</code></pre></div></div>
-<p><br></p>
-
-<p><b>Ex: Minimum Consecutive Cards to Pick Up:</b> Given an integer array cards, find the length of the shortest subarray that contains at least one duplicate. If the array has no duplicates, return -1.</p>
-<ul>
-  <li>Initialize a dictionary storing all the indexes of the elements as values</li>
-  <li>The shortest array will have the same element in its first and last index</li>
-  <li>Check the distance between all adjacent pairs of values and find the minimum</li>
-</ul>
-
-<p><br><br></p>
-<h2>3. Linked Lists</h2>
-<p><br>
-Even though head changes, ptr still refers to same node</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ptr</span> <span class="o">=</span> <span class="n">head</span>
+</code></pre></div></div> <p><br></p> <p><b>Ex: Minimum Consecutive Cards to Pick Up:</b> Given an integer array cards, find the length of the shortest subarray that contains at least one duplicate. If the array has no duplicates, return -1.</p> <ul> <li>Initialize a dictionary storing all the indexes of the elements as values</li> <li>The shortest array will have the same element in its first and last index</li> <li>Check the distance between all adjacent pairs of values and find the minimum</li> </ul> <p><br><br></p> <h2>3. Linked Lists</h2> <p><br> Even though head changes, ptr still refers to same node</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ptr</span> <span class="o">=</span> <span class="n">head</span>
 <span class="n">head</span> <span class="o">=</span> <span class="n">head</span><span class="p">.</span><span class="nb">next</span>
 <span class="n">head</span> <span class="o">=</span> <span class="bp">None</span>
-</code></pre></div></div>
-<p><br>
-<b><u>Single Linked Lists</u></b><br>
-We have a single “next” pointer, so we need a reference to node at i-1 to refer to previous <br></p>
-
-<p>Say we want to add a new element X into position i. <br></p>
-<ol>
-  <li>We need a pointer at i-1</li>
-  <li>The next element (which is at i) will be pushed to i+1</li>
-  <li>Which becomes the next node of X</li>
-  <li>X becomes the next node of pointer 
-We need a reference to the node at (i - 1) if we wanted to add or remove at (i)</li>
-</ol>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ListNode</span><span class="p">:</span>
+</code></pre></div></div> <p><br> <b><u>Single Linked Lists</u></b><br> We have a single “next” pointer, so we need a reference to node at i-1 to refer to previous <br></p> <p>Say we want to add a new element X into position i. <br></p> <ol> <li>We need a pointer at i-1</li> <li>The next element (which is at i) will be pushed to i+1</li> <li>Which becomes the next node of X</li> <li>X becomes the next node of pointer We need a reference to the node at (i - 1) if we wanted to add or remove at (i)</li> </ol> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ListNode</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
         <span class="n">self</span><span class="p">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">val</span>
         <span class="n">self</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="bp">None</span>
@@ -621,14 +187,7 @@ We need a reference to the node at (i - 1) if we wanted to add or remove at (i)<
 <span class="k">def</span> <span class="nf">add_node</span><span class="p">(</span><span class="n">prev_node</span><span class="p">,</span> <span class="n">node_to_add</span><span class="p">):</span> <span class="c1">#prev_node at i-1
 </span>    <span class="n">node_to_add</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="n">prev_node</span><span class="p">.</span><span class="nb">next</span> <span class="c1">#
 </span>    <span class="n">prev_node</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="n">node_to_add</span> <span class="c1">#set the next step of the previous node at (i-1) to make it i which becomes equal to the new element 
-</span></code></pre></div></div>
-<p><img src="/assets/node1.png" width="300" height="200">
-<img src="/assets/node2.png" width="300" height="200"></p>
-
-<p><br><br>
-<b><u>Doubly Linked Lists</u></b><br>
-We now have a pointer to previous node as well, so unlike single lists, we only need reference to node at i.<br></p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ListNode</span><span class="p">:</span>
+</span></code></pre></div></div> <p><img src="/assets/node1.png" width="300" height="200"> <img src="/assets/node2.png" width="300" height="200"></p> <p><br><br> <b><u>Doubly Linked Lists</u></b><br> We now have a pointer to previous node as well, so unlike single lists, we only need reference to node at i.<br></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ListNode</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">val</span><span class="p">):</span>
         <span class="n">self</span><span class="p">.</span><span class="n">val</span> <span class="o">=</span> <span class="n">val</span>
         <span class="n">self</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="bp">None</span>
@@ -648,23 +207,7 @@ We now have a pointer to previous node as well, so unlike single lists, we only 
     <span class="n">next_node</span> <span class="o">=</span> <span class="n">node</span><span class="p">.</span><span class="nb">next</span>
     <span class="n">prev_node</span><span class="p">.</span><span class="nb">next</span> <span class="o">=</span> <span class="n">next_node</span>
     <span class="n">next_node</span><span class="p">.</span><span class="n">prev</span> <span class="o">=</span> <span class="n">prev_node</span>
-</code></pre></div></div>
-<p><img src="/assets/node3.png" width="400" height="200"></p>
-
-<p><br><br>
-<b><u>Linked Lists w/ Sentinel Nodes</u></b><br>
-Head pointer @ start of list and tail pointer @ end of linked lists.<br>
-The real head of the linked list is head.next and the real tail is tail.prev. <br>
-The sentinel nodes themselves are not part of our linked list.</p>
-
-<p><br>
-<b><u>Fast and slow pointers</u></b><br></p>
-
-<ul>
-  <li>If we have one pointer moving twice as fast as the other, then by the time it reaches the end, the slow pointer will be halfway through since it is moving at half the speed.</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_middle</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
+</code></pre></div></div> <p><img src="/assets/node3.png" width="400" height="200"></p> <p><br><br> <b><u>Linked Lists w/ Sentinel Nodes</u></b><br> Head pointer @ start of list and tail pointer @ end of linked lists.<br> The real head of the linked list is head.next and the real tail is tail.prev. <br> The sentinel nodes themselves are not part of our linked list.</p> <p><br> <b><u>Fast and slow pointers</u></b><br></p> <ul> <li>If we have one pointer moving twice as fast as the other, then by the time it reaches the end, the slow pointer will be halfway through since it is moving at half the speed.</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get_middle</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
     <span class="n">slow</span> <span class="o">=</span> <span class="n">head</span>
     <span class="n">fast</span> <span class="o">=</span> <span class="n">head</span>
     <span class="k">while</span> <span class="n">fast</span> <span class="ow">and</span> <span class="n">fast</span><span class="p">.</span><span class="nb">next</span><span class="p">:</span> <span class="c1">#fast.next is necessary because if fast is last then fast.next is null and fast.next.next throws an error
@@ -672,16 +215,7 @@ The sentinel nodes themselves are not part of our linked list.</p>
         <span class="n">fast</span> <span class="o">=</span> <span class="n">fast</span><span class="p">.</span><span class="nb">next</span><span class="p">.</span><span class="nb">next</span>
     
     <span class="k">return</span> <span class="n">slow</span><span class="p">.</span><span class="n">val</span>
-</code></pre></div></div>
-
-<p><br>
-<b>Ex:</b> Checking if a linked list has a cycle/is closed (imagine a circular track)<br></p>
-<ul>
-  <li>If the fast pointer eventually meets the slow pointer at some point, we can conclude its closed</li>
-  <li>Otherwise if the distance between fast and slow just keeps increasing with no end, its non-cyclical</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</code></pre></div></div> <p><br> <b>Ex:</b> Checking if a linked list has a cycle/is closed (imagine a circular track)<br></p> <ul> <li>If the fast pointer eventually meets the slow pointer at some point, we can conclude its closed</li> <li>Otherwise if the distance between fast and slow just keeps increasing with no end, its non-cyclical</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">hasCycle</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">head</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ListNode</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
         <span class="n">slow</span> <span class="o">=</span> <span class="n">head</span>
         <span class="n">fast</span> <span class="o">=</span> <span class="n">head</span>
@@ -692,15 +226,7 @@ The sentinel nodes themselves are not part of our linked list.</p>
                 <span class="k">return</span> <span class="bp">True</span>
 
         <span class="k">return</span> <span class="bp">False</span>
-</code></pre></div></div>
-
-<p><b>Ex:</b> Given a linked list and an integer k, return the k’th from the tail end <br></p>
-<ul>
-  <li>Position slow pointer at head and fast pointer k steps from head.</li>
-  <li>When fast pointer reaches the end, we know slow must be k’th distance away from tail.</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_node</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+</code></pre></div></div> <p><b>Ex:</b> Given a linked list and an integer k, return the k’th from the tail end <br></p> <ul> <li>Position slow pointer at head and fast pointer k steps from head.</li> <li>When fast pointer reaches the end, we know slow must be k’th distance away from tail.</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">find_node</span><span class="p">(</span><span class="n">head</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="n">slow</span> <span class="o">=</span> <span class="n">head</span>
     <span class="n">fast</span> <span class="o">=</span> <span class="n">head</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="n">k</span><span class="p">):</span>
@@ -711,9 +237,7 @@ The sentinel nodes themselves are not part of our linked list.</p>
         <span class="n">fast</span> <span class="o">=</span> <span class="n">fast</span><span class="p">.</span><span class="nb">next</span>
     
     <span class="k">return</span> <span class="n">slow</span>
-</code></pre></div></div>
-<p><b>Ex:</b> Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">duplicates</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
+</code></pre></div></div> <p><b>Ex:</b> Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">duplicates</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
     <span class="n">current</span> <span class="o">=</span> <span class="n">head</span>
     <span class="k">while</span> <span class="n">current</span> <span class="ow">and</span> <span class="n">current</span><span class="p">.</span><span class="nb">next</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">current</span> <span class="o">==</span> <span class="n">current</span><span class="p">.</span><span class="nb">next</span><span class="p">:</span> <span class="c1">#if there is a duplicate
@@ -722,14 +246,7 @@ The sentinel nodes themselves are not part of our linked list.</p>
           <span class="n">current</span> <span class="o">=</span> <span class="n">current</span><span class="p">.</span><span class="nb">next</span> <span class="c1">#increment as normal
 </span>    
     <span class="k">return</span> <span class="n">head</span>
-</code></pre></div></div>
-<p><br>
-<b><u>Reversing Linked Lists</u></b><br></p>
-<ul>
-  <li>At any given node curr, we can set curr.next = prev to switch direction of arrow</li>
-  <li>At every step through the list (driven by next_node), we switch the directional arrow
-    <div class="language-python highlighter-rouge">
-<div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">reverse_list</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
+</code></pre></div></div> <p><br> <b><u>Reversing Linked Lists</u></b><br></p> <ul> <li>At any given node curr, we can set curr.next = prev to switch direction of arrow</li> <li>At every step through the list (driven by next_node), we switch the directional arrow <div class="language-python highlighter-rouge"> <div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">reverse_list</span><span class="p">(</span><span class="n">head</span><span class="p">):</span>
   <span class="n">prev</span> <span class="o">=</span> <span class="n">Null</span> <span class="c1">#set prev to be before the head
 </span>  <span class="n">curr</span> <span class="o">=</span> <span class="n">head</span>
   <span class="k">while</span> <span class="n">curr</span><span class="p">:</span>
@@ -739,16 +256,7 @@ The sentinel nodes themselves are not part of our linked list.</p>
 </span>      <span class="n">curr</span> <span class="o">=</span> <span class="n">next_node</span>      <span class="c1"># move curr forward
 </span>        
   <span class="k">return</span> <span class="n">prev</span>
-</code></pre></div>    </div>
-  </li>
-</ul>
-
-<p><b>Ex:</b> Swap Nodes in Pairs: <br></p>
-<ul>
-  <li>Given the head of a linked list, swap every pair of nodes. For example, given a linked list 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; 6, return a linked list 2 -&gt; 1 -&gt; 4 -&gt; 3 -&gt; 6 -&gt; 5.</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</code></pre></div> </div> </li> </ul> <p><b>Ex:</b> Swap Nodes in Pairs: <br></p> <ul> <li>Given the head of a linked list, swap every pair of nodes. For example, given a linked list 1 -&gt; 2 -&gt; 3 -&gt; 4 -&gt; 5 -&gt; 6, return a linked list 2 -&gt; 1 -&gt; 4 -&gt; 3 -&gt; 6 -&gt; 5.</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">swapPairs</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">head</span><span class="p">:</span> <span class="n">ListNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ListNode</span><span class="p">:</span>
         <span class="n">dummy</span> <span class="o">=</span> <span class="nc">ListNode</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">head</span><span class="p">)</span> <span class="c1">#initialize dummy variable
 </span>        <span class="n">prev</span><span class="p">,</span> <span class="n">curr</span> <span class="o">=</span> <span class="n">dummy</span><span class="p">,</span> <span class="n">head</span> <span class="c1">#dummy is set to the node before head
@@ -769,21 +277,7 @@ The sentinel nodes themselves are not part of our linked list.</p>
           <span class="n">curr</span> <span class="o">=</span> <span class="n">nextPair</span>
         
         <span class="k">return</span> <span class="n">dummy</span><span class="p">.</span><span class="nb">next</span> <span class="c1">#which will always point to head
-</span></code></pre></div></div>
-
-<p><br><br></p>
-<h2>4. Stacks</h2>
-<p><br></p>
-<ul>
-  <li>LIFO (last in first out) – like a stack of plates</li>
-  <li>Push = append to list</li>
-  <li>Pop = remove from end of list</li>
-  <li>Check conditions for stack[-1]
-<br>
-</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">isValid</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</span></code></pre></div></div> <p><br><br></p> <h2>4. Stacks</h2> <p><br></p> <ul> <li>LIFO (last in first out) – like a stack of plates</li> <li>Push = append to list</li> <li>Pop = remove from end of list</li> <li>Check conditions for stack[-1] <br> </li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">isValid</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
     <span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">matching</span> <span class="o">=</span> <span class="p">{</span><span class="sh">"</span><span class="s">(</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">)</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">[</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">]</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">{</span><span class="sh">"</span><span class="p">:</span> <span class="sh">"</span><span class="s">}</span><span class="sh">"</span><span class="p">}</span>
 
@@ -798,17 +292,7 @@ The sentinel nodes themselves are not part of our linked list.</p>
 </span>                <span class="k">return</span> <span class="bp">False</span>
 
     <span class="k">return</span> <span class="ow">not</span> <span class="n">stack</span> <span class="c1"># since we are popping/removing elements as we go, return True if empty
-</span></code></pre></div></div>
-
-<p><br><br></p>
-<h4>Queues</h4>
-<p><br></p>
-<ul>
-  <li>FIFO (first in first out) – like a fast food line <br>
-</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+</span></code></pre></div></div> <p><br><br></p> <h4>Queues</h4> <p><br></p> <ul> <li>FIFO (first in first out) – like a fast food line <br> </li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">collections</span> <span class="kn">import</span> <span class="n">deque</span>
 
 <span class="k">class</span> <span class="nc">RecentCounter</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
@@ -825,15 +309,7 @@ The sentinel nodes themselves are not part of our linked list.</p>
 <span class="c1"># Your RecentCounter object will be instantiated and called as such:
 # obj = RecentCounter()
 # param_1 = obj.ping(t)
-</span></code></pre></div></div>
-<p><br></p>
-<h5>Monotonic</h5>
-<p><br></p>
-<ul>
-  <li>For each index, find the number of days it is away from a warmer day</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+</span></code></pre></div></div> <p><br></p> <h5>Monotonic</h5> <p><br></p> <ul> <li>For each index, find the number of days it is away from a warmer day</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">dailyTemperatures</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">temperatures</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
         <span class="n">stack</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1">#stores indices as long as temp keeps decreasing
 </span>        <span class="n">answer</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="nf">len</span><span class="p">(</span><span class="n">temperatures</span><span class="p">)</span> <span class="c1"># init array
@@ -845,17 +321,7 @@ The sentinel nodes themselves are not part of our linked list.</p>
 </span>            <span class="n">stack</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> 
         
         <span class="k">return</span> <span class="n">answer</span>
-</code></pre></div></div>
-
-<p><br><br></p>
-<h2>5. Binary Trees</h2>
-<p><br></p>
-
-<h4>Depth First Search (DFS): Travel down as deep as possible before wide </h4>
-<p><br><br></p>
-
-<h5>Iterative Approach (Using Stacks): Returning DFS Order </h5>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">DFS</span><span class="p">(</span><span class="n">root</span><span class="p">):</span>
+</code></pre></div></div> <p><br><br></p> <h2>5. Binary Trees</h2> <p><br></p> <h4>Depth First Search (DFS): Travel down as deep as possible before wide </h4> <p><br><br></p> <h5>Iterative Approach (Using Stacks): Returning DFS Order </h5> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">DFS</span><span class="p">(</span><span class="n">root</span><span class="p">):</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span> <span class="c1">#base case
 </span>      <span class="k">return</span> <span class="p">[]</span>
     
@@ -868,32 +334,14 @@ The sentinel nodes themselves are not part of our linked list.</p>
 </span>            <span class="n">stack</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">current</span><span class="p">.</span><span class="n">right</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">current</span><span class="p">.</span><span class="n">left</span><span class="p">:</span> <span class="c1">#if current node has a left child, then push onto stack
 </span>            <span class="n">stack</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">current</span><span class="p">.</span><span class="n">left</span><span class="p">)</span>
-</code></pre></div></div>
-<p><br></p>
-
-<h5>Recursive Approach: Returning DFS Order</h5>
-<ul>
-  <li>THE LINE AFTER RECURSIVE FUNCTION CALL IS ONLY EXECUTED AFTER BASE CASE IS MET</li>
-  <li>Preorder: Logic done on current node before moving onto children</li>
-  <li>Inorder: Logic done after reaching node without left child</li>
-  <li>Postorder: Logic done only after reaching leaf nodes</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
+</code></pre></div></div> <p><br></p> <h5>Recursive Approach: Returning DFS Order</h5> <ul> <li>THE LINE AFTER RECURSIVE FUNCTION CALL IS ONLY EXECUTED AFTER BASE CASE IS MET</li> <li>Preorder: Logic done on current node before moving onto children</li> <li>Inorder: Logic done after reaching node without left child</li> <li>Postorder: Logic done only after reaching leaf nodes</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
 <span class="mi">1</span>    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
 <span class="mi">2</span>        <span class="k">return</span> <span class="c1">#if base case is hit, return
 </span>
 <span class="mi">3</span>    <span class="nf">dfs</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="n">left</span><span class="p">)</span> <span class="c1"># RECURSIVELY KEEP CALLING LEFT UNTIL NO LEFT NODE EXISTS...THEN CALL RIGHT
 </span><span class="mi">4</span>    <span class="nf">dfs</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="n">right</span><span class="p">)</span>
 <span class="mi">5</span>    <span class="k">return</span>
-</code></pre></div></div>
-<ul>
-  <li>if base case is hit, return to previous node</li>
-  <li>3 and 4 is done, so go to line 5</li>
-  <li>line 5 returns back to previous node</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">isSameTree</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
+</code></pre></div></div> <ul> <li>if base case is hit, return to previous node</li> <li>3 and 4 is done, so go to line 5</li> <li>line 5 returns back to previous node</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">isSameTree</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">):</span>
         <span class="c1"># Are both p and q None? If so, we have reached all the way to the leaf nodes
 </span>        <span class="k">if</span> <span class="ow">not</span> <span class="n">p</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">q</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">True</span> 
@@ -909,32 +357,14 @@ The sentinel nodes themselves are not part of our linked list.</p>
 
         <span class="c1"># Recursive call to the next level down
 </span>        <span class="k">return</span> <span class="n">self</span><span class="p">.</span><span class="nf">isSameTree</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">left</span><span class="p">,</span> <span class="n">q</span><span class="p">.</span><span class="n">left</span><span class="p">)</span> <span class="ow">and</span> <span class="n">self</span><span class="p">.</span><span class="nf">isSameTree</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">right</span><span class="p">,</span> <span class="n">q</span><span class="p">.</span><span class="n">right</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p><br></p>
-
-<p><b>Ex: Return Maximum Depth of Tree</b></p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">maxDepth</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span>
+</code></pre></div></div> <p><br></p> <p><b>Ex: Return Maximum Depth of Tree</b></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">maxDepth</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
     
     <span class="n">left</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">maxDepth</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="n">left</span><span class="p">)</span>
     <span class="n">right</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">maxDepth</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="n">right</span><span class="p">)</span>
     <span class="k">return</span> <span class="nf">max</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
-</code></pre></div></div>
-<p><br></p>
-<h4>Breadth First Search (BFS):</h4>
-<p>Traverse as <b>wide</b> as possible at given level first before deep <br></p>
-<ul>
-  <li>init a queue</li>
-  <li>while queue:</li>
-  <li>init variable tracking length of queue (# of current nodes we need to iterate left/right for)</li>
-  <li>iterate over that many of times (to find left/right child of current nodes)</li>
-  <li>pop the queue so it clears for the next step</li>
-  <li>append the children (so queue only storing next nodes)</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">collections</span> <span class="kn">import</span> <span class="n">deque</span>
+</code></pre></div></div> <p><br></p> <h4>Breadth First Search (BFS):</h4> <p>Traverse as <b>wide</b> as possible at given level first before deep <br></p> <ul> <li>init a queue</li> <li>while queue:</li> <li>init variable tracking length of queue (# of current nodes we need to iterate left/right for)</li> <li>iterate over that many of times (to find left/right child of current nodes)</li> <li>pop the queue so it clears for the next step</li> <li>append the children (so queue only storing next nodes)</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">collections</span> <span class="kn">import</span> <span class="n">deque</span>
 
 <span class="k">def</span> <span class="nf">print_all_nodes</span><span class="p">(</span><span class="n">root</span><span class="p">):</span>
     <span class="n">queue</span> <span class="o">=</span> <span class="nf">deque</span><span class="p">([</span><span class="n">root</span><span class="p">])</span>  <span class="c1">#stores all nodes at NEXT level from left to right
@@ -950,11 +380,7 @@ The sentinel nodes themselves are not part of our linked list.</p>
                 <span class="n">queue</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="n">left</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">node</span><span class="p">.</span><span class="n">right</span><span class="p">:</span>
                 <span class="n">queue</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="n">right</span><span class="p">)</span>
-</code></pre></div></div>
-<p><br>
-<b>Ex: Return all right values</b></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">rightSideView</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span>
+</code></pre></div></div> <p><br> <b>Ex: Return all right values</b></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">rightSideView</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">root</span><span class="p">):</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span>
         <span class="k">return</span> <span class="p">[]</span>
     
@@ -973,18 +399,7 @@ The sentinel nodes themselves are not part of our linked list.</p>
                 <span class="n">queue</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">node</span><span class="p">.</span><span class="n">right</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="n">ans</span>
-</code></pre></div></div>
-<p><br></p>
-
-<h5>Binary Search Trees:</h5>
-<ul>
-  <li>All left children are less than the parent, all right values are greater than the parent <br>
-<br>
-</li>
-</ul>
-
-<p><b>Ex: Give a range [low,high], return sum of all tree values within that range </b></p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">def</span> <span class="nf">rangeSumBST</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">):</span>
+</code></pre></div></div> <p><br></p> <h5>Binary Search Trees:</h5> <ul> <li>All left children are less than the parent, all right values are greater than the parent <br> <br> </li> </ul> <p><b>Ex: Give a range [low,high], return sum of all tree values within that range </b></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">def</span> <span class="nf">rangeSumBST</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">):</span>
       <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span>
           <span class="k">return</span> <span class="mi">0</span>
 
@@ -997,9 +412,7 @@ The sentinel nodes themselves are not part of our linked list.</p>
           <span class="n">ans</span> <span class="o">+=</span> <span class="n">self</span><span class="p">.</span><span class="nf">rangeSumBST</span><span class="p">(</span><span class="n">root</span><span class="p">.</span><span class="n">right</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span>
 
       <span class="k">return</span> <span class="n">ans</span>
-</code></pre></div></div>
-<p><b>Ex: Check if its a valid binary search tree </b></p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">def</span> <span class="nf">isValidBST</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+</code></pre></div></div> <p><b>Ex: Check if its a valid binary search tree </b></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">def</span> <span class="nf">isValidBST</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">TreeNode</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
       <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">small</span><span class="p">,</span> <span class="n">large</span><span class="p">):</span>
           <span class="k">if</span> <span class="ow">not</span> <span class="n">node</span><span class="p">:</span>
               <span class="k">return</span> <span class="bp">True</span>
@@ -1014,29 +427,7 @@ The sentinel nodes themselves are not part of our linked list.</p>
 </span>          <span class="k">return</span> <span class="n">left</span> <span class="ow">and</span> <span class="n">right</span>
 
       <span class="k">return</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="nf">float</span><span class="p">(</span><span class="sh">"</span><span class="s">-inf</span><span class="sh">"</span><span class="p">),</span> <span class="nf">float</span><span class="p">(</span><span class="sh">"</span><span class="s">inf</span><span class="sh">"</span><span class="p">))</span>
-</code></pre></div></div>
-<p><br></p>
-
-<h2>6. Graphs</h2>
-<p><br></p>
-<ul>
-  <li>Undirected (Bidirectional) vs Directed (Unidirectional)</li>
-  <li>Usually represented by a dictionary where each key is node, values are its outgoing connections from each node</li>
-  <li>Use a set “seen” to make sure node is only visited once (to prevent infinite loops in cyclical cases)</li>
-</ul>
-
-<center>
-<img src="/assets/graphs.png" width="300" height="200">
-</center>
-<p><br></p>
-
-<p><b>Input Type 1: Array of Edges</b> (pairs of edges)</p>
-<ul>
-  <li>edges = [[0, 1], [1, 2], [2, 0], [2, 3]]</li>
-  <li>each pair element in array represents an outgoing edge connection</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">build_graph</span><span class="p">(</span><span class="n">edges</span><span class="p">):</span>
+</code></pre></div></div> <p><br></p> <h2>6. Graphs</h2> <p><br></p> <ul> <li>Undirected (Bidirectional) vs Directed (Unidirectional)</li> <li>Usually represented by a dictionary where each key is node, values are its outgoing connections from each node</li> <li>Use a set “seen” to make sure node is only visited once (to prevent infinite loops in cyclical cases)</li> </ul> <center> <img src="/assets/graphs.png" width="300" height="200"> </center> <p><br></p> <p><b>Input Type 1: Array of Edges</b> (pairs of edges)</p> <ul> <li>edges = [[0, 1], [1, 2], [2, 0], [2, 3]]</li> <li>each pair element in array represents an outgoing edge connection</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">build_graph</span><span class="p">(</span><span class="n">edges</span><span class="p">):</span>
     <span class="n">graph</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">edges</span><span class="p">:</span>
         <span class="n">graph</span><span class="p">[</span><span class="n">x</span><span class="p">].</span><span class="nf">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
@@ -1044,48 +435,7 @@ The sentinel nodes themselves are not part of our linked list.</p>
 </span>        <span class="c1"># uncomment the above line if the graph is undirected
 </span>    
     <span class="k">return</span> <span class="n">graph</span>
-</code></pre></div></div>
-<p><br></p>
-
-<p><b>Input Type 2: Adjacency List</b> (index based)</p>
-<ul>
-  <li>graph = [[1], [2], [0, 3], []]</li>
-  <li>graph[i] = outgoing connections from node i</li>
-  <li>
-<br><br>
-</li>
-</ul>
-
-<p><b>Input Type 3: Adjacency Matrix</b> (matrix form of array of edges)</p>
-<ul>
-  <li>graph[i][j] = 1 if there is an outgoing connection from node i to node j</li>
-  <li>i.e., if graph[node][i] = 1 then i is a neighbor to node</li>
-  <li>essentially the same as putting a 1 in the position of “array of edges” representation</li>
-</ul>
-
-<center>$$
-\begin{bmatrix}
-0 &amp; 1 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 1 &amp; 0 \\
-1 &amp; 0 &amp; 0 &amp; 1 \\
-0 &amp; 0 &amp; 0 &amp; 0
-\end{bmatrix}
-$$</center>
-<p><br><br></p>
-
-<h5><b>DFS Graphs</b></h5>
-<ul>
-  <li>Exploring each node’s neighbors recursively one by one</li>
-</ul>
-
-<p><b>Return the total number of closed cycle loops</b></p>
-<ul>
-  <li>Init a set “seen” to prevent from revisiting nodes</li>
-  <li>Internal logic: If node[i]’s neighbor has not seen yet, then mark as seen and recursively check the neighbors on all of its neighbors (this will handle all connections in a cycle as “seen”)</li>
-  <li>Iterate over all nodes and if something hasn’t been seen yet, we know that’s a new cycle</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">findCircleNum</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">isConnected</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</code></pre></div></div> <p><br></p> <p><b>Input Type 2: Adjacency List</b> (index based)</p> <ul> <li>graph = [[1], [2], [0, 3], []]</li> <li>graph[i] = outgoing connections from node i</li> <li> <br><br> </li> </ul> <p><b>Input Type 3: Adjacency Matrix</b> (matrix form of array of edges)</p> <ul> <li>graph[i][j] = 1 if there is an outgoing connection from node i to node j</li> <li>i.e., if graph[node][i] = 1 then i is a neighbor to node</li> <li>essentially the same as putting a 1 in the position of “array of edges” representation</li> </ul> <center>$$ \begin{bmatrix} 0 &amp; 1 &amp; 0 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 0 &amp; 0 \end{bmatrix} $$</center> <p><br><br></p> <h5><b>DFS Graphs</b></h5> <ul> <li>Exploring each node’s neighbors recursively one by one</li> </ul> <p><b>Return the total number of closed cycle loops</b></p> <ul> <li>Init a set “seen” to prevent from revisiting nodes</li> <li>Internal logic: If node[i]’s neighbor has not seen yet, then mark as seen and recursively check the neighbors on all of its neighbors (this will handle all connections in a cycle as “seen”)</li> <li>Iterate over all nodes and if something hasn’t been seen yet, we know that’s a new cycle</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">findCircleNum</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">isConnected</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     
   <span class="c1">#internal logic: marks all neighbors in a province as seen
 </span>  <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">node</span><span class="p">):</span> 
@@ -1126,17 +476,7 @@ $$</center>
             <span class="nf">dfs</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="n">ans</span>
-</code></pre></div></div>
-<p><br></p>
-
-<p><b>Ex: Return the minimum number of swaps needed for a directed graph to make them all lead into one node</b><br></p>
-<ul>
-  <li>Indentify all edges pointing away from 0</li>
-  <li>Start DFS starting from node 0 (meaning we will always be moving away from 0)</li>
-  <li>Record the direction, if the original direction matches the DFS, then we need +1 swap (indicate moving towards)</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">minReorder</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">connections</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</code></pre></div></div> <p><br></p> <p><b>Ex: Return the minimum number of swaps needed for a directed graph to make them all lead into one node</b><br></p> <ul> <li>Indentify all edges pointing away from 0</li> <li>Start DFS starting from node 0 (meaning we will always be moving away from 0)</li> <li>Record the direction, if the original direction matches the DFS, then we need +1 swap (indicate moving towards)</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">minReorder</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">connections</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="n">roads</span> <span class="o">=</span> <span class="nf">set</span><span class="p">()</span>
     <span class="n">graph</span> <span class="o">=</span> <span class="nf">defaultdict</span><span class="p">(</span><span class="nb">list</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">connections</span><span class="p">:</span>
@@ -1172,11 +512,7 @@ $$</center>
                 <span class="n">stack</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">neighbor</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="n">ans</span>
-</code></pre></div></div>
-<p><br>
-<b>Ex: rooms[i] is all keys to other rooms that can be found in that room. Return true if one can visit all rooms</b></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">canVisitAll</span><span class="p">(</span><span class="n">rooms</span><span class="p">):</span>
+</code></pre></div></div> <p><br> <b>Ex: rooms[i] is all keys to other rooms that can be found in that room. Return true if one can visit all rooms</b></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">canVisitAll</span><span class="p">(</span><span class="n">rooms</span><span class="p">):</span>
   <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">node</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">neighbor</span> <span class="ow">in</span> <span class="n">rooms</span><span class="p">[</span><span class="n">node</span><span class="p">]:</span>
       <span class="k">if</span> <span class="n">neighbor</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
@@ -1187,12 +523,7 @@ $$</center>
   <span class="nf">dfs</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
   <span class="k">return</span> <span class="nf">len</span><span class="p">(</span><span class="n">seen</span><span class="p">)</span> <span class="o">==</span> <span class="nf">len</span><span class="p">(</span><span class="n">rooms</span><span class="p">)</span>
 
-</code></pre></div></div>
-<p><br>
-<b>Ex: Find islands</b><br>
-<img src="/assets/island.png" width="300" height="200"></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">numIslands</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">grid</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</code></pre></div></div> <p><br> <b>Ex: Find islands</b><br> <img src="/assets/island.png" width="300" height="200"></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">numIslands</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">grid</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">valid</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
         <span class="k">return</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="ow">and</span> <span class="n">grid</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">==</span> <span class="sh">"</span><span class="s">1</span><span class="sh">"</span>
     
@@ -1216,21 +547,7 @@ $$</center>
                 <span class="nf">dfs</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="n">ans</span>
-</code></pre></div></div>
-<p><br><br></p>
-
-<h5><b>BFS Graphs</b></h5>
-<p>(think of water ripples from a stone in pond) <br></p>
-<ul>
-  <li>Explores all possible neighbors from starting node (level 0)</li>
-  <li>Better for finding <b>shortest path</b>
-</li>
-  <li>With BFS, every time we visit a node, we must have arrived in the fewest possible steps</li>
-  <li>Each “level” is the direct connection from the chosen node</li>
-</ul>
-
-<p><b>Ex: Find shortest path of 0’s from (0,0) to (n,n)&lt;//b&gt;</b></p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">shortestPathBinaryMatrix</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">grid</span><span class="p">):</span>
+</code></pre></div></div> <p><br><br></p> <h5><b>BFS Graphs</b></h5> <p>(think of water ripples from a stone in pond) <br></p> <ul> <li>Explores all possible neighbors from starting node (level 0)</li> <li>Better for finding <b>shortest path</b> </li> <li>With BFS, every time we visit a node, we must have arrived in the fewest possible steps</li> <li>Each “level” is the direct connection from the chosen node</li> </ul> <p><b>Ex: Find shortest path of 0’s from (0,0) to (n,n)&lt;//b&gt;</b></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">shortestPathBinaryMatrix</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">grid</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">grid</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
         <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
     
@@ -1254,13 +571,7 @@ $$</center>
                 <span class="n">queue</span><span class="p">.</span><span class="nf">append</span><span class="p">((</span><span class="n">next_row</span><span class="p">,</span> <span class="n">next_col</span><span class="p">,</span> <span class="n">steps</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
     
     <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
-</code></pre></div></div>
-<p><br><br></p>
-
-<p><b>Ex: Given the root of binary tree, target node, and integer k, return all nodes that are k distance from target</b>
-from collections import deque</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">distanceK</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+</code></pre></div></div> <p><br><br></p> <p><b>Ex: Given the root of binary tree, target node, and integer k, return all nodes that are k distance from target</b> from collections import deque</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">distanceK</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
   <span class="c1"># converts tree to undirected graph
 </span>    <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">parent</span><span class="p">):</span> 
         <span class="k">if</span> <span class="ow">not</span> <span class="n">node</span><span class="p">:</span>
@@ -1287,16 +598,7 @@ from collections import deque</p>
         <span class="n">distance</span> <span class="o">+=</span> <span class="mi">1</span>
     
     <span class="k">return</span> <span class="p">[</span><span class="n">node</span><span class="p">.</span><span class="n">val</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">queue</span><span class="p">]</span>
-</code></pre></div></div>
-<p><br><br></p>
-
-<p><b>Ex: Find distance from 0 for each cell (i.e., Return matrix of values where each cell is k distances away from 0<b></b></b></p>
-<ul>
-  <li>Start at all 0 nodes</li>
-  <li>Set all direct neighbors = 1, neighbors of neighbors = 2, and so on</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">updateMatrix</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">mat</span><span class="p">):</span>
+</code></pre></div></div> <p><br><br></p> <p><b>Ex: Find distance from 0 for each cell (i.e., Return matrix of values where each cell is k distances away from 0<b></b></b></p> <ul> <li>Start at all 0 nodes</li> <li>Set all direct neighbors = 1, neighbors of neighbors = 2, and so on</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">updateMatrix</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">mat</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">valid</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span> <span class="c1">#check if in bounds and valid
 </span>        <span class="k">return</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">row</span> <span class="o">&lt;</span> <span class="n">m</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">col</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="ow">and</span> <span class="n">mat</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">col</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span>
     
@@ -1324,28 +626,7 @@ from collections import deque</p>
                 <span class="n">mat</span><span class="p">[</span><span class="n">next_row</span><span class="p">][</span><span class="n">next_col</span><span class="p">]</span> <span class="o">=</span> <span class="n">steps</span>
     
     <span class="k">return</span> <span class="n">mat</span>
-</code></pre></div></div>
-<p><br></p>
-
-<h2>7. Heaps</h2>
-<p><br></p>
-<ul>
-  <li>Used for repeatedly finding max or min element</li>
-  <li>Complete binary tree structure (all levels must be full except last)</li>
-</ul>
-
-<p>Min Heapify: <br></p>
-<ol>
-  <li>Starts at the last nonleaf node</li>
-  <li>Take min of (child 1, child 2, parent)</li>
-  <li>Swap places with the min as the parent</li>
-  <li>Keep doing this until we reach the root node which should then contain the min value
-<br>
-</li>
-</ol>
-
-<p><b>Ex: Stones[i] is the weight of i’th stone. Choose heaviest two stones x and y. If x == y, both stones removed. If x &lt; y, put back a stone with weight y - x.  Return weight of the last remaining stone.</b></p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">heapq</span> <span class="c1">#min to max, heapop pops the min
+</code></pre></div></div> <p><br></p> <h2>7. Heaps</h2> <p><br></p> <ul> <li>Used for repeatedly finding max or min element</li> <li>Complete binary tree structure (all levels must be full except last)</li> </ul> <p>Min Heapify: <br></p> <ol> <li>Starts at the last nonleaf node</li> <li>Take min of (child 1, child 2, parent)</li> <li>Swap places with the min as the parent</li> <li>Keep doing this until we reach the root node which should then contain the min value <br> </li> </ol> <p><b>Ex: Stones[i] is the weight of i’th stone. Choose heaviest two stones x and y. If x == y, both stones removed. If x &lt; y, put back a stone with weight y - x. Return weight of the last remaining stone.</b></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">heapq</span> <span class="c1">#min to max, heapop pops the min
 </span>
 <span class="k">def</span> <span class="nf">lastStoneWeight</span><span class="p">(</span><span class="n">stones</span><span class="p">):</span>
         <span class="n">stones</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="n">stone</span> <span class="k">for</span> <span class="n">stone</span> <span class="ow">in</span> <span class="n">stones</span><span class="p">]</span> <span class="c1">#bc heapq only does min heaps, take the negative for the max heap
@@ -1357,32 +638,7 @@ from collections import deque</p>
                 <span class="n">heapq</span><span class="p">.</span><span class="nf">heappush</span><span class="p">(</span><span class="n">stones</span><span class="p">,</span> <span class="o">-</span><span class="nf">abs</span><span class="p">(</span><span class="n">first</span> <span class="o">-</span> <span class="n">second</span><span class="p">))</span> <span class="c1">#push back the difference
 </span>
         <span class="k">return</span> <span class="o">-</span><span class="n">stones</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">stones</span> <span class="k">else</span> <span class="mi">0</span>
-</code></pre></div></div>
-<p><br></p>
-<h5><b>Two Heaps</b></h5>
-<p><br></p>
-
-<ul>
-  <li>Good for finding the median <br>
-</li>
-</ul>
-
-<p><b>Ex: Find median </b></p>
-<ul>
-  <li>Max heap with lower half of data</li>
-  <li>Min heap with upper half of data</li>
-  <li>If even: Heappop average of both will return the median</li>
-  <li>If odd: Heappop element of larger array is the median
-<br>
-    <ol>
-      <li>Push num onto the max heap (as mentioned above we arbitrarily chose the max heap).</li>
-      <li>Pop from the max heap, and push that element onto the min heap.</li>
-      <li>After step 2, if the min heap has more elements than the max heap, pop from the min heap and push the result onto the max heap.</li>
-    </ol>
-  </li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
+</code></pre></div></div> <p><br></p> <h5><b>Two Heaps</b></h5> <p><br></p> <ul> <li>Good for finding the median <br> </li> </ul> <p><b>Ex: Find median </b></p> <ul> <li>Max heap with lower half of data</li> <li>Min heap with upper half of data</li> <li>If even: Heappop average of both will return the median</li> <li>If odd: Heappop element of larger array is the median <br> <ol> <li>Push num onto the max heap (as mentioned above we arbitrarily chose the max heap).</li> <li>Pop from the max heap, and push that element onto the min heap.</li> <li>After step 2, if the min heap has more elements than the max heap, pop from the min heap and push the result onto the max heap.</li> </ol> </li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">):</span>
     <span class="n">self</span><span class="p">.</span><span class="n">min_heap</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="n">self</span><span class="p">.</span><span class="n">max_heap</span> <span class="o">=</span> <span class="p">[]</span>
 
@@ -1396,17 +652,7 @@ from collections import deque</p>
     <span class="k">if</span> <span class="nf">len</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">max_heap</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nf">len</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">min_heap</span><span class="p">):</span> <span class="c1">#the popped element of larger array is the median, otherwise it's the average
 </span>        <span class="k">return</span> <span class="o">-</span><span class="n">self</span><span class="p">.</span><span class="n">max_heap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
     <span class="nf">return </span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">min_heap</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">self</span><span class="p">.</span><span class="n">max_heap</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
-</code></pre></div></div>
-<p><br></p>
-
-<h5><b>Top K</b></h5>
-<p><br></p>
-<ul>
-  <li>We want to find the “best” k elements of a collection</li>
-  <li>Use heap to keep popping off the “worst” elements to keep the top K elements in answer array</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">topKFrequent</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
+</code></pre></div></div> <p><br></p> <h5><b>Top K</b></h5> <p><br></p> <ul> <li>We want to find the “best” k elements of a collection</li> <li>Use heap to keep popping off the “worst” elements to keep the top K elements in answer array</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">topKFrequent</span><span class="p">(</span><span class="n">nums</span><span class="p">,</span><span class="n">k</span><span class="p">):</span>
     <span class="n">counts</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">heap</span> <span class="o">=</span> <span class="p">[]</span>
     
@@ -1416,19 +662,7 @@ from collections import deque</p>
 </span>            <span class="n">heapq</span><span class="p">.</span><span class="nf">heappop</span><span class="p">(</span><span class="n">heap</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="p">[</span><span class="n">pair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">heap</span><span class="p">]</span>
-</code></pre></div></div>
-<p><br></p>
-
-<h2>8. Greedy Approaches</h2>
-<p><br></p>
-<ul>
-  <li>Makes locally optimal decision at each step without accounting for future rewards</li>
-  <li>Usually will ask for max or min of something</li>
-</ul>
-
-<p><b>Ex: Integer array arr and an integer X. If X &lt; array[i], then X is destroyed. Else if X &gt;= array[i], then X += array[i]. Return True if X can be greater than all elements in array</b></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">asteroidsDestroyed</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
+</code></pre></div></div> <p><br></p> <h2>8. Greedy Approaches</h2> <p><br></p> <ul> <li>Makes locally optimal decision at each step without accounting for future rewards</li> <li>Usually will ask for max or min of something</li> </ul> <p><b>Ex: Integer array arr and an integer X. If X &lt; array[i], then X is destroyed. Else if X &gt;= array[i], then X += array[i]. Return True if X can be greater than all elements in array</b></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">asteroidsDestroyed</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">X</span><span class="p">):</span>
     <span class="n">array</span><span class="p">.</span><span class="nf">sort</span><span class="p">()</span> <span class="c1">#smallest to largest
 </span>    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">array</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="n">X</span><span class="p">:</span> <span class="c1">#return false if any element is greater than X 
@@ -1436,12 +670,7 @@ from collections import deque</p>
         <span class="n">X</span> <span class="o">+=</span> <span class="n">i</span>  <span class="c1">#otherwise, add i to X
 </span>    
     <span class="k">return</span> <span class="bp">True</span>
-</code></pre></div></div>
-<p><br></p>
-
-<p><b> Ex: Min # of subsequences needed where all elements inside each have max deviation of k</b></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
+</code></pre></div></div> <p><br></p> <p><b> Ex: Min # of subsequences needed where all elements inside each have max deviation of k</b></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">k</span><span class="p">)</span>
     <span class="n">subsets</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">array</span><span class="p">.</span><span class="nf">sort</span><span class="p">()</span>
     <span class="n">minimum</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c1">#smallest element
@@ -1451,16 +680,7 @@ from collections import deque</p>
             <span class="n">subsets</span> <span class="o">+=</span> <span class="mi">1</span>
     
     <span class="k">return</span> <span class="n">subsets</span>
-</code></pre></div></div>
-<p><br></p>
-
-<p><b> Ex: You are given n projects with arr profits and arr minimum capital required. You start with w capital. Completing a project gives you w += profits[i]. Return max w possible if you are allowed k projects.<b></b></b></p>
-<ul>
-  <li>Create a max heap for profits that satisfy your capital w</li>
-  <li>Pop off the project you can do with max profits you can take on for each project</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">heapq</span>
+</code></pre></div></div> <p><br></p> <p><b> Ex: You are given n projects with arr profits and arr minimum capital required. You start with w capital. Completing a project gives you w += profits[i]. Return max w possible if you are allowed k projects.<b></b></b></p> <ul> <li>Create a max heap for profits that satisfy your capital w</li> <li>Pop off the project you can do with max profits you can take on for each project</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">heapq</span>
 
 <span class="k">def</span> <span class="nf">findMaximizedCapital</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">profits</span><span class="p">,</span> <span class="n">capital</span><span class="p">):</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">profits</span><span class="p">)</span>
@@ -1481,20 +701,7 @@ from collections import deque</p>
 </span>        <span class="n">w</span> <span class="o">-=</span> <span class="n">heapq</span><span class="p">.</span><span class="nf">heappop</span><span class="p">(</span><span class="n">heap</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="n">w</span>
-</code></pre></div></div>
-
-<p><br><br></p>
-<h2>9. Binary Search</h2>
-<ul>
-  <li>Worst case runs O(log n)</li>
-  <li>Usually space needs to be sorted prior</li>
-  <li>Divides each section in half recursively</li>
-</ul>
-
-<p><b>Ex: We want to find index of X in a sorted array.</b> 1) Start in the middle of a sorted array. If the middle is less than X, then throw away the lower half. Do this iteratively. <br></p>
-
-<p>Implementation: <br></p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">left</span> <span class="o">=</span> <span class="mi">0</span>
+</code></pre></div></div> <p><br><br></p> <h2>9. Binary Search</h2> <ul> <li>Worst case runs O(log n)</li> <li>Usually space needs to be sorted prior</li> <li>Divides each section in half recursively</li> </ul> <p><b>Ex: We want to find index of X in a sorted array.</b> 1) Start in the middle of a sorted array. If the middle is less than X, then throw away the lower half. Do this iteratively. <br></p> <p>Implementation: <br></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">left</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">right</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
 
 <span class="k">while</span> <span class="n">left</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">:</span>
@@ -1508,19 +715,7 @@ from collections import deque</p>
 <span class="c1">#if you get to this point without arr[mid] = x, then the search was unsuccessful. 
 # The left pointer will be at index where x would need to be inserted to maintain sort
 </span><span class="k">return</span> <span class="n">left</span>
-</code></pre></div></div>
-<p><br><br></p>
-
-<p><b>Ex: We want to find index of X in a sorted matrix</b></p>
-<ul>
-  <li><b>(row = i // items in each row)</b></li>
-  <li><b>(column index = i % items in each row)</b></li>
-  <li>index i has position (m, n) = (i // n, i % n)</li>
-  <li>since there are n items in each row, we know that at index i, we’ve passed by n * _ = i elements</li>
-  <li>and the column index “resets” every n elements, so we need i % n</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">searchMatrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
+</code></pre></div></div> <p><br><br></p> <p><b>Ex: We want to find index of X in a sorted matrix</b></p> <ul> <li><b>(row = i // items in each row)</b></li> <li><b>(column index = i % items in each row)</b></li> <li>index i has position (m, n) = (i // n, i % n)</li> <li>since there are n items in each row, we know that at index i, we’ve passed by n * _ = i elements</li> <li>and the column index “resets” every n elements, so we need i % n</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">searchMatrix</span><span class="p">(</span><span class="n">matrix</span><span class="p">,</span> <span class="n">target</span><span class="p">):</span>
     <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="nf">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">),</span> <span class="nf">len</span><span class="p">(</span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
     <span class="n">left</span><span class="p">,</span> <span class="n">right</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">m</span> <span class="o">*</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span> <span class="c1">#right pointer flattens matrix into array
 </span>    
@@ -1539,16 +734,7 @@ from collections import deque</p>
             <span class="n">right</span> <span class="o">=</span> <span class="n">mid</span> <span class="o">-</span> <span class="mi">1</span>
     
     <span class="k">return</span> <span class="bp">False</span>
-</code></pre></div></div>
-
-<p><br><br>
-<b> Ex: Find the number of candies each person can eat without exceeding their calorie limits<b></b></b></p>
-<ul>
-  <li>Use prefix sum</li>
-  <li>Returning the left pointer tells us the max we reach before exceeding limit</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">eatCandies</span><span class="p">(</span><span class="n">candies</span><span class="p">,</span> <span class="n">calorieLimits</span><span class="p">):</span>
+</code></pre></div></div> <p><br><br> <b> Ex: Find the number of candies each person can eat without exceeding their calorie limits<b></b></b></p> <ul> <li>Use prefix sum</li> <li>Returning the left pointer tells us the max we reach before exceeding limit</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">eatCandies</span><span class="p">(</span><span class="n">candies</span><span class="p">,</span> <span class="n">calorieLimits</span><span class="p">):</span>
     <span class="n">candies</span> <span class="o">=</span> <span class="nf">sorted</span><span class="p">(</span><span class="n">candies</span><span class="p">)</span>
     
     <span class="n">prefix</span> <span class="o">=</span> <span class="p">[</span><span class="n">candies</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span>
@@ -1570,40 +756,7 @@ from collections import deque</p>
         <span class="n">results</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">left</span><span class="p">)</span> <span class="c1">#returning left tells you the max you can go before exceeding limit (how far you can go down the line of candies)
 </span>    
     <span class="k">return</span> <span class="n">results</span>
-</code></pre></div></div>
-<p><br></p>
-
-<p><b>Implementation Tips</b><br></p>
-<ul>
-  <li>Return left to find minimum</li>
-  <li>Return right to find maximum
-<br><br><br>
-</li>
-</ul>
-
-<h2>10. Backtracking </h2>
-<ul>
-  <li>Pruning non-solution paths to reduce the possibility space</li>
-  <li>Good for problems where you want to “find all” of something</li>
-  <li>Hint: If the input constraint is very small n &lt;= ~15</li>
-  <li>
-    <ol>
-      <li>calling recursive backtrack() = moving to child of node</li>
-    </ol>
-  </li>
-  <li>
-    <ol>
-      <li>remove modification = moving back to parent node
-<br><br>
-</li>
-    </ol>
-  </li>
-</ul>
-
-<p><b>Template</b><br>
-UNDO MODIFICATION; LINE AFTER RECURSIVE CALL IS ONLY EXECUTED AFTER BASE CASE</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#let curr represent the thing you are building
+</code></pre></div></div> <p><br></p> <p><b>Implementation Tips</b><br></p> <ul> <li>Return left to find minimum</li> <li>Return right to find maximum <br><br><br> </li> </ul> <h2>10. Backtracking </h2> <ul> <li>Pruning non-solution paths to reduce the possibility space</li> <li>Good for problems where you want to “find all” of something</li> <li>Hint: If the input constraint is very small n &lt;= ~15</li> <li> <ol> <li>calling recursive backtrack() = moving to child of node</li> </ol> </li> <li> <ol> <li>remove modification = moving back to parent node <br><br> </li> </ol> </li> </ul> <p><b>Template</b><br> UNDO MODIFICATION; LINE AFTER RECURSIVE CALL IS ONLY EXECUTED AFTER BASE CASE</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#let curr represent the thing you are building
 #it could be an array or a combination of variables
 </span><span class="k">def</span> <span class="nf">backtrack</span><span class="p">(</span><span class="n">curr</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">base</span> <span class="n">case</span><span class="p">:</span>
@@ -1614,12 +767,7 @@ UNDO MODIFICATION; LINE AFTER RECURSIVE CALL IS ONLY EXECUTED AFTER BASE CASE</p
         <span class="n">modify</span> <span class="n">curr</span>
         <span class="nf">backtrack</span><span class="p">(</span><span class="n">curr</span><span class="p">)</span> <span class="c1">#recursion ends only after base case
 </span>        <span class="n">undo</span> <span class="n">whatever</span> <span class="n">modification</span> <span class="n">was</span> <span class="n">done</span> <span class="n">to</span> <span class="n">curr</span>
-</code></pre></div></div>
-<p><br></p>
-
-<p><b>Ex: Find all permutations of array</b></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">permute</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+</code></pre></div></div> <p><br></p> <p><b>Ex: Find all permutations of array</b></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">permute</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">backtrack</span><span class="p">(</span><span class="n">curr</span><span class="p">):</span>
         <span class="k">if</span> <span class="nf">len</span><span class="p">(</span><span class="n">curr</span><span class="p">)</span> <span class="o">==</span> <span class="nf">len</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
             <span class="n">ans</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">curr</span><span class="p">[:])</span> <span class="c1">#shallow copy curr so it's not mutable by ###ref###
@@ -1636,15 +784,7 @@ UNDO MODIFICATION; LINE AFTER RECURSIVE CALL IS ONLY EXECUTED AFTER BASE CASE</p
     <span class="n">ans</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="nf">backtrack</span><span class="p">([])</span>
     <span class="k">return</span> <span class="n">ans</span>
-</code></pre></div></div>
-<p><br><br></p>
-
-<p><b>Ex: Find all subsets of array</b></p>
-<ul>
-  <li>We do not want duplicates so only consider any number that comes AFTER that value</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">subsets</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
+</code></pre></div></div> <p><br><br></p> <p><b>Ex: Find all subsets of array</b></p> <ul> <li>We do not want duplicates so only consider any number that comes AFTER that value</li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">subsets</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">backtrack</span><span class="p">(</span><span class="n">curr</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="nf">len</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span> <span class="c1">#if index is out of bounds
 </span>            <span class="k">return</span>
@@ -1658,19 +798,7 @@ UNDO MODIFICATION; LINE AFTER RECURSIVE CALL IS ONLY EXECUTED AFTER BASE CASE</p
     <span class="n">ans</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="nf">backtrack</span><span class="p">([],</span> <span class="mi">0</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">ans</span>
-</code></pre></div></div>
-<p><br><br></p>
-
-<p><b>Ex: N-Queens</b> Find number of unique solutions to place n queens on an n x n chessboard <br></p>
-<ul>
-  <li>We need to use backtracking to figure out all possible placements (if the next step doesn’t work, go back to previous)</li>
-  <li>We need to figure out which row, col, diagonol, antidiagonal is free</li>
-</ul>
-
-<p><b>***HACK 1: Each diagonal has the same (row - col) value</b> because moving down and right, both row and col gets incremented so difference is same throughout <br><br>
-<b>***HACK 2: Each antidiagonal has the same (row + col) value</b> because moving down increments row and left decrements col so sum is preserved</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">totalNQueens</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</code></pre></div></div> <p><br><br></p> <p><b>Ex: N-Queens</b> Find number of unique solutions to place n queens on an n x n chessboard <br></p> <ul> <li>We need to use backtracking to figure out all possible placements (if the next step doesn’t work, go back to previous)</li> <li>We need to figure out which row, col, diagonol, antidiagonal is free</li> </ul> <p><b>***HACK 1: Each diagonal has the same (row - col) value</b> because moving down and right, both row and col gets incremented so difference is same throughout <br><br> <b>***HACK 2: Each antidiagonal has the same (row + col) value</b> because moving down increments row and left decrements col so sum is preserved</p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">totalNQueens</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">def</span> <span class="nf">backtrack</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">diagonals</span><span class="p">,</span> <span class="n">anti_diagonals</span><span class="p">,</span> <span class="n">cols</span><span class="p">):</span>
         <span class="c1"># Base case - N queens have been placed
 </span>        <span class="k">if</span> <span class="n">row</span> <span class="o">==</span> <span class="n">n</span><span class="p">:</span> <span class="c1">#if we have managed to reach the last row (after placing one queen on each)
@@ -1703,25 +831,7 @@ UNDO MODIFICATION; LINE AFTER RECURSIVE CALL IS ONLY EXECUTED AFTER BASE CASE</p
         <span class="k">return</span> <span class="n">solutions</span>
 
     <span class="k">return</span> <span class="nf">backtrack</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nf">set</span><span class="p">(),</span> <span class="nf">set</span><span class="p">(),</span> <span class="nf">set</span><span class="p">())</span>
-</code></pre></div></div>
-<p><br><br></p>
-
-<h2>11. Dynamic Programming </h2>
-<ul>
-  <li>Optimize recursion with memoization (storing results in hashmap to avoid repeated computations)</li>
-</ul>
-
-<p>Problems using DP will have 2 traits:</p>
-<ol>
-  <li>Asking for an optimal value (max/min) of something, or the # of ways to do something</li>
-  <li>At each step, you need to make decision that affects future decisions 
-<br><br>
-</li>
-</ol>
-
-<p><b> Ex: Fibonacci with memoization </b></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+</code></pre></div></div> <p><br><br></p> <h2>11. Dynamic Programming </h2> <ul> <li>Optimize recursion with memoization (storing results in hashmap to avoid repeated computations)</li> </ul> <p>Problems using DP will have 2 traits:</p> <ol> <li>Asking for an optimal value (max/min) of something, or the # of ways to do something</li> <li>At each step, you need to make decision that affects future decisions <br><br> </li> </ol> <p><b> Ex: Fibonacci with memoization </b></p> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">return</span> <span class="mi">0</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
@@ -1734,43 +844,7 @@ UNDO MODIFICATION; LINE AFTER RECURSIVE CALL IS ONLY EXECUTED AFTER BASE CASE</p
     <span class="k">return</span> <span class="n">memo</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
 
 <span class="n">memo</span> <span class="o">=</span> <span class="p">{}</span>
-</code></pre></div></div>
-<p><br><br></p>
-
-<h5><b>Framework for DP</b></h5>
-<p><br>
-<b>Ex: Min Cost Climbing Stairs: You are given an array where array[i] is the cost of the i’th step. Once you pay, you can either go up one of two steps. Find min cost to reach top</b><br><br></p>
-
-<p><b>1. We need a function/data structure to compute answer:</b></p>
-<ul>
-  <li>What is the function returning? (Returning the cost up to the i’th step)</li>
-  <li>What are the state inputs? (We need the i’th step as the state)
-    <ul>
-      <li>so lets have dp(i)</li>
-    </ul>
-  </li>
-</ul>
-
-<p><br>
-<b>2. We need a recurrence relation for state transitions:</b></p>
-<ul>
-  <li>Say we want to compute min cost to step 100</li>
-  <li>We know we needed to arrive from step 98 or 99</li>
-  <li>So dp(100) = min(dp(99) + cost[99], dp(98) + cost[98])</li>
-  <li>we know dp(99) returns the min cost of getting to 99’th step and dp(98) returns min cost to get to 98’th step</li>
-  <li>So dp(i) = min(dp(i-1) + cost[i-1], dp(i-2) + cost[i-2])</li>
-</ul>
-
-<p><br>
-<b>3. We need a base case:</b></p>
-<ul>
-  <li>We start at steps 0 or 1 (which means cost is 0)</li>
-  <li>So dp(0) = dp(1) = 0
-<br><br>
-</li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">minCostClimbingStairs</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">cost</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+</code></pre></div></div> <p><br><br></p> <h5><b>Framework for DP</b></h5> <p><br> <b>Ex: Min Cost Climbing Stairs: You are given an array where array[i] is the cost of the i’th step. Once you pay, you can either go up one of two steps. Find min cost to reach top</b><br><br></p> <p><b>1. We need a function/data structure to compute answer:</b></p> <ul> <li>What is the function returning? (Returning the cost up to the i’th step)</li> <li>What are the state inputs? (We need the i’th step as the state) <ul> <li>so lets have dp(i)</li> </ul> </li> </ul> <p><br> <b>2. We need a recurrence relation for state transitions:</b></p> <ul> <li>Say we want to compute min cost to step 100</li> <li>We know we needed to arrive from step 98 or 99</li> <li>So dp(100) = min(dp(99) + cost[99], dp(98) + cost[98])</li> <li>we know dp(99) returns the min cost of getting to 99’th step and dp(98) returns min cost to get to 98’th step</li> <li>So dp(i) = min(dp(i-1) + cost[i-1], dp(i-2) + cost[i-2])</li> </ul> <p><br> <b>3. We need a base case:</b></p> <ul> <li>We start at steps 0 or 1 (which means cost is 0)</li> <li>So dp(0) = dp(1) = 0 <br><br> </li> </ul> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">minCostClimbingStairs</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">cost</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="c1"># 1. A function that returns the answer
 </span>    <span class="k">def</span> <span class="nf">dp</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
@@ -1786,18 +860,7 @@ UNDO MODIFICATION; LINE AFTER RECURSIVE CALL IS ONLY EXECUTED AFTER BASE CASE</p
     
     <span class="n">memo</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">return</span> <span class="nf">dp</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">cost</span><span class="p">))</span>
-</code></pre></div></div>
-<p><br><br></p>
-
-<p><b>Ex: Robbing Houses: array[i] represents how much money you gain from robbing house i. You cannot rob houses directly next to one another (so you can only skip one house). Return max amount you can rob </b><br></p>
-<ol>
-  <li>What is the input? –&gt; the index i of the house</li>
-  <li>What is the output? –&gt; the max amount of money we get up to house i</li>
-  <li>What is the recursive relation? –&gt; at each index, we either don’t rob the current house because we robbed the previous house dp(i-1) OR we robbed the prev.prev house plus the current house so array[i] + dp(i-2)</li>
-  <li>What is the base case? –&gt; we rob either the first so dp(0) = array[0] or go to the second to see if it’s more than the first dp(1) = max(array[0], max[array[1]). We need dp(1) otherwise the recurrence relation will use dp(-1).</li>
-</ol>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">functools</span> <span class="kn">import</span> <span class="n">cache</span>
+</code></pre></div></div> <p><br><br></p> <p><b>Ex: Robbing Houses: array[i] represents how much money you gain from robbing house i. You cannot rob houses directly next to one another (so you can only skip one house). Return max amount you can rob </b><br></p> <ol> <li>What is the input? –&gt; the index i of the house</li> <li>What is the output? –&gt; the max amount of money we get up to house i</li> <li>What is the recursive relation? –&gt; at each index, we either don’t rob the current house because we robbed the previous house dp(i-1) OR we robbed the prev.prev house plus the current house so array[i] + dp(i-2)</li> <li>What is the base case? –&gt; we rob either the first so dp(0) = array[0] or go to the second to see if it’s more than the first dp(1) = max(array[0], max[array[1]). We need dp(1) otherwise the recurrence relation will use dp(-1).</li> </ol> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="n">functools</span> <span class="kn">import</span> <span class="n">cache</span>
 
 <span class="k">def</span> <span class="nf">rob</span><span class="p">(</span><span class="n">houses</span><span class="p">):</span>
     <span class="nd">@cache</span> <span class="c1">#python memoization
@@ -1811,150 +874,4 @@ UNDO MODIFICATION; LINE AFTER RECURSIVE CALL IS ONLY EXECUTED AFTER BASE CASE</p
 
     <span class="k">return</span> <span class="nf">dp</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">houses</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 
-</code></pre></div></div>
-
-<p><br><br><br><br><br><br><br><br>
-Hacks:</p>
-<ul>
-  <li>Flip between 1 and 0 is f(x) = 1 - x. f(1) = 0 and f(0) = 1.</li>
-</ul>
-
-
-  </article>
-</div>
-
-      
-    </div>
-
-    <!-- Footer -->    
-    <footer class="fixed-bottom">
-      <div class="container mt-0">
-        © Copyright 2025 Chelsea  Zou. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>.
-
-      </div>
-    </footer>
-
-    <!-- JavaScripts -->
-    <!-- jQuery -->
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-    <!-- Bootsrap & MDB scripts -->
-  <script src="/assets/js/bootstrap.bundle.min.js"></script>
-  <!-- <script src="/assets/js/mdb.min.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
-
-    <!-- Masonry & imagesLoaded -->
-  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
-    
-  <!-- Medium Zoom JS -->
-  <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script>
-  <script defer src="/assets/js/zoom.js?7b30caa5023af4af8408a472dc4e1ebb"></script>
-
-  <!-- Bootstrap Table -->
-  <script defer src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"></script>
-
-  <!-- Load Common JS -->
-  <script src="/assets/js/no_defer.js?d633890033921b33e0ceb13d22340a9c"></script>
-  <script defer src="/assets/js/common.js?acdb9690d7641b2f8d40529018c71a01"></script>
-  <script defer src="/assets/js/copy_code.js?07b8786bab9b4abe90d10e61f7d12ff7" type="text/javascript"></script>
-
-    
-  <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
-  <script async src="https://badge.dimensions.ai/badge.js"></script>
-
-    <!-- MathJax -->
-  <script type="text/javascript">
-    window.MathJax = {
-      tex: {
-        tags: 'ams'
-      }
-    };
-  </script>
-  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
-  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-
-    
-    
-
-<!-- Scrolling Progress Bar -->
-<script type="text/javascript">
-  /*
-   * This JavaScript code has been adapted from the article 
-   * https://css-tricks.com/reading-position-indicator/ authored by Pankaj Parashar, 
-   * published on the website https://css-tricks.com on the 7th of May, 2014.
-   * Couple of changes were made to the original code to make it compatible 
-   * with the `al-foio` theme.
-   */
-  const progressBar = $("#progress");
-  /*
-   * We set up the bar after all elements are done loading.
-   * In some cases, if the images in the page are larger than the intended
-   * size they'll have on the page, they'll be resized via CSS to accomodate
-   * the desired size. This mistake, however, breaks the computations as the
-   * scroll size is computed as soon as the elements finish loading.
-   * To account for this, a minimal delay was introduced before computing the
-   * values.
-   */
-  window.onload = function () {
-    setTimeout(progressBarSetup, 50);
-  };
-  /*
-   * We set up the bar according to the browser.
-   * If the browser supports the progress element we use that.
-   * Otherwise, we resize the bar thru CSS styling
-   */
-  function progressBarSetup() {
-    if ("max" in document.createElement("progress")) {
-      initializeProgressElement();
-      $(document).on("scroll", function() {
-        progressBar.attr({ value: getCurrentScrollPosition() });
-      });
-      $(window).on("resize", initializeProgressElement);
-    } else {
-      resizeProgressBar();
-      $(document).on("scroll", resizeProgressBar);
-      $(window).on("resize", resizeProgressBar);
-    }
-  }
-  /*
-   * The vertical scroll position is the same as the number of pixels that
-   * are hidden from view above the scrollable area. Thus, a value > 0 is
-   * how much the user has scrolled from the top
-   */
-  function getCurrentScrollPosition() {
-    return $(window).scrollTop();
-  }
-
-  function initializeProgressElement() {
-    let navbarHeight = $("#navbar").outerHeight(true);
-    $("body").css({ "padding-top": navbarHeight });
-    $("progress-container").css({ "padding-top": navbarHeight });
-    progressBar.css({ top: navbarHeight });
-    progressBar.attr({
-      max: getDistanceToScroll(),
-      value: getCurrentScrollPosition(),
-    });
-  }
-  /*
-   * The offset between the html document height and the browser viewport
-   * height will be greater than zero if vertical scroll is possible.
-   * This is the distance the user can scroll
-   */
-  function getDistanceToScroll() {
-    return $(document).height() - $(window).height();
-  }
-
-  function resizeProgressBar() {
-    progressBar.css({ width: getWidthPercentage() + "%" });
-  }
-  // The scroll ratio equals the percentage to resize the bar
-  function getWidthPercentage() {
-    return (getCurrentScrollPosition() / getDistanceToScroll()) * 100;
-  }
-</script>
-
-    
-  </body>
-</html>
+</code></pre></div></div> <p><br><br><br><br><br><br><br><br> Hacks:</p> <ul> <li>Flip between 1 and 0 is f(x) = 1 - x. f(1) = 0 and f(0) = 1.</li> </ul> </article> </div> </div> <footer class="fixed-bottom"> <div class="container mt-0"> © Copyright 2025 Chelsea Zou. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <script src="/assets/js/bootstrap.bundle.min.js"></script> <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script> <script defer src="/assets/js/masonry.js" type="text/javascript"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.js" integrity="sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8=" crossorigin="anonymous"></script> <script defer src="/assets/js/zoom.js?7b30caa5023af4af8408a472dc4e1ebb"></script> <script defer src="https://unpkg.com/bootstrap-table@1.22.1/dist/bootstrap-table.min.js"></script> <script src="/assets/js/no_defer.js?d633890033921b33e0ceb13d22340a9c"></script> <script defer src="/assets/js/common.js?acdb9690d7641b2f8d40529018c71a01"></script> <script defer src="/assets/js/copy_code.js?07b8786bab9b4abe90d10e61f7d12ff7" type="text/javascript"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script type="text/javascript">window.MathJax={tex:{tags:"ams"}};</script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script> <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <script type="text/javascript">function progressBarSetup(){"max"in document.createElement("progress")?(initializeProgressElement(),$(document).on("scroll",function(){progressBar.attr({value:getCurrentScrollPosition()})}),$(window).on("resize",initializeProgressElement)):(resizeProgressBar(),$(document).on("scroll",resizeProgressBar),$(window).on("resize",resizeProgressBar))}function getCurrentScrollPosition(){return $(window).scrollTop()}function initializeProgressElement(){let e=$("#navbar").outerHeight(!0);$("body").css({"padding-top":e}),$("progress-container").css({"padding-top":e}),progressBar.css({top:e}),progressBar.attr({max:getDistanceToScroll(),value:getCurrentScrollPosition()})}function getDistanceToScroll(){return $(document).height()-$(window).height()}function resizeProgressBar(){progressBar.css({width:getWidthPercentage()+"%"})}function getWidthPercentage(){return getCurrentScrollPosition()/getDistanceToScroll()*100}const progressBar=$("#progress");window.onload=function(){setTimeout(progressBarSetup,50)};</script> </body> </html>
