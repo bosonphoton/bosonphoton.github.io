@@ -31,6 +31,20 @@ nav_order: 2
 <hr>
 <body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
     <div style="text-align: left;">
+        <b><a href = "https://cs329a.stanford.edu/winter2025projects/prime.pdf">PRIME: Planning with Reflective, Iterative, Multi-agentic Exploration </a></b>
+    </div>
+</body>
+
+<hr>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="text-align: left;">
+        <b><a href = "/assets/hallu.pdf">Thinking, Faithful and Stable: Mitigating Hallucinations in LLMs</a></b>
+    </div>
+</body>
+
+<hr>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="text-align: left;">
         <b><a href = "http://arxiv.org/abs/2408.17251">Abstracted Gaussian Prototypes for One-Shot Concept Learning</a></b>
     </div>
 </body>
