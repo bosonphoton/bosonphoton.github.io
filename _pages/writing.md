@@ -15,6 +15,7 @@ nav_order: 1
 ---
 
 <h3> thoughts </h3>
+<a href = "/thoughts/play.html">Playing Games</a><br>
 <a href = "/thoughts/rejectdefault.html">I Don't Believe in Nature</a><br>
 <a href = "/thoughts/itsdoomed.html">Machine Learning Research is Doomed</a><br>
 <a href = "/thoughts/machinepsych.html">Machine Psychology</a><br>
