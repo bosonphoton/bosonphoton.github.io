@@ -35,7 +35,6 @@ nav_order: 4
   <li>The Black Swan by Nassim Taleb</li>
   <li>The Singularity is Near by Ray Kurzweil</li>
   <li>The Big Picture by Sean Carroll</li>
-  <li>Little Green Book by Phil Gordon</li>
   <li>Magic Tree House Series by Mary Pope Osborne</li>
 </ul>
 
