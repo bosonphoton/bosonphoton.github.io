@@ -38,7 +38,7 @@ nav_order: 2
 <hr>
 <body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
     <div style="text-align: left;">
-        <b><a href = "/assets/hallu.pdf">Thinking, Faithful and Stable: Mitigating Hallucinations in LLMs</a></b>
+        <b><a href = "https://arxiv.org/pdf/2511.15921">Thinking, Faithful and Stable: Mitigating Hallucinations in LLMs</a></b>
     </div>
 </body>
 
