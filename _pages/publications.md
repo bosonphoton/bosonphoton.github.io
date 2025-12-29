@@ -31,6 +31,28 @@ nav_order: 2
 <hr>
 <body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
     <div style="text-align: left;">
+        <b><a href = "https://arxiv.org/pdf/2512.21577"> A Unified Definition of Hallucination </a></b>
+    </div>
+</body>
+
+<hr>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="text-align: left;">
+        <b><a href = "/assets/welfare.pdf"> The Bit After The Episode: First Person LLM Self-Testimonies on Environments </a></b>
+    </div>
+</body>
+
+<hr>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="text-align: left;">
+        <b><a href = "https://agi.safe.ai/">Humanity's Last Exam </a></b>
+    </div>
+</body>
+
+
+<hr>
+<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
+    <div style="text-align: left;">
         <b><a href = "https://cs329a.stanford.edu/winter2025projects/prime.pdf">PRIME: Planning with Reflective, Iterative, Multi-agentic Exploration </a></b>
     </div>
 </body>
