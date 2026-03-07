@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feelings and where to find them</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding-right: 300px;
+            padding-left: 300px;
+            padding-top: 50px;
+            padding-bottom: 100px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Feelings and where to find them.</h1>
+
+Throughout my entire adult life, people have been telling me I act like a robot. No emotions, hard to read, "chill" if they wanna be nice. It's funny because I used to be the opposite. As a kid I was a candid emotional mess: clingy, tempered, jealous, etc. I'd need to hold my mom's hand to fall asleep. I'd follow her everywhere, wrap myself around her leg, and not let go. When she'd go to sleep with my dad instead, I'd feel a deep sense of abandonment. I had a temper that was hard to control. When I got angry, I became very distasteful. And I was also very jealous. When my best friend had another close friend, I wrote several dramatic poems about the "terrible" feeling that "consumed me". In retrospect, I was a dysfunctional annoying kid.<br><br>
+
+Somewhere between then and now, something changed. And here I am trying to psychoanalyze myself: what went right, and how to think about it. I feel close to none of these emotions anymore. It's not that they don't exist, but rather that they've been mapped onto a more subtle space. For example, if there is a case in which I should feel angry, I would mostly just feel disappointment. Or instead of jealousy, I would feel a slight sense of shame. It's not a straightforward mapping but the underlying signals are still similar in nature.<br><br>
+
+My roboticism might have been partly due to parenting, partly due to being an oversensitive kid, and partly due to just personal experience. Chinese parents speedrun a real lesson: emotion is weakness so get over it. And honestly? They're mostly correct. Being an emotionally sensitive kid probably gets you hurt more than normal, so over time you learn to dial down the knob. You condition yourself to see that most things aren't that serious, and that there's little reason to feel extremes. You learn to first think rationally about whether something is worth feeling, and if it isn't, then calibrate accordingly. Reason becomes a helpful critic against emotion. Now depending on your experiences, it's also possible that your network can sometimes overcorrect and stop firing on things that should have fired. But in general, one benefits more from the calibration than it harms. Of course emotions shouldn't be suppressed, but if they easily dictate your rationale at any cost, then sorry you're ngmi.<br><br>
+
+What I learned is that feeling can eventually become a choice. One can deliberately calibrate emotions with logic. This calibrated version of emotions is what I will define as <b><i>sensibilities</i></b>. How I see it: emotions are a base layer. They are universal, instinctive, and sometimes irrational. People experience them in varying magnitudes, but the texture is more or less the same. Sensibilities, on the other hand, are a bit more complex. They are emotions that have been thought through, and hence, more personalized to the individual. You can think of them as a literal rational "transformation" of emotions.<br><br>
+
+Idk. Try to represent simple emotional states as the basis vectors \(\{e_1, e_2, \ldots, e_n\}\) of \(\mathbb{R}^n\). Let \(m_i \geq 0\) be a scalar representing how intensely one feels emotional state \(i\). A full raw emotional experience (often layered) is then the vector:<br><br>
+
+$$\mathbf{v} = \sum_{i=1}^{n} m_i e_i$$
+
+<br>
+
+Let \(L: \mathbb{R}^n \rightarrow \mathbb{R}^n\) be a learned operator representing logic that transforms raw emotion into a calibrated emotion. A sensibility is then:<br><br>
+
+$$s = L(\mathbf{v}) = L\!\left(\sum_{i=1}^{n} m_i e_i\right)$$
+
+<br>
+
+In the simplest case, \(L\) is a matrix doing two things: scaling magnitudes (i.e., dampening anger) and remapping between certain emotional states (i.e., rerouting anger into disappointment). Basically it's an emotional filtration and refinement process.<br><br>
+
+Emotions are fast and reactive rollouts, sensibilities are slower as they require rational thinking. As a kid, I probably lived too much in the emotions space, which was not fun for myself or for those around me. Nowadays I try to live in the sensibilities space as much as possible. I try to feel selectively. If I seem robotic to people who are used to communicating through reaction, then so be it. By default, emotions will control your state and influence how you think. The better way to go about life is probably the reverse: first think, then decide what is worth feeling. This is maybe just a restatement of stoicism: one should only feel when it's beneficial, otherwise let it go.<br><br>
+
+<script>
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\(", right: "\\)", display: false}
+        ],
+        throwOnError: false
+    });
+</script>
+
+</body>
+</html>
