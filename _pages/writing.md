@@ -6,7 +6,7 @@ permalink: /writing/
 
 title: writing
 
-description: i like to write
+description: if money didn't matter, I would write for a living
 
 nav: true
 
@@ -27,6 +27,7 @@ nav_order: 1
 <br>
 
 <h3> medium articles </h3>
+<a href="https://medium.com/@bosonphoton/consciousness-and-strange-loops-5f8b6199bc3a" target="_blank" rel="noopener">Consciousness and Strange Loops</a><br>
 <a href="https://medium.com/@bosonphoton/rethinking-about-thinking-with-ai-dce143c07704" target="_blank" rel="noopener">Rethinking About Thinking With AI</a><br>
 <a href="https://medium.com/@bosonphoton/maximum-likelihood-estimation-93367f010577" target="_blank" rel="noopener">Maximum Likelihood Estimation</a><br>
 <a href="https://medium.com/@bosonphoton/attention-is-1-3-of-what-you-need-057e2c1035cd" target="_blank" rel="noopener">Attention Is 1/3 of What You Need</a><br>
