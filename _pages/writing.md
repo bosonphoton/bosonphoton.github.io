@@ -30,7 +30,6 @@ nav_order: 1
 <a href="https://medium.com/@bosonphoton/consciousness-and-strange-loops-5f8b6199bc3a" target="_blank" rel="noopener">Consciousness and Strange Loops</a><br>
 <a href="https://medium.com/@bosonphoton/rethinking-about-thinking-with-ai-dce143c07704" target="_blank" rel="noopener">Rethinking About Thinking With AI</a><br>
 <a href="https://medium.com/@bosonphoton/maximum-likelihood-estimation-93367f010577" target="_blank" rel="noopener">Maximum Likelihood Estimation</a><br>
-<a href="https://medium.com/@bosonphoton/attention-is-1-3-of-what-you-need-057e2c1035cd" target="_blank" rel="noopener">Attention Is 1/3 of What You Need</a><br>
 <a href="https://medium.com/@bosonphoton/probability-theory-random-variables-distributions-9f49d8f258c7" target="_blank" rel="noopener">Probability Theory: Random Variables & Distributions</a><br>
 <a href="https://medium.com/@bosonphoton/probability-theory-introduction-2c1903a9a44b" target="_blank" rel="noopener">Probability Theory: Introduction</a><br>
 <a href="https://medium.com/@bosonphoton/mathematical-introduction-to-dynamical-systems-2d581fcb2444" target="_blank" rel="noopener">Mathematical Introduction to Dynamical Systems</a><br>
