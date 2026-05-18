@@ -31,7 +31,7 @@ nav_order: 2
 <hr>
 <body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
     <div style="text-align: left;">
-        <b><a href = "https://arxiv.org/pdf/2605.09823"> CalBench: Evaluating Coordination–Privacy Trade-offs in Multi-Agent LLMs </a><b>
+        <b><a href = "https://arxiv.org/pdf/2605.09823"> CalBench: Evaluating Coordination–Privacy Trade-offs in Multi-Agent LLMs </a></b>
     </div>
 </body>
 
