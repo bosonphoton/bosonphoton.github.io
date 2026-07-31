@@ -24,7 +24,7 @@
 <h1>Feelings and Where to Find Them</h1>
 <p><time datetime="2026-03-07">March 7, 2026</time></p>
 
-Throughout my entire adult life, people have been telling me I act like a robot, or that it was hard to tell my emotions. It's funny because as a kid, I used to be the opposite. I was a candid emotional mess: tempered, sensitive, jealous, clingy, etc. I'd cry alot over small things, I'd need to hold my mom's hand to fall asleep and follow her everywhere, and I would feel a deep sense of abandonment when my mom would leave me for work, or go to bed with my dad instead. I also had a temper that was hard to control. When I got angry, I became very distasteful. I was also very jealous. When my best friend had another close friend, I wrote several dramatic poems about the "terrible" feeling that "consumed me". In retrospect, I was a dysfunctional annoying kid.<br><br>
+Throughout my entire adult life, people have been telling me I act like a robot, or that it was hard to tell my emotions. It's funny because as a kid, I used to be the opposite. I was a candid emotional mess and I'd cry alot over small things, I'd need to hold my mom's hand to fall asleep and follow her everywhere, and I would feel a deep sense of abandonment when my mom would leave me for work, or go to bed with my dad instead. I also had a temper that was hard to control. When I got angry, I became very distasteful. I was also very jealous. In retrospect, I was a dysfunctional annoying kid.<br><br>
 
 Somewhere between then and now, something changed. And here I am trying to psychoanalyze myself: what went right, and how to think about it. I feel close to none of these emotions anymore. It's not that they don't exist, but rather that they've been mapped onto a more subtle space. For example, if there is a case in which I should feel angry, I would mostly just feel disappointment. Or instead of jealousy, I would feel a slight sense of shame. It's not a straightforward mapping but the underlying signals are still similar in nature.<br><br>
 
@@ -32,17 +32,9 @@ My roboticism might have been partly due to parenting, partly due to being an ov
 
 What I learned is that feeling can eventually become a choice. One can deliberately calibrate emotions with logic. This calibrated version of emotions is what I will define as <b><i>sensibilities</i></b>. How I see it: emotions are a base layer. They are universal, instinctive, and sometimes irrational. People experience them in varying magnitudes, but the texture is more or less the same. Sensibilities, on the other hand, are a bit more complex. They are emotions that have been thought through, and hence, more personalized to the individual. You can think of them as a literal rational "transformation" of emotions.<br><br>
 
-Idk think of representing simple emotional states as the basis vectors \(\{e_1, e_2, \ldots, e_n\}\) of \(\mathbb{R}^n\). Let \(m_i \geq 0\) be a scalar representing how intensely one feels emotional state \(i\). A full raw emotional experience (often layered) is then the vector:<br><br>
+Think of representing simple emotional states as the basis vectors \(\{e_1, e_2, \ldots, e_n\}\) of \(\mathbb{R}^n\). Let \(m_i \geq 0\) be a scalar representing how intensely one feels emotional state \(i\). A full raw emotional experience (often layered) is then the vector \(\mathbf{v} = \sum_{i=1}^{n} m_i e_i\).<br><br>
 
-$$\mathbf{v} = \sum_{i=1}^{n} m_i e_i$$
-
-<br>
-
-Let \(L: \mathbb{R}^n \rightarrow \mathbb{R}^n\) be a learned operator that transforms raw emotion into a calibrated emotion. A sensibility is then:<br><br>
-
-$$s = L(\mathbf{v}) = L\!\left(\sum_{i=1}^{n} m_i e_i\right)$$
-
-<br>
+Let \(L: \mathbb{R}^n \rightarrow \mathbb{R}^n\) transform raw emotion into a calibrated emotion. A sensibility is then \(s = L(\mathbf{v}) = L\!\left(\sum_{i=1}^{n} m_i e_i\right)\).<br><br>
 
 In the simplest case, \(L\) is a matrix representing "logic" and does two things: scaling magnitudes (i.e., dampening anger) and remapping between certain emotional states (i.e., rerouting anger into disappointment). Basically it's an emotional filtration and refinement process.<br><br>
 
@@ -51,7 +43,6 @@ Emotions are fast and reactive rollouts, sensibilities are slower as they requir
 <script>
     renderMathInElement(document.body, {
         delimiters: [
-            {left: "$$", right: "$$", display: true},
             {left: "\\(", right: "\\)", display: false}
         ],
         throwOnError: false
