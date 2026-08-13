@@ -2,7 +2,7 @@
 layout: page
 title: notes
 permalink: /notes/
-description: ML, math, & research notes (constantly in progress/updated)
+description: old notes that I probably will not refer back to
 nav: true
 nav_order: 2
 horizontal: false

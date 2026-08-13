@@ -2,7 +2,7 @@
 layout: page
 permalink: /personal/
 title: personal
-description: Outside of research, I enjoy extreme sports like kitesurfing, paragliding, speedriding (skiing with a paraglide), surfing, snowboarding, skiing, electronic music (mostly ambient/deep house/future bass/trap/trance) and classical piano, philosophy of mind, poker, and writing random stuff.
+description: Outside of research, I enjoy extreme sports like kitesurfing, paragliding, speedriding (skiing with a paraglide), surfing, snowboarding, skiing, electronic music (mostly ambient/future bass/trap/trance), psychology, philosophy of mind, bio-hacking (as much as my wallet can allow for now), poker, and writing random stuff.
 nav: true
 nav_order: 4
 ---
@@ -40,82 +40,3 @@ nav_order: 4
 
 </body>
 <br>
-
-<hr>
-
-<h3>podcasts</h3>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    .iframe-container {
-      width: 30%; /* Adjust the width as needed */
-      margin: 10px;
-      display: inline-block;
-      vertical-align: top;
-      box-sizing: border-box;
-    }
-
-    .iframe-container iframe {
-      width: 100%;
-      height: 200px; /* Adjust the height as needed */
-      border-radius: 12px;
-    }
-  </style>
-</head>
-<body>
-
-<div class="iframe-container">
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/2MAi0BvDc6GTFvKFPXnkCL/video?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
-
-<div class="iframe-container">
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/02e6PZeIOdpmBGT9THuzwR?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
-
-<div class="iframe-container">
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/2UZj8c8Ap5oc2gh2rJxLLe?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
-
-
-<div class="iframe-container">
- <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/0Nq3gBTKrKfCOLNvpFhhS1?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
-
-<div class="iframe-container">
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/2IqXAVFR4e0Bmyjsdc8QzF/video?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
-
-<div class="iframe-container">
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/622lvLwp8CVu6dvCsYAJhN?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
-
-<div class="iframe-container">
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/3mliji9352UAk3XnWElnDV?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
-
-<div class="iframe-container">
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/1LaCr5TFAgYPK5qHjP3XDp?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
-
-<div class="iframe-container">
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/20Gf4IAauFrfj7RBkjcWxh?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
-
-
-<div class="iframe-container">
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/6z4NLXyHPga1UmSJsPK7G1?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
-
-<div class="iframe-container">
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/1hikWa5LWDQJwXtz5LoeVn?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
-
-<div class="iframe-container">
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/4sOVMPFJmCROADLMDdDwjs?utm_source=generator" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-</div>
-
-
-</body>
-
-
