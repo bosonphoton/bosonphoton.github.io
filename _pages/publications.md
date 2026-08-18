@@ -88,7 +88,7 @@ nav_order: 2
 <hr>
 <body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0;">
     <div style="text-align: left;">
-        <b><a href = "http://arxiv.org/abs/2408.17251">Abstracted Gaussian Prototypes for One-Shot Concept Learning</a></b>
+        <b><a href = "http://arxiv.org/abs/2408.17251">(Undergrad Thesis) Abstracted Gaussian Prototypes for One-Shot Concept Learning</a></b>
     </div>
 </body>
 
