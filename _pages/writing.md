@@ -15,14 +15,15 @@ nav_order: 1
 ---
 
 <h3> thoughts </h3>
-<a href = "/thoughts/feelings.html">Feelings and Where to Find Them</a><br>
-<a href = "/thoughts/play.html">Playing Games</a><br>
-<a href = "/thoughts/rejectdefault.html">I Don't Believe in Nature</a><br>
-<a href = "/thoughts/itsdoomed.html">Machine Learning Research is Doomed</a><br>
-<a href = "/thoughts/machinepsych.html">Machine Psychology</a><br>
-<a href = "/thoughts/fooc.html">Fear of Opportunity Cost</a><br>
-<a href = "/thoughts/academia.html">Academia Deromanticized</a><br>
-<a href = "/thoughts/AGI.html">Intelligence and AGI</a><br>
+<div style="white-space: nowrap;"><time datetime="2026-08-27">8.27.26</time> <a href = "/thoughts/explorexploit.html">Experience-Maxxing</a></div>
+<div style="white-space: nowrap;"><time datetime="2026-03-07">3.7.26</time> <a href = "/thoughts/feelings.html">Feelings and Where to Find Them</a></div>
+<div style="white-space: nowrap;"><time datetime="2025-11-18">11.18.25</time> <a href = "/thoughts/play.html">Playing Games</a></div>
+<div style="white-space: nowrap;"><time datetime="2025-07-15">7.15.25</time> <a href = "/thoughts/rejectdefault.html">I Don't Believe in Nature</a></div>
+<div style="white-space: nowrap;"><time datetime="2025-03-10">3.10.25</time> <a href = "/thoughts/itsdoomed.html">Machine Learning Research is Doomed</a></div>
+<div style="white-space: nowrap;"><time datetime="2024-10-17">10.17.24</time> <a href = "/thoughts/machinepsych.html">Machine Psychology</a></div>
+<div style="white-space: nowrap;"><time datetime="2024-06-22">6.22.24</time> <a href = "/thoughts/fooc.html">Fear of Opportunity Cost</a></div>
+<div style="white-space: nowrap;"><time datetime="2024-04-25">4.25.24</time> <a href = "/thoughts/academia.html">Academia Deromanticized</a></div>
+<div style="white-space: nowrap;"><time datetime="2023-05-05">5.5.23</time> <a href = "/thoughts/AGI.html">Intelligence and AGI</a></div>
 
 <br>
 
